@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "363"
             endingLineNumber = "363"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "361"
             endingLineNumber = "361"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "358"
             endingLineNumber = "358"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
             endingLineNumber = "357"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,8 +80,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "730"
             endingLineNumber = "730"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,8 +96,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "723"
             endingLineNumber = "723"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,8 +144,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "706"
             endingLineNumber = "706"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "708"
             endingLineNumber = "708"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "textViewDidBeginEditing(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -256,8 +256,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "507"
             endingLineNumber = "507"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "moveonBankDetail()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -272,8 +272,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "497"
             endingLineNumber = "497"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "moveonBankDetail()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -288,8 +288,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "502"
             endingLineNumber = "502"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "moveonBankDetail()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -377,7 +377,8 @@ class VendorPackageVC: BaseVC,deleteFeature {
 
               
 
-               VendorTypedropDown.dataSource = ["Manufacturer", "Supplier", "Retailer", "Importer/Exporter"]
+               VendorTypedropDown.dataSource = ["Manufacturer","Supplier","Wholesaler","Distributor","Producer","Service Provider"
+               ,"Retailer"]
 
                VendorTypedropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                    print(index)
