@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VendortypeCell" id="gTV-IL-0wX" customClass="VendortypeCell" customModule="ZaraatVendor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="51"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYP-Jo-94g">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="51"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6A-rq-MbY">
+                                <rect key="frame" x="8" y="13" width="157" height="30"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b6A-rq-MbY" secondAttribute="bottom" constant="8" id="EWm-S7-rPf"/>
+                            <constraint firstItem="b6A-rq-MbY" firstAttribute="top" secondItem="uYP-Jo-94g" secondAttribute="top" constant="13" id="N6N-3T-Rqf"/>
+                            <constraint firstAttribute="trailing" secondItem="b6A-rq-MbY" secondAttribute="trailing" constant="8" id="SZd-nb-qwS"/>
+                            <constraint firstItem="b6A-rq-MbY" firstAttribute="leading" secondItem="uYP-Jo-94g" secondAttribute="leading" constant="8" id="maQ-kv-MU6"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJH-EC-7Ji">
+                        <rect key="frame" x="155" y="0.0" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="iTv-va-wz7"/>
+                            <constraint firstAttribute="width" constant="18" id="m2S-1Z-WJh"/>
+                        </constraints>
+                        <state key="normal" image="Cross-1"/>
+                        <connections>
+                            <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2SJ-sd-31M"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uYP-Jo-94g" secondAttribute="bottom" id="38s-aL-xb5"/>
+                <constraint firstAttribute="trailing" secondItem="mJH-EC-7Ji" secondAttribute="trailing" id="Ayj-ph-jDO"/>
+                <constraint firstItem="mJH-EC-7Ji" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Cwy-XG-j0t"/>
+                <constraint firstAttribute="trailing" secondItem="uYP-Jo-94g" secondAttribute="trailing" id="bdS-KE-5OJ"/>
+                <constraint firstItem="uYP-Jo-94g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gKG-EO-s0c"/>
+                <constraint firstItem="uYP-Jo-94g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hgD-HN-2HM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="173" height="51"/>
+            <connections>
+                <outlet property="lbltitle" destination="b6A-rq-MbY" id="HE6-zR-pEd"/>
+            </connections>
+            <point key="canvasLocation" x="221.01449275362322" y="124.21875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Cross-1" width="25" height="25"/>
+    </resources>
+</document>

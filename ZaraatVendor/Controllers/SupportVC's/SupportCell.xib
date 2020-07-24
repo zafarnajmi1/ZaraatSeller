@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SupportCell" rowHeight="71" id="KGk-i7-Jjw" customClass="SupportCell" customModule="ZaraatVendor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGb-ry-u06">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-1" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-g1-BPp">
+                                <rect key="frame" x="20" y="25.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Kky-mK-659"/>
+                                    <constraint firstAttribute="width" constant="20" id="eoT-Vq-0Dl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pz-xs-g7s">
+                                <rect key="frame" x="66" y="21.5" width="234" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Pz-xs-g7s" firstAttribute="centerY" secondItem="ggq-g1-BPp" secondAttribute="centerY" id="9iW-Tf-YpP"/>
+                            <constraint firstAttribute="trailing" secondItem="1Pz-xs-g7s" secondAttribute="trailing" constant="20" id="UY0-Fa-tF3"/>
+                            <constraint firstItem="1Pz-xs-g7s" firstAttribute="top" secondItem="bGb-ry-u06" secondAttribute="top" constant="21.5" id="Zxh-F1-NWP"/>
+                            <constraint firstItem="1Pz-xs-g7s" firstAttribute="leading" secondItem="ggq-g1-BPp" secondAttribute="trailing" constant="26" id="fCP-dg-vEb"/>
+                            <constraint firstAttribute="bottom" secondItem="1Pz-xs-g7s" secondAttribute="bottom" constant="21.5" id="meb-am-NdV"/>
+                            <constraint firstItem="ggq-g1-BPp" firstAttribute="centerY" secondItem="bGb-ry-u06" secondAttribute="centerY" id="u0Z-C0-duc"/>
+                            <constraint firstItem="ggq-g1-BPp" firstAttribute="leading" secondItem="bGb-ry-u06" secondAttribute="leading" constant="20" id="wsl-IF-pTY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="bGb-ry-u06" secondAttribute="trailing" id="Fpd-C6-Ywd"/>
+                    <constraint firstItem="bGb-ry-u06" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QE1-Ro-bfo"/>
+                    <constraint firstAttribute="bottom" secondItem="bGb-ry-u06" secondAttribute="bottom" id="fy7-WW-F3m"/>
+                    <constraint firstItem="bGb-ry-u06" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oR5-mR-1LP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="ggq-g1-BPp" id="oMX-AY-gNd"/>
+                <outlet property="lbltitl" destination="1Pz-xs-g7s" id="Yce-WX-Lrf"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.763392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Phone-1" width="25" height="25"/>
+    </resources>
+</document>

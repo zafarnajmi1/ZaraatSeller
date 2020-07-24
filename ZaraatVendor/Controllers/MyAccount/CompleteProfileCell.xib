@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompleteProfileCell" rowHeight="62" id="PNE-ug-Nlj" customClass="CompleteProfileCell" customModule="ZaraatVendor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNE-ug-Nlj" id="hXY-74-sHq">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x77-Ad-pbp">
+                        <rect key="frame" x="0.0" y="16" width="430" height="31"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Your Business Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-dh-a4A">
+                                <rect key="frame" x="16" y="4" width="233" height="23"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-TN-pOi">
+                                <rect key="frame" x="307" y="0.5" width="105" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InComplete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-sv-JzA">
+                                        <rect key="frame" x="4" y="4.5" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99157708879999995" green="0.057421468199999999" blue="0.054084770380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nu5-sv-JzA" firstAttribute="leading" secondItem="DRO-TN-pOi" secondAttribute="leading" constant="4" id="Dhz-lB-l4Z"/>
+                                    <constraint firstItem="Nu5-sv-JzA" firstAttribute="top" secondItem="DRO-TN-pOi" secondAttribute="top" constant="4.5" id="JSC-9T-MG6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nu5-sv-JzA" secondAttribute="trailing" constant="4" id="i3i-LC-4D6"/>
+                                    <constraint firstAttribute="width" constant="105" id="o5C-vt-3u1"/>
+                                    <constraint firstAttribute="height" constant="30" id="x30-7y-RyQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nu5-sv-JzA" secondAttribute="bottom" constant="4.5" id="zfb-XY-lry"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MVC-dh-a4A" firstAttribute="leading" secondItem="x77-Ad-pbp" secondAttribute="leading" constant="16" id="AMd-NS-H6P"/>
+                            <constraint firstAttribute="trailing" secondItem="DRO-TN-pOi" secondAttribute="trailing" constant="18" id="GUT-vt-9Rz"/>
+                            <constraint firstItem="MVC-dh-a4A" firstAttribute="centerY" secondItem="x77-Ad-pbp" secondAttribute="centerY" id="cum-n1-v46"/>
+                            <constraint firstItem="DRO-TN-pOi" firstAttribute="centerY" secondItem="x77-Ad-pbp" secondAttribute="centerY" id="n7B-Rr-KaA"/>
+                            <constraint firstAttribute="bottom" secondItem="MVC-dh-a4A" secondAttribute="bottom" constant="4" id="n9c-BJ-goo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="x77-Ad-pbp" firstAttribute="leading" secondItem="hXY-74-sHq" secondAttribute="leading" id="KGl-1z-EX3"/>
+                    <constraint firstItem="x77-Ad-pbp" firstAttribute="top" secondItem="hXY-74-sHq" secondAttribute="top" constant="16" id="Raa-Th-KnM"/>
+                    <constraint firstAttribute="bottom" secondItem="x77-Ad-pbp" secondAttribute="bottom" constant="15" id="aMS-El-1YW"/>
+                    <constraint firstAttribute="trailing" secondItem="x77-Ad-pbp" secondAttribute="trailing" id="uac-MI-vtc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="99l-IF-3nt"/>
+            <connections>
+                <outlet property="completeView" destination="DRO-TN-pOi" id="RJ7-Ub-Vuy"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="94.419642857142847"/>
+        </tableViewCell>
+    </objects>
+</document>

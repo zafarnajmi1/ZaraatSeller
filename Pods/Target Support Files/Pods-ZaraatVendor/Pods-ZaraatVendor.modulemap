@@ -1,0 +1,6 @@
+framework module Pods_ZaraatVendor {
+  umbrella header "Pods-ZaraatVendor-umbrella.h"
+
+  export *
+  module * { export * }
+}

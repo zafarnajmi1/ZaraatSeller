@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="SalesListCell" customModule="ZaraatVendor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG3-kz-UGS">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="111"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="All Image 4" translatesAutoresizingMaskIntoConstraints="NO" id="xUq-VS-e0G">
+                                <rect key="frame" x="8" y="20.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6o6-1G-5iK"/>
+                                    <constraint firstAttribute="height" constant="70" id="W5e-5S-jCh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Da-mi-A6s">
+                                <rect key="frame" x="86" y="18.5" width="123" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount Price :  299 PKR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-CF-yZy">
+                                <rect key="frame" x="86" y="44.5" width="170.5" height="23"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry Date: 20-05-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-wv-NiF">
+                                <rect key="frame" x="86" y="67.5" width="170" height="23"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicate-1" translatesAutoresizingMaskIntoConstraints="NO" id="I3Z-7z-tOE">
+                                <rect key="frame" x="362" y="48" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="1RF-qi-dTS"/>
+                                    <constraint firstAttribute="width" constant="15" id="PO7-I8-HFh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xUq-VS-e0G" firstAttribute="top" secondItem="OG3-kz-UGS" secondAttribute="top" constant="20.5" id="2P6-7I-mKN"/>
+                            <constraint firstItem="lrZ-CF-yZy" firstAttribute="top" secondItem="0Da-mi-A6s" secondAttribute="bottom" constant="2" id="6FF-V2-XmD"/>
+                            <constraint firstItem="0Da-mi-A6s" firstAttribute="top" secondItem="xUq-VS-e0G" secondAttribute="top" constant="-2" id="9fp-Nj-Lmt"/>
+                            <constraint firstItem="I3Z-7z-tOE" firstAttribute="centerY" secondItem="OG3-kz-UGS" secondAttribute="centerY" id="QLC-tz-eDa"/>
+                            <constraint firstItem="0Da-mi-A6s" firstAttribute="leading" secondItem="xUq-VS-e0G" secondAttribute="trailing" constant="8" id="S9A-6w-p5c"/>
+                            <constraint firstItem="xUq-VS-e0G" firstAttribute="leading" secondItem="OG3-kz-UGS" secondAttribute="leading" constant="8" id="Vr4-yN-Ttq"/>
+                            <constraint firstItem="0Pl-wv-NiF" firstAttribute="leading" secondItem="xUq-VS-e0G" secondAttribute="trailing" constant="8" id="atX-sF-BWJ"/>
+                            <constraint firstItem="lrZ-CF-yZy" firstAttribute="leading" secondItem="xUq-VS-e0G" secondAttribute="trailing" constant="8" id="ev6-rj-Nab"/>
+                            <constraint firstAttribute="trailing" secondItem="I3Z-7z-tOE" secondAttribute="trailing" constant="15" id="iMa-ST-xYK"/>
+                            <constraint firstAttribute="bottom" secondItem="xUq-VS-e0G" secondAttribute="bottom" constant="20.5" id="ra6-ss-A9E"/>
+                            <constraint firstItem="xUq-VS-e0G" firstAttribute="centerY" secondItem="OG3-kz-UGS" secondAttribute="centerY" id="tLv-4X-QSX"/>
+                            <constraint firstItem="0Pl-wv-NiF" firstAttribute="top" secondItem="lrZ-CF-yZy" secondAttribute="bottom" id="tYN-S8-VPR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OG3-kz-UGS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KF9-Ub-arz"/>
+                    <constraint firstAttribute="trailing" secondItem="OG3-kz-UGS" secondAttribute="trailing" id="Y2s-f5-Rsi"/>
+                    <constraint firstItem="OG3-kz-UGS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="adm-gd-kCD"/>
+                    <constraint firstAttribute="bottom" secondItem="OG3-kz-UGS" secondAttribute="bottom" id="yQY-Mv-y6x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="xUq-VS-e0G" id="Gu8-gz-OZ8"/>
+                <outlet property="lbldate" destination="0Pl-wv-NiF" id="W6G-gs-EwW"/>
+                <outlet property="lblprice" destination="lrZ-CF-yZy" id="Yan-Q1-JAG"/>
+                <outlet property="lbltitle" destination="0Da-mi-A6s" id="rwN-z7-Jg3"/>
+            </connections>
+            <point key="canvasLocation" x="184.05797101449278" y="162.72321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="All Image 4" width="530" height="415"/>
+        <image name="indicate-1" width="25" height="25"/>
+    </resources>
+</document>
