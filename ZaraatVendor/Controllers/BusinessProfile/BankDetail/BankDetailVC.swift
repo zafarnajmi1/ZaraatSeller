@@ -54,6 +54,7 @@ class BankDetailVC: UIViewController {
     }
     
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
@@ -70,7 +71,7 @@ class BankDetailVC: UIViewController {
         txtbranchCode.text =  editvendorsBProfile?.vendor_branch_code
         txtAccounttitle.text =  editvendorsBProfile?.vendor_account_title
         txtbranchname.text = editvendorsBProfile?.vendor_bank_name
-        self.params.params.updateValue(editvendorsBProfile?.bank_id! ?? "", forKey:"bank_id" )
+        self.params.params.updateValue(editvendorsBProfile?.bank_id ?? "", forKey:"bank_id" )
     }
     func setUpView() {
         

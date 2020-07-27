@@ -183,7 +183,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
           if UIDevice.current.userInterfaceIdiom == .pad {
 
                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
-                let vc =  storyBoard.instantiateViewController(withIdentifier: "SetPasswordVC") as? SetPasswordVC
+                let vc =  storyBoard.instantiateViewController(withIdentifier: "RestPasswordVC") as? RestPasswordVC
                 
              
                 self.navigationController?.pushViewController(vc!, animated: true)
@@ -191,7 +191,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
           } else {
 
                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
-                let vc =  storyBoard.instantiateViewController(withIdentifier: "SetPasswordVC") as? SetPasswordVC
+                let vc =  storyBoard.instantiateViewController(withIdentifier: "RestPasswordVC") as? RestPasswordVC
                  
              
                 self.navigationController?.pushViewController(vc!, animated: true)

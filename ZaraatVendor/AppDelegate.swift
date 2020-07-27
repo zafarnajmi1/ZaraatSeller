@@ -20,10 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      IQKeyboardManager.shared.enable = true
-        GMSServices.provideAPIKey("AIzaSyDTr8Ay74_TINfjRARbVN4H0BtGbpzv8DE")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI") //("AIzaSyBjEjCpCv1VfMc-BTh191xCd_omhTjJZDE")
-        GMSPlacesClient.provideAPIKey("AIzaSyDTr8Ay74_TINfjRARbVN4H0BtGbpzv8DE")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI")
+        GMSServices.provideAPIKey("AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI") //("AIzaSyBjEjCpCv1VfMc-BTh191xCd_omhTjJZDE")
+        GMSPlacesClient.provideAPIKey("AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI")
         // CrispSDK.configure(websiteID: "")
-        
+        //AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs
+//AIzaSyDTr8Ay74_TINfjRARbVN4H0BtGbpzv8DE
+
         return true
     }
 
