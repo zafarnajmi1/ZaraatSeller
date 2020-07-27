@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden =  false
         self.title = "Home"
         supportView.viewconfig(radius: 5)
          inboxView.viewconfig(radius: 5)

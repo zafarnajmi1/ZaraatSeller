@@ -117,7 +117,7 @@ class BillingInfoVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  false
+            self.navigationController?.navigationBar.isHidden =  true
             setUpEditProfile()
         }
     }
@@ -434,8 +434,8 @@ class BillingInfoVC: UIViewController {
                 ShareData.hideProgress()
                 if response.success == 1 {
                      Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
-               
-                    self.movetoHome()
+                   
+                        self.movetoHome()
                     
                 } else {
                     ShareData.hideProgress()

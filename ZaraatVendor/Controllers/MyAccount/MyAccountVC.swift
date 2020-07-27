@@ -26,6 +26,7 @@ class MyAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Account"
+//        self.navigationController?.navigationBar.isHidden =  true
         self.userimg.roundImg()
         tblView.register(UINib.init(nibName: "MyCccountCell", bundle: nil), forCellReuseIdentifier: "MyCccountCell")
         tblView.register(UINib.init(nibName: "CompleteProfileCell", bundle: nil), forCellReuseIdentifier: "CompleteProfileCell")

@@ -126,7 +126,7 @@ class BusinessInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.navigationController?.navigationBar.isHidden =  false
+        // self.navigationController?.navigationBar.isHidden =  false
         btnNext.backgroundColor =  #colorLiteral(red: 1, green: 0.518507421, blue: 0.0850796476, alpha: 1)
         self.title = "Business Profile"
         txtdescriptionUr.delegate = self
@@ -162,7 +162,7 @@ class BusinessInfoVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  false
+            self.navigationController?.navigationBar.isHidden =  true
             setupEditBProfile()
         }
        

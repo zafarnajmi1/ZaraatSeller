@@ -12,8 +12,8 @@ class TabBarVC: UITabBarController {
 
    override func viewDidLoad() {
             super.viewDidLoad()
-    self.title = "Home"
-    //         self.navigationController?.navigationBar.isHidden =  false
+             //self.title = "Home"
+            self.navigationController?.navigationBar.isHidden =  true
     //         self.navigationItem.hidesBackButton = false
           cinfigTabbar()
             

@@ -54,12 +54,11 @@ class BankDetailVC: UIViewController {
     }
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  false
+            self.navigationController?.navigationBar.isHidden =  true
             setUpEditProfile()
         }
     }
