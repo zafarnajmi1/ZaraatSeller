@@ -162,7 +162,7 @@ class BusinessInfoVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  true
+            self.navigationController?.navigationBar.isHidden =  false 
             setupEditBProfile()
         }
        
@@ -265,7 +265,6 @@ class BusinessInfoVC: UIViewController {
         
         
     }
-
     
     
     @IBAction func businesstype(_ sender: UIButton) {
@@ -516,6 +515,7 @@ class BusinessInfoVC: UIViewController {
     }
     
     func checkData() -> Bool {
+       
 //        if txtownerName.text == "" {
 //            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Owner Name", messagetype: 0)
 //            return false
@@ -547,8 +547,8 @@ class BusinessInfoVC: UIViewController {
         }else if txtcompanyName.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Company Name", messagetype: 0)
             return false
-        } else if txtbusinessNumber.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 7FkR3412) ", messagetype: 0)
+            } else if txtbusinessNumber.text == ""  {
+            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 11234567-2) ", messagetype: 0)
             return false
         }else if txtDocumentAttachment.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Document (e.g image)", messagetype: 0)

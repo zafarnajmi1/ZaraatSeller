@@ -58,7 +58,7 @@ class BankDetailVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  true
+            self.navigationController?.navigationBar.isHidden =  false 
             setUpEditProfile()
         }
     }

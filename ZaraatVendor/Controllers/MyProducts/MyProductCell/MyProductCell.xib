@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProductCell" rowHeight="118" id="KGk-i7-Jjw" customClass="MyProductCell" customModule="ZaraatVendor" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProductCell" rowHeight="118" id="KGk-i7-Jjw" customClass="MyProductCell" customModule="Zaraat_Seller" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="382" height="118"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -44,13 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNj-Ev-43D">
-                                <rect key="frame" x="81" y="49" width="103" height="17"/>
+                                <rect key="frame" x="81" y="47" width="103" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-fV-5Oa">
-                                <rect key="frame" x="186" y="49" width="42.5" height="17"/>
+                                <rect key="frame" x="186" y="47" width="42.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -85,20 +85,36 @@
                                     <constraint firstItem="1wI-7P-m7i" firstAttribute="top" secondItem="ejg-24-37T" secondAttribute="top" id="oa9-HV-MNa"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnR-CE-MZ4">
+                                <rect key="frame" x="81" y="67" width="50" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phr-Rm-g36">
+                                <rect key="frame" x="133" y="67" width="42.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="aNj-Ev-43D" firstAttribute="top" secondItem="I5w-Iw-bAk" secondAttribute="bottom" constant="10" id="7XA-gI-vTg"/>
+                            <constraint firstItem="aNj-Ev-43D" firstAttribute="top" secondItem="I5w-Iw-bAk" secondAttribute="bottom" constant="8" id="7XA-gI-vTg"/>
+                            <constraint firstItem="Phr-Rm-g36" firstAttribute="leading" secondItem="nnR-CE-MZ4" secondAttribute="trailing" constant="2" id="BnD-xS-Qcc"/>
                             <constraint firstItem="aNj-Ev-43D" firstAttribute="leading" secondItem="Aqt-EB-HIU" secondAttribute="trailing" constant="8" id="Et6-RK-efe"/>
                             <constraint firstItem="MDa-fV-5Oa" firstAttribute="centerY" secondItem="aNj-Ev-43D" secondAttribute="centerY" id="Fdx-ZP-Y1Y"/>
                             <constraint firstItem="Aqt-EB-HIU" firstAttribute="leading" secondItem="zsA-XQ-222" secondAttribute="leading" constant="8" id="Gmy-9b-nyN"/>
                             <constraint firstItem="I5w-Iw-bAk" firstAttribute="top" secondItem="Aqt-EB-HIU" secondAttribute="top" id="L55-W8-Vp5"/>
                             <constraint firstItem="Aqt-EB-HIU" firstAttribute="top" secondItem="zsA-XQ-222" secondAttribute="top" constant="14" id="Orb-GR-wiy"/>
+                            <constraint firstItem="Phr-Rm-g36" firstAttribute="centerY" secondItem="nnR-CE-MZ4" secondAttribute="centerY" id="Wpk-UV-vPg"/>
                             <constraint firstAttribute="trailing" secondItem="ejg-24-37T" secondAttribute="trailing" constant="12" id="i2m-p0-r3g"/>
+                            <constraint firstItem="nnR-CE-MZ4" firstAttribute="top" secondItem="aNj-Ev-43D" secondAttribute="bottom" id="lKn-Nk-APE"/>
                             <constraint firstItem="ejg-24-37T" firstAttribute="centerY" secondItem="zsA-XQ-222" secondAttribute="centerY" id="mrt-jL-Bhc"/>
                             <constraint firstAttribute="bottom" secondItem="Aqt-EB-HIU" secondAttribute="bottom" constant="10" id="npL-OT-7S4"/>
                             <constraint firstItem="MDa-fV-5Oa" firstAttribute="leading" secondItem="aNj-Ev-43D" secondAttribute="trailing" constant="2" id="ser-wN-nKw"/>
                             <constraint firstItem="I5w-Iw-bAk" firstAttribute="leading" secondItem="Aqt-EB-HIU" secondAttribute="trailing" constant="8" id="x3E-h0-afG"/>
+                            <constraint firstItem="nnR-CE-MZ4" firstAttribute="leading" secondItem="Aqt-EB-HIU" secondAttribute="trailing" constant="8" id="zvV-Sn-XOs"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -112,8 +128,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="img" destination="Aqt-EB-HIU" id="yKR-tZ-CtD"/>
+                <outlet property="lblinstock" destination="nnR-CE-MZ4" id="9VS-1p-V0W"/>
                 <outlet property="lblproductName" destination="I5w-Iw-bAk" id="CrD-gY-tfa"/>
                 <outlet property="lblremainstock" destination="aNj-Ev-43D" id="JPl-cg-2Tc"/>
+                <outlet property="lbltons" destination="Phr-Rm-g36" id="wpG-7D-ghb"/>
                 <outlet property="lbltons2" destination="MDa-fV-5Oa" id="Fkh-pk-RPR"/>
                 <outlet property="mangView" destination="ejg-24-37T" id="2vg-gu-wWN"/>
             </connections>

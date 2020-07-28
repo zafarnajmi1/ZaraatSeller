@@ -96,7 +96,7 @@ class VendorPackageVC: BaseVC,deleteFeature {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
              addBackButton()
-            self.navigationController?.navigationBar.isHidden =  true
+            self.navigationController?.navigationBar.isHidden =  false
             btnMarket.isUserInteractionEnabled =  false
             editprofileApiCall()
         } else {

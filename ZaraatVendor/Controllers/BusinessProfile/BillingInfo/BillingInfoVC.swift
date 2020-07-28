@@ -117,7 +117,7 @@ class BillingInfoVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  true
+            self.navigationController?.navigationBar.isHidden =  false 
             setUpEditProfile()
         }
     }
@@ -494,7 +494,19 @@ class BillingInfoVC: UIViewController {
     
     
     @IBAction func skipAction(_ sender: UIButton) {
+        params.params.updateValue(ShareData.shareInfo.userInfo?.vendors?.vendor_id ?? "", forKey: "vendor_id")
+        params.params.updateValue(txtbilingpersonname.text!, forKey: "billing_person_name")
+        params.params.updateValue(txtbilingAddress.text!, forKey: "billing_address")
+        params.params.updateValue(txtbillingZipcode.text!, forKey: "billing_zipcode")
         
+        params.params.updateValue(txtshippingpersonname.text!, forKey: "shipping_person_name")
+        params.params.updateValue(txtshippingaddress.text!, forKey: "shipping_address")
+        params.params.updateValue(txtshippingZip.text!, forKey: "shipping_zipcode")
+        
+        params.params.updateValue("1", forKey: "shipping_status")
+        params.params.updateValue("1", forKey: "billing_status")
+        
+        params.params.updateValue(params.features, forKey:"vendor_category_id")
         businessPrfileSkipAction()
         
     }

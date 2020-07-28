@@ -15,8 +15,8 @@ class MyProductCell: UITableViewCell {
 
     @IBOutlet weak var lbltons2: UILabel!
     @IBOutlet weak var lblremainstock: UILabel!
-    //@IBOutlet weak var lbltons: UILabel!
-    //@IBOutlet weak var lblinstock: UILabel!
+    @IBOutlet weak var lbltons: UILabel!
+    @IBOutlet weak var lblinstock: UILabel!
     @IBOutlet weak var lblproductName: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var mangView: UIView!
@@ -35,8 +35,8 @@ class MyProductCell: UITableViewCell {
     }
     
     func setData(obj: Products) {
-        //lbltons.text = obj.product_stock ?? "" + "Tons"
-        lbltons2.text = obj.stock_threshold ?? "" + "Tons"
+        lbltons.text = obj.product_stock ?? ""
+        lbltons2.text = obj.stock_threshold ?? ""
         img.sd_imageIndicator = SDWebImageActivityIndicator.gray
         img.sd_setImage(with: URL(string: obj.images![0].file_path ?? ""), placeholderImage: UIImage(named: "Grey Logo (1)"))
         
