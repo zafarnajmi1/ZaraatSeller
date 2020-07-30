@@ -32,6 +32,11 @@ class SplashVC: BaseVC {
             }
         }
         
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
         func CheckLogin() {
             if ShareData.shareInfo.autologin == true  {
                 LoginVendor()

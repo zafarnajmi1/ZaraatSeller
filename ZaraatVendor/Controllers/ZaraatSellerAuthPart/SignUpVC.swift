@@ -12,18 +12,18 @@ class SignUpVC: BaseVC {
    var mydropwdown = DropDown()
     @IBOutlet weak var btnsignUp: UIButton!
    
-    @IBOutlet weak var usernameView: UIView!
-    @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var passwordView: UIView!
-    
-    @IBOutlet weak var btnquestion: UIButton!
-    @IBOutlet weak var lastNameView: UIView!
-    @IBOutlet weak var confirmPasswordView: UIView!
-    
-    @IBOutlet weak var phoneView: UIView!
-    //@IBOutlet weak var cityView: UIView!
-    
-    @IBOutlet weak var txtlastName: UITextField!
+//    @IBOutlet weak var usernameView: UIView!
+//    @IBOutlet weak var emailView: UIView!
+//    @IBOutlet weak var passwordView: UIView!
+//
+//    @IBOutlet weak var btnquestion: UIButton!
+//    @IBOutlet weak var lastNameView: UIView!
+//    @IBOutlet weak var confirmPasswordView: UIView!
+//
+//    @IBOutlet weak var phoneView: UIView!
+//    //@IBOutlet weak var cityView: UIView!
+//
+//    @IBOutlet weak var txtlastName: UITextField!
     @IBOutlet weak var txtuserName: UITextField!
     @IBOutlet weak var txtemail: UITextField!
     @IBOutlet weak var txtpassword: UITextField!
@@ -32,13 +32,13 @@ class SignUpVC: BaseVC {
     
     //@IBOutlet weak var txtcity: UITextField!
     
-    @IBOutlet weak var txtanswer: UITextField!
-    @IBOutlet weak var answerView: UIView!
-    
-    @IBOutlet weak var questionView: UIView!
-    // @IBOutlet weak var questionView: UIView!
-    
-    @IBOutlet weak var txtquestion: UITextField!
+//    @IBOutlet weak var txtanswer: UITextField!
+//    @IBOutlet weak var answerView: UIView!
+//
+//    @IBOutlet weak var questionView: UIView!
+//    // @IBOutlet weak var questionView: UIView!
+//
+//    @IBOutlet weak var txtquestion: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +49,12 @@ class SignUpVC: BaseVC {
     
     
     func viewconfigsignup(){
-        btnsignUp.roundbuttonRadius(borderwidth: 2)
-        usernameView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        emailView.addInnerShadow(topColor: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1))
-        passwordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        confirmPasswordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        phoneView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+        btnsignUp.roundbuttonRadius(borderwidth: 0)
+//        usernameView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        emailView.addInnerShadow(topColor: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1))
+//        passwordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        confirmPasswordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        phoneView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         //cityView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         //lastNameView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         //questionView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))

@@ -101,7 +101,10 @@ class CodeVerificationVC: BaseVC, UITextFieldDelegate {
     //
     //
         
-        
+    @IBAction func backscreen(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
         @IBAction func resendAction(_ sender: UIButton) {
             
             

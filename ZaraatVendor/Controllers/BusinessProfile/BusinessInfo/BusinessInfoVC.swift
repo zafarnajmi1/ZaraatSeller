@@ -547,7 +547,7 @@ class BusinessInfoVC: UIViewController {
         }else if txtcompanyName.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Company Name", messagetype: 0)
             return false
-            } else if txtbusinessNumber.text == ""  {
+            } else if txtbusinessNumber.text?.isValidCode == false  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 11234567-2) ", messagetype: 0)
             return false
         }else if txtDocumentAttachment.text == ""  {

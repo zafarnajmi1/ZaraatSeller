@@ -63,7 +63,7 @@ extension UIViewController {
         navigationItem.hidesBackButton = true
     }
     
-    func addBackButton(backImage: UIImage = #imageLiteral(resourceName: "BackArrow")) {
+    func addBackButton(backImage: UIImage = #imageLiteral(resourceName: "backarrow")) {
         hideBackButton()
         let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem  = backButton
@@ -282,7 +282,7 @@ extension String {
     
     
     var isValidCode: Bool {
-        return NSPredicate(format: "SELF MATCHES %@", "^([0-9]-+[0-9]{1})").evaluate(with: self)
+        return NSPredicate(format: "SELF MATCHES %@", "^([0-9]{7}+[-]{1}+[0-9]{1})").evaluate(with: self)
     }
 }
 

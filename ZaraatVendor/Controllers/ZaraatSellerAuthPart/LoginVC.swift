@@ -7,34 +7,46 @@
 //
 
 import UIKit
+import  SkyFloatingLabelTextField
+class LoginVC: BaseVC,UITextFieldDelegate {
 
-class LoginVC: BaseVC {
-
-        @IBOutlet weak var passwordView: UIView!
-        @IBOutlet weak var emailView: UIView!
+//        @IBOutlet weak var passwordView: UIView!
+//        @IBOutlet weak var emailView: UIView!
         @IBOutlet weak var txtpassword: UITextField!
         @IBOutlet weak var btnlogin: UIButton!
         
       
-       
-        
-    @IBOutlet weak var txtemail: UITextField!
+    @IBOutlet weak var txtlogin: SkyFloatingLabelTextFieldWithIcon!
     
         
+   // @IBOutlet weak var txtemail: UITextField!
+    
+        var textFields: [SkyFloatingLabelTextField] = []
+
+           let lightGreyColor: UIColor = UIColor(red: 197 / 255, green: 205 / 255, blue: 205 / 255, alpha: 1.0)
+           let darkGreyColor: UIColor = UIColor(red: 52 / 255, green: 42 / 255, blue: 61 / 255, alpha: 1.0)
+           let overcastBlueColor: UIColor = UIColor(red: 0, green: 187 / 255, blue: 204 / 255, alpha: 1.0)
         
         override func viewDidLoad() {
             super.viewDidLoad()
+           textFields = [txtlogin]
+           for textField in textFields {
+               textField.delegate = self
+           }
            
+            
+            
+
 //            self.gmailView.roundView()
 //            self.twitterView.roundView()
             
     //        fbView.viewconfig(radius: 5)
     //        gmailView.viewconfig(radius: 5)
     //        twitterView.viewconfig(radius: 5)
-            btnlogin.roundbuttonRadius(borderwidth: 2)
-            
-            emailView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-            passwordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+              btnlogin.roundbuttonRadius(borderwidth: 0)
+//
+//            emailView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//            passwordView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
             //lgog.image = UIImage.init(named: "Logo")
             //headerView.roundCorners([.bottomLeft,.bottomRight], radius: 200)
         }
@@ -54,7 +66,7 @@ class LoginVC: BaseVC {
         
         
         func checkData()-> Bool {
-            if txtemail.text == "" {
+            if txtlogin.text == "" {
                Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Email", messagetype: 0)
                 return false
             } else if txtpassword.text == "" {
@@ -63,7 +75,7 @@ class LoginVC: BaseVC {
             }else if txtpassword.text!.count < 3 || txtpassword.text!.count > 15  {
               Zalert.ZshareAlert.showAlert(title: "Alert", message: " Password length must be 3-15 characters", messagetype: 0)
                 return false
-            }else if txtemail.text!.isValidEmail != true  {
+            }else if txtlogin.text!.isValidEmail != true  {
               Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Valid Email", messagetype: 0)
                 return false
             }
@@ -74,14 +86,14 @@ class LoginVC: BaseVC {
     //
         func LoginVendor() {
     
-               let dic : [String:Any] = ["email" : txtemail.text!,"password":txtpassword.text!]
+               let dic : [String:Any] = ["email" : txtlogin.text!,"password":txtpassword.text!]
             ShareData.showProgress()
                userhandler.login(parms: dic, Success: {response in
                  ShareData.hideProgress()
                    ShareData.hideProgress()
                    if response.success == 1{
                     ShareData.shareInfo.userInfo = response
-                    ShareData.shareInfo.email = self.txtemail.text!
+                    ShareData.shareInfo.email = self.txtlogin.text!
                     ShareData.shareInfo.password = self.txtpassword.text!
                     ShareData.shareInfo.autologin =  true
                     if response.vendors?.status == 0 {

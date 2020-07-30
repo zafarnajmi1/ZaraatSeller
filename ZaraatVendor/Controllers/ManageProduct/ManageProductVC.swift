@@ -90,12 +90,12 @@ class ManageProductVC: UIViewController {
     func getViewPrpduct(){
         ShareData.showProgress()
         userhandler.viewVendorProduct(id: productId, Success: {successResponse in
-            ShareData.hideProgress()
+            ShareData.hideProgress() 
             if successResponse.status == 1 {
                 self.viewproduct =  successResponse
                 
                 self.lblstock.text =  self.viewproduct?.product?.product_stock
-                self.lbldescription.text =  self.viewproduct?.product?.product_description_en
+                self.lbldescription.text =  self.viewproduct?.features?.feature_desc_en
                 self.lblproductname.text =  self.viewproduct?.product?.product_title_en
                 self.slidercollection.reloadData()
             } else {

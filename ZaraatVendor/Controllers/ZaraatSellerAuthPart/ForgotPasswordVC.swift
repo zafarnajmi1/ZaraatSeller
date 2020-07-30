@@ -13,13 +13,13 @@ class ForgotPasswordVC: BaseVC {
    
 
         @IBOutlet weak var btnNext: UIButton!
-        @IBOutlet weak var emailView: UIView!
+       // @IBOutlet weak var emailView: UIView!
         @IBOutlet weak var txtemail: UITextField!
         var id = 0
         override func viewDidLoad() {
             super.viewDidLoad()
-            emailView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-            btnNext.roundbuttonRadius(borderwidth: 2)
+            //emailView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+            btnNext.roundbuttonRadius(borderwidth: 0)
             //addShadow(to: [.top,.bottom,.left,.right], radius: 5.0)//addInerShadowLayer()
         }
         

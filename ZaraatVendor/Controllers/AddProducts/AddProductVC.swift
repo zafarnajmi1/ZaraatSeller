@@ -64,10 +64,10 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
 //    @IBOutlet weak var btnVariable: UIButton!
     
     
-    @IBOutlet weak var discriptionView: UIView!
+    //@IBOutlet weak var discriptionView: UIView!
     
     
-    @IBOutlet weak var txtView: UITextView!
+   // @IBOutlet weak var txtView: UITextView!
     
     
     @IBOutlet weak var btnadproduct: UIButton!
@@ -82,9 +82,9 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     @IBOutlet weak var stockProductView: UIView!
     
     
-    @IBOutlet weak var descriptionENView: UIView!
+    //@IBOutlet weak var descriptionENView: UIView!
     
-    @IBOutlet weak var txtdescriptionEN: UITextView!
+    //@IBOutlet weak var txtdescriptionEN: UITextView!
     
     //@IBOutlet weak var typeView: UIView!
     
@@ -139,7 +139,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     //@IBOutlet weak var txtdesriptionEn: UITextView!
     
-    @IBOutlet weak var txtdescriptionUr: UITextView!
+    //@IBOutlet weak var txtdescriptionUr: UITextView!
     
     
     @IBOutlet weak var lengthView: UIView!
@@ -261,8 +261,8 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 self.txtheight.text = self.viewproduct?.product?.product_height
                 self.txtwidth.text = self.viewproduct?.product?.product_width
                 self.txtsaleprice.text = self.viewproduct?.product?.selling_price
-                self.txtdescriptionEN.text = self.viewproduct?.product?.product_description_en
-                self.txtdescriptionUr.text = self.viewproduct?.product?.product_description_urdu
+//                self.txtdescriptionEN.text = self.viewproduct?.product?.product_description_en
+//                self.txtdescriptionUr.text = self.viewproduct?.product?.product_description_urdu
                 self.clView.reloadData()
             } else {
                  ShareData.hideProgress()
@@ -288,16 +288,16 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func formConfig(){
         
-        txtView.delegate = self
-         txtView.textColor = UIColor.lightGray
-         txtView.text = "Discription(urdu)"
-        txtView.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
-        
-        
-        txtdescriptionEN.delegate = self
-         txtdescriptionEN.textColor = UIColor.lightGray
-         txtdescriptionEN.text = "Discription(en)"
-        txtdescriptionEN.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+//        txtView.delegate = self
+//         txtView.textColor = UIColor.lightGray
+//         txtView.text = "Discription(urdu)"
+//        txtView.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+//
+//
+//        txtdescriptionEN.delegate = self
+//         txtdescriptionEN.textColor = UIColor.lightGray
+//         txtdescriptionEN.text = "Discription(en)"
+//        txtdescriptionEN.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
         
         headerView.viewSetUp(radius: 8, color: #colorLiteral(red: 0.7955924273, green: 0.8120230436, blue: 0.8036844134, alpha: 1), borderwidth: 1)
        
@@ -344,17 +344,17 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         salePriceView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
         self.skuView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
          
-        descriptionENView.layer.cornerRadius = 10
-        descriptionENView.layer.borderWidth = 1
-        descriptionENView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
-        
-        
-        
-        
-        
-        discriptionView.layer.cornerRadius = 10
-        discriptionView.layer.borderWidth = 1
-        discriptionView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+//        descriptionENView.layer.cornerRadius = 10
+//        descriptionENView.layer.borderWidth = 1
+//        descriptionENView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+//
+//
+//
+//
+//
+//        discriptionView.layer.cornerRadius = 10
+//        discriptionView.layer.borderWidth = 1
+//        discriptionView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
         
         imageView.layer.cornerRadius = 10
         imageView.layer.borderWidth = 1
@@ -570,13 +570,13 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                    Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter the Stock", messagetype: 0)
                                return false
                }
-        else if txtdescriptionUr.text == ""{
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter the Discription In (Urdu)", messagetype: 0)
-                        return false
-        }else if txtdescriptionEN.text == ""{
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter the Discription In (English)", messagetype: 0)
-                        return false
-        }
+//        else if txtdescriptionUr.text == ""{
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter the Discription In (Urdu)", messagetype: 0)
+//                        return false
+//        }else if txtdescriptionEN.text == ""{
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter the Discription In (English)", messagetype: 0)
+//                        return false
+//        }
         return true
     }
     
@@ -617,7 +617,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func createProductApi(){
         
-        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"product_description_en":txtdescriptionEN.text!,"product_description_urdu":txtdescriptionUr.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!]
+        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!]
         
         
         print("Check Data",dic)
@@ -667,7 +667,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func updateProductApi(){
             
-            let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"product_description_en":txtdescriptionEN.text!,"product_description_urdu":txtdescriptionUr.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!]
+            let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!]
            // userhandler.UplodGallery(img: img, Success: {successResponse in
             //            ShareData.hideProgress()
             //            self.imageGallery = successResponse
@@ -991,57 +991,57 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
 }
 
 
-extension AddProductVC: UITextViewDelegate{
-    
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Discription(en)" {
-            textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-            
-        }
-        else if textView.text == "Discription(urdu)"{
-            
-            textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-            
-        }
-      
-        
-    }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-        }
-        return true
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView == txtdescriptionEN {
-            if textView.text == ""{
-            textView.text = "Discription(en)"
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-            
-            }
-        }
-        else if textView == txtdescriptionUr {
-            if textView.text == ""{
-                textView.text = "Discription(urdu)"
-                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-               
-            }
-        }
-        
-        
-    }
-    
-    
-    
-    
-    
-    
-}
+//extension AddProductVC: UITextViewDelegate{
+//
+//
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if textView.text == "Discription(en)" {
+//            textView.text = ""
+//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+//
+//        }
+//        else if textView.text == "Discription(urdu)"{
+//
+//            textView.text = ""
+//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+//
+//        }
+//
+//
+//    }
+//
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        if text == "\n" {
+//            textView.resignFirstResponder()
+//        }
+//        return true
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if textView == txtdescriptionEN {
+//            if textView.text == ""{
+//            textView.text = "Discription(en)"
+//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+//
+//            }
+//        }
+//        else if textView == txtdescriptionUr {
+//            if textView.text == ""{
+//                textView.text = "Discription(urdu)"
+//                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+//
+//            }
+//        }
+//
+//
+//    }
+//
+//
+//
+//
+//
+//
+//}
 
 extension AddProductVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {

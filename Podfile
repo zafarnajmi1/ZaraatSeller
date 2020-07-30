@@ -42,4 +42,5 @@ target 'ZaraatVendor' do
  pod 'YPImagePicker'
  pod 'SwiftyMenu'
 # pod 'Crisp'
+pod 'SkyFloatingLabelTextField'
 end
