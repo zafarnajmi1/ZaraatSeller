@@ -101,6 +101,58 @@ extension UIViewController {
 extension UIView {
     
     
+    func cardShadow(){
+        self.layer.cornerRadius = 10.0
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 0.7
+    }
+    
+    
+    
+    enum VerticalLocation: String {
+        case bottom
+        case top
+    }
+    func addShadow(location: VerticalLocation, color: UIColor = .black, opacity: Float = 0.3, radius: CGFloat = 50) {
+            switch location {
+            case .bottom:
+                addShadow(offset: CGSize(width: 0, height: 5), color: color, opacity: opacity, radius: radius)
+            case .top:
+                addShadow(offset: CGSize(width: 0, height: -5), color: color, opacity: opacity, radius: radius)
+            }
+        }
+
+        func addShadow(offset: CGSize, color: UIColor = .black, opacity: Float = 0.3, radius: CGFloat = 50) {
+            self.layer.masksToBounds = false
+            self.layer.shadowColor = color.cgColor
+            self.layer.shadowOffset = offset
+            self.layer.shadowOpacity = opacity
+            self.layer.shadowRadius = radius
+        }
+    
+    
+    
+    func dropShadow(shadowColor: UIColor = UIColor.black,
+                    fillColor: UIColor = UIColor.white,
+                    opacity: Float = 0.2,
+                    offset: CGSize = CGSize(width: 0.0, height: 10.0),
+                    radius: CGFloat = 1) -> CAShapeLayer {
+
+        let shadowLayer = CAShapeLayer()
+
+        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: radius).cgPath
+        shadowLayer.fillColor = fillColor.cgColor
+        shadowLayer.shadowColor = shadowColor.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = offset
+        shadowLayer.shadowOpacity = opacity
+        shadowLayer.shadowRadius = radius
+        layer.insertSublayer(shadowLayer, at: 0)
+        return shadowLayer
+    }
+    
     public func addSoftUIEffectForView(cornerRadius: CGFloat = 15.0, themeColor: UIColor = UIColor(red: 241/255, green: 243/255, blue: 246/255, alpha: 1.0)) {
         self.layer.cornerRadius = layer.frame.height / 2 //cornerRadius
         self.layer.masksToBounds = false
@@ -170,8 +222,9 @@ extension UIView {
 
     let mask = CAShapeLayer()
          mask.path = path.cgPath
-         self.layer.mask = mask
+        self.layer.mask = mask
     }
+    
     func roundCornersWithLayerMask(cornerRadii: CGFloat, corners: UIRectCorner) {
       let path = UIBezierPath(roundedRect: bounds,
                               byRoundingCorners: corners,
@@ -357,3 +410,100 @@ extension UIViewController {
           overrideUserInterfaceStyle = .light
     }
 }
+
+
+
+
+
+@IBDesignable class ShadowView: UIView {
+
+    @IBInspectable var shadowColor: UIColor? {
+        get {
+            if let color = layer.shadowColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.shadowColor = color.cgColor
+            } else {
+                layer.shadowColor = nil
+            }
+        }
+    }
+
+    
+    
+    
+    
+    @IBInspectable var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+
+    @IBInspectable var shadowOffset: CGPoint {
+        get {
+            return CGPoint(x: layer.shadowOffset.width, y:layer.shadowOffset.height)
+        }
+        set {
+            layer.shadowOffset = CGSize(width: newValue.x, height: newValue.y)
+        }
+
+     }
+
+    @IBInspectable var shadowBlur: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue / 2.0
+        }
+    }
+
+    
+    @IBInspectable var borderwidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    
+    @IBInspectable var borderColor: UIColor? {
+           get {
+               if let color = layer.borderColor {
+                   return UIColor(cgColor: color)
+               }
+               return nil
+           }
+           set {
+               if let color = newValue {
+                   layer.borderColor = color.cgColor
+               } else {
+                   layer.borderColor = nil
+               }
+           }
+       }
+    
+    
+    @IBInspectable var shadowSpread: CGFloat = 0 {
+        didSet {
+            if shadowSpread == 0 {
+                layer.shadowPath = nil
+            } else {
+                let dx = -shadowSpread
+                let rect = bounds.insetBy(dx: dx, dy: dx)
+                layer.shadowPath = UIBezierPath(rect: rect).cgPath
+            }
+        }
+    }
+}
+
+

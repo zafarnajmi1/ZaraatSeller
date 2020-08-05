@@ -11,15 +11,20 @@ import  BadgeHub
 
 class HomeVC: UIViewController {
 
+    //@IBOutlet weak var ovelView: UIView!
     @IBOutlet weak var supportView: UIView!
     @IBOutlet weak var inboxView: UIView!
     @IBOutlet weak var salesView: UIView!
     @IBOutlet weak var myAccountView: UIView!
     
+    @IBOutlet weak var inquiresView: UIView!
     
+    @IBOutlet weak var ordersView: UIView!
     
       var notificationBadge : BadgeHub?
     
+    @IBOutlet weak var btninquries: UIButton!
+    @IBOutlet weak var btnorders: UIButton!
     let buttonBar = UIView()
     // This needs to be false since we are using auto layout constraints
     
@@ -27,13 +32,14 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden =  false
+        self.setTabs()
+        self.navigationController?.navigationBar.isHidden =  true
         self.title = "Home"
         supportView.viewconfig(radius: 5)
          inboxView.viewconfig(radius: 5)
          myAccountView.viewconfig(radius: 5)
          salesView.viewconfig(radius: 5)
-        
+        //ovelView.roundCornersWithLayerMask(cornerRadii: 30, corners: [.bottomRight,.bottomLeft])
 //        notificationBadge = BadgeHub(view: supportView)
 //        notificationBadge?.scaleCircleSize(by: 0.65)
 //        notificationBadge?.setCircleColor(#colorLiteral(red: 0.9568627451, green: 0.6352941176, blue: 0.2078431373, alpha: 1), label: nil)
@@ -47,6 +53,58 @@ class HomeVC: UIViewController {
         //segmentConfig()
     }
     
+    func setTabs(){
+        
+       btninquries.layer.borderWidth =  1
+       btninquries.layer.borderColor =  #colorLiteral(red: 0.7007732391, green: 0.7412289977, blue: 0.7496894598, alpha: 1)
+       btninquries.roundButton()
+       btninquries.setTitleColor(#colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1), for: .normal)
+       
+        btnorders.roundButton()
+       btnorders.layer.backgroundColor =  #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
+      btnorders.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+       
+       ordersView.alpha =  1
+       inquiresView.alpha = 0
+
+    }
+    
+    @IBAction func inqueriesAction(_ sender: Any) {
+        btnorders.layer.borderWidth =  1
+               btnorders.layer.borderColor =  #colorLiteral(red: 0.7007732391, green: 0.7412289977, blue: 0.7496894598, alpha: 1)
+               btnorders.roundButton()
+               btnorders.setTitleColor(#colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1), for: .normal)
+         btnorders.layer.backgroundColor =  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+         
+        btninquries.roundButton()
+        btninquries.layer.backgroundColor =  #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
+        btninquries.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        ordersView.alpha =  0
+        inquiresView.alpha = 1
+    }
+    
+    @IBAction func orderAction(_ sender: UIButton) {
+        
+        btninquries.layer.borderWidth =  1
+              btninquries.layer.borderColor =  #colorLiteral(red: 0.7007732391, green: 0.7412289977, blue: 0.7496894598, alpha: 1)
+              btninquries.roundButton()
+              btninquries.setTitleColor(#colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1), for: .normal)
+         btninquries.layer.backgroundColor =  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+       btnorders.roundButton()
+         btnorders.layer.backgroundColor =  #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
+        btnorders.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        ordersView.alpha =  1
+        inquiresView.alpha = 0
+
+    }
+    
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.shadowImage = UIImage()

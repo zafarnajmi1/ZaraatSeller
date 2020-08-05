@@ -31,6 +31,35 @@ class TabBarVC: UITabBarController {
         
         func cinfigTabbar() {
             
+//            tabBar.barTintColor = .white
+//              tabBar.isTranslucent = false
+//
+//            tabBar.addShadow(location: .top)
+//
+//                    tabBar.layer.masksToBounds = false
+//                    tabBar.isTranslucent = true
+//                    tabBar.barStyle = .blackOpaque
+//                    tabBar.layer.cornerRadius = 13
+                    //tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            
+           tabBar.roundCorners([.topLeft, .topRight], radius: 100)
+            let tabBar = self.tabBar
+            tabBar.backgroundColor =  #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
+            tabBar.clipsToBounds = true
+            tabBar.layer.masksToBounds = true
+            self.tabBar.isTranslucent = true
+            tabBar.barTintColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
+//            tabBar.backgroundImage = UIImage()
+//
+//            let bgView: UIImageView = UIImageView(image:UIImage.init(named: "Lower Curve"))
+//            bgView.frame = tabBar.bounds
+//            tabBar.addSubview(bgView)
+//           tabBar.layer.borderWidth = 0
+//            tabBar.layer.borderColor = .none
+//            UITabBar.appearance().barTintColor = UIColor.clear
+//
+//            UITabBar.appearance().layer.borderWidth = 0.50
+//            UITabBar.appearance().clipsToBounds = true
     //        self.tabBar.isTranslucent = false
     //        tabBar.layer.shadowColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     //        tabBar.layer.shadowOpacity = 1
@@ -46,8 +75,8 @@ class TabBarVC: UITabBarController {
     //       let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "YourFontName", size: 12.0)!]
             //UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
           
-            let selectedtxtcolor = #colorLiteral(red: 1, green: 0.518507421, blue: 0.0850796476, alpha: 1)
-            let unSelectedtxtcolor = #colorLiteral(red: 0.5527616143, green: 0.5568413734, blue: 0.5609211326, alpha: 1)
+            let selectedtxtcolor = #colorLiteral(red: 0.1764705882, green: 0.8352941176, blue: 0.9764705882, alpha: 1)
+            let unSelectedtxtcolor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             UITabBar.appearance().tintColor =  #colorLiteral(red: 0.8582944274, green: 0.8745539188, blue: 0.8786686063, alpha: 1)
            
             UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unSelectedtxtcolor], for: .normal)

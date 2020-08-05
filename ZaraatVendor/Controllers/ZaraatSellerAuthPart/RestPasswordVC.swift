@@ -14,9 +14,9 @@ class RestPasswordVC: UIViewController {
     @IBOutlet weak var txtnewpass: UITextField!
     @IBOutlet weak var txtoldpass: UITextField!
     @IBOutlet weak var btnChange: UIButton!
-    @IBOutlet weak var ReEnterPassView: UIView!
-    @IBOutlet weak var newPassView: UIView!
-    @IBOutlet weak var oldView: UIView!
+//    @IBOutlet weak var ReEnterPassView: UIView!
+//    @IBOutlet weak var newPassView: UIView!
+//    @IBOutlet weak var oldView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         btnChange.roundButton()
@@ -26,9 +26,9 @@ class RestPasswordVC: UIViewController {
     }
     
     func setupChange(){
-        oldView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        ReEnterPassView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        newPassView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        oldView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        ReEnterPassView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        newPassView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
     }
   
     @IBAction func changeAction(_ sender: UIButton) {
