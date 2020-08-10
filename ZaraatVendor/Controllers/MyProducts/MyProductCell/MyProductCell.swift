@@ -25,7 +25,7 @@ class MyProductCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
         
-        mangView.viewconfig(radius: 10)
+        mangView.viewconfig(radius: Int(mangView.layer.frame.height / 2))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

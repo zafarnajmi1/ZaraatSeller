@@ -12,6 +12,7 @@ class PlatinumPkgVC: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Platinum")
     }
+    @IBOutlet weak var btnupgrade: UIButton!
     
      var packages : [Packages]?
     
@@ -19,7 +20,7 @@ class PlatinumPkgVC: UIViewController, IndicatorInfoProvider {
      @IBOutlet weak var tblView: UITableView!
         override func viewDidLoad() {
             super.viewDidLoad()
-
+            self.btnupgrade.roundButton()
             tblView.register(UINib.init(nibName: "PkgsCell", bundle: nil), forCellReuseIdentifier: "PkgsCell")
         }
         

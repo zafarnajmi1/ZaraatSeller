@@ -9,7 +9,9 @@
 import UIKit
 import  XLPagerTabStrip
 
-class InquiresVC: UIViewController,IndicatorInfoProvider {
+class InquiresVC: UIViewController,IndicatorInfoProvider,InquiriesReply {
+    
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "INQUIRES")
     }
@@ -26,7 +28,16 @@ class InquiresVC: UIViewController,IndicatorInfoProvider {
         @objc func refresh() {
             print("Iam Fresh")
         }
-
+    func replyinquireis(cell: InquiresCell) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InquiriesReplyVC") as! InquiriesReplyVC
+       
+        vc.modalPresentationStyle = .currentContext
+        vc.providesPresentationContextTransitionStyle = true
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext;
+        vc.view.backgroundColor = UIColor.init(white: 0.4, alpha: 0.8)
+        self.present(vc, animated: true, completion: nil)
+    }
 
     }
     extension InquiresVC : UITableViewDelegate , UITableViewDataSource {
@@ -40,8 +51,13 @@ class InquiresVC: UIViewController,IndicatorInfoProvider {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "InquiresCell") as?  InquiresCell
+            cell?.delegate =  self
             return cell!
         }
-        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClientMessageVC") as! ClientMessageVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
     }

@@ -109,6 +109,8 @@
 		CE6D9DF52473AE55004DA883 /* EditBusinessProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D9DF42473AE55004DA883 /* EditBusinessProfile.swift */; };
 		CE71A6D42499F00E0050B9DC /* AddGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71A6D32499F00E0050B9DC /* AddGalleryModel.swift */; };
 		CE7EA17B24C058E5007DD55F /* FeaturesViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA17A24C058E4007DD55F /* FeaturesViewVC.swift */; };
+		CE82068F24DBE66E002C1BB9 /* InquiriesReplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82068E24DBE66E002C1BB9 /* InquiriesReplyVC.swift */; };
+		CE82069124DC25D3002C1BB9 /* ClientMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82069024DC25D3002C1BB9 /* ClientMessageVC.swift */; };
 		CE8E026B246D1396003CCA92 /* GetProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E026A246D1396003CCA92 /* GetProductsModel.swift */; };
 		CE8E026D246D2501003CCA92 /* GetProductsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E026C246D2501003CCA92 /* GetProductsCategories.swift */; };
 		CE8E026F246D25D0003CCA92 /* GetProductsSubCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E026E246D25CF003CCA92 /* GetProductsSubCategories.swift */; };
@@ -406,6 +408,8 @@
 		CE6D9DF42473AE55004DA883 /* EditBusinessProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessProfile.swift; sourceTree = "<group>"; };
 		CE71A6D32499F00E0050B9DC /* AddGalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGalleryModel.swift; sourceTree = "<group>"; };
 		CE7EA17A24C058E4007DD55F /* FeaturesViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewVC.swift; sourceTree = "<group>"; };
+		CE82068E24DBE66E002C1BB9 /* InquiriesReplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiriesReplyVC.swift; sourceTree = "<group>"; };
+		CE82069024DC25D3002C1BB9 /* ClientMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMessageVC.swift; sourceTree = "<group>"; };
 		CE8E026A246D1396003CCA92 /* GetProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsModel.swift; sourceTree = "<group>"; };
 		CE8E026C246D2501003CCA92 /* GetProductsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsCategories.swift; sourceTree = "<group>"; };
 		CE8E026E246D25CF003CCA92 /* GetProductsSubCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsSubCategories.swift; sourceTree = "<group>"; };
@@ -903,6 +907,15 @@
 			path = ChangeLanguage;
 			sourceTree = "<group>";
 		};
+		CE82068D24DBE649002C1BB9 /* InquiriesReply */ = {
+			isa = PBXGroup;
+			children = (
+				CE82068E24DBE66E002C1BB9 /* InquiriesReplyVC.swift */,
+				CE82069024DC25D3002C1BB9 /* ClientMessageVC.swift */,
+			);
+			path = InquiriesReply;
+			sourceTree = "<group>";
+		};
 		CE999F4F24234B5D00A62352 /* BusinessProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1172,7 @@
 		CEBFC2552420E55F00D6ADA1 /* INQUIRES */ = {
 			isa = PBXGroup;
 			children = (
+				CE82068D24DBE649002C1BB9 /* InquiriesReply */,
 				CEBFC2602420E5D200D6ADA1 /* InquiresVC.swift */,
 				CEBFC2562420E59300D6ADA1 /* InquiresCell.swift */,
 				CEBFC2572420E59300D6ADA1 /* InquiresCell.xib */,
@@ -1576,6 +1590,7 @@
 				CEBCEBB02493A639009088D9 /* AddProductsModel.swift in Sources */,
 				CE518A5524C5BFB600ADEE79 /* AddReceiptModel.swift in Sources */,
 				CE0F06B424C16D67006ABD0A /* MainPakAgesVC.swift in Sources */,
+				CE82069124DC25D3002C1BB9 /* ClientMessageVC.swift in Sources */,
 				CE0F06B824C173BB006ABD0A /* GoldPkgVC.swift in Sources */,
 				CE0F06C124C17918006ABD0A /* PkgsCell.swift in Sources */,
 				CE0F06C424C18CC8006ABD0A /* FreePkgVC.swift in Sources */,
@@ -1660,6 +1675,7 @@
 				CE528B72248F73FC001AB5B9 /* AddproductGetChildCategories.swift in Sources */,
 				CE0F06B624C16D86006ABD0A /* SilverPkgVC.swift in Sources */,
 				CE518A5324C5AA5E00ADEE79 /* AddReceiptVC.swift in Sources */,
+				CE82068F24DBE66E002C1BB9 /* InquiriesReplyVC.swift in Sources */,
 				43B775D0242B1F5600B788A8 /* RecieverTxtCell.swift in Sources */,
 				4329DD91242DFAD700F0DCC5 /* AllOrderVC.swift in Sources */,
 				CE0F06BE24C17415006ABD0A /* TitaniumPkgVC.swift in Sources */,
@@ -1868,7 +1884,7 @@
 			baseConfigurationReference = 3FD7B3AAA956CB0A978E776B /* Pods-ZaraatVendor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = CDPRJ86Z6R;
@@ -1879,7 +1895,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ARW;
 				PRODUCT_NAME = "Zaraat Seller";
-				PROVISIONING_PROFILE_SPECIFIER = zaraatDestributtionProfile;
+				PROVISIONING_PROFILE_SPECIFIER = zaraatSellerProfileDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1890,7 +1906,7 @@
 			baseConfigurationReference = 99679711226C3816B895D9C1 /* Pods-ZaraatVendor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = CDPRJ86Z6R;
@@ -1901,7 +1917,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ARW;
 				PRODUCT_NAME = "Zaraat Seller";
-				PROVISIONING_PROFILE_SPECIFIER = zaraatDestributtionProfile;
+				PROVISIONING_PROFILE_SPECIFIER = zaraatSellerProfileDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

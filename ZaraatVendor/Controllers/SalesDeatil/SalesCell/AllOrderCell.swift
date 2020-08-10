@@ -11,11 +11,11 @@ import UIKit
 class AllOrderCell: UITableViewCell {
 
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var btnViewOrder: UIButton!
+    //@IBOutlet weak var btnViewOrder: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-        btnViewOrder.roundButton()
+        //btnViewOrder.roundButton()
         mainView.viewSetUp(radius: 8, color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), borderwidth: 1)
     }
 

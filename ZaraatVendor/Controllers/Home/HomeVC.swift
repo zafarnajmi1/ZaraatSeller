@@ -33,8 +33,13 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setTabs()
-        self.navigationController?.navigationBar.isHidden =  true
-        self.title = "Home"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+         navigationController?.navigationBar.titleTextAttributes = textAttributes
+       navigationButtons()
+         setNavigationBar()
+         UIApplication.shared.setStatusBar()
+        //self.navigationController?.navigationBar.isHidden =  true
+        self.navigationItem.title = "Zaraat Seller"
         supportView.viewconfig(radius: 5)
          inboxView.viewconfig(radius: 5)
          myAccountView.viewconfig(radius: 5)
@@ -143,14 +148,14 @@ class HomeVC: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
                    
                let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
-               let vc =  storyBoard.instantiateViewController(withIdentifier: "SalesDetailVC") as? SalesDetailVC
+               let vc =  storyBoard.instantiateViewController(withIdentifier: "TotalSalesVC") as? TotalSalesVC
                    //hidesBottomBarWhenPushed = true
                self.navigationController?.pushViewController(vc!, animated: true)
                
                } else {
                
                let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
-               let vc =  storyBoard.instantiateViewController(withIdentifier: "SalesDetailVC") as? SalesDetailVC
+               let vc =  storyBoard.instantiateViewController(withIdentifier: "TotalSalesVC") as? TotalSalesVC
                    //hidesBottomBarWhenPushed = true
                self.navigationController?.pushViewController(vc!, animated: true)
                }
@@ -202,25 +207,25 @@ class HomeVC: UIViewController {
     
     @IBAction func supportAction(_ sender: UIButton) {
         
-        self.alertMessage(message: "Order's Comining Soon...", completionHandler: {
-                  
-              })
-        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
+//        self.alertMessage(message: "Order's Comining Soon...", completionHandler: {
+//
+//              })
+//        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
         
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//
-//        let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
-//        let vc =  storyBoard.instantiateViewController(withIdentifier: "SupportVC") as? SupportVC
-//            //hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(vc!, animated: true)
-//
-//        } else {
-//
-//        let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
-//        let vc =  storyBoard.instantiateViewController(withIdentifier: "SupportVC") as? SupportVC
-//            //hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(vc!, animated: true)
-//        }
+        if UIDevice.current.userInterfaceIdiom == .pad {
+
+        let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
+        let vc =  storyBoard.instantiateViewController(withIdentifier: "AllOrderVC") as? AllOrderVC
+            //hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc!, animated: true)
+
+        } else {
+
+        let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
+        let vc =  storyBoard.instantiateViewController(withIdentifier: "AllOrderVC") as? AllOrderVC
+            //hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     
     

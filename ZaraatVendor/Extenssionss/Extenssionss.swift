@@ -12,6 +12,60 @@ import UIKit
 import SDWebImage
 
 extension UIViewController {
+    
+    
+    
+    
+      public func setNavigationBar(){
+            self.navigationItem.hidesBackButton =  false
+            self.navigationController?.isNavigationBarHidden = false
+             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+             let navColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)//UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+             let color: UIColor = navColor
+             self.navigationController?.navigationBar.isTranslucent = false
+             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) //UIColor(red: 223/255, green: 48/255, blue: 81/255, alpha: 1.0)
+             self.navigationController?.navigationBar.barTintColor = color
+            
+    //        let navigationBar = navigationController?.navigationBar
+    //        let navigationBarAppearence = UINavigationBarAppearance()
+    //        //navBarAppearence.shadowColor = .clear
+    //        navigationBar!.scrollEdgeAppearance = navigationBarAppearence
+            
+             //self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            // self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font:UIFont(name: "JosefinSans-SemiBold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+             self.navigationController?.navigationBar.barStyle = .blackTranslucent
+             
+         }
+    
+    func navigationButtons() {
+
+        let btn1 = UIButton()  //UIButton(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
+          
+         btn1.frame = CGRect(x: 0.0, y: 0.0, width: 10, height: 10)
+        btn1.setImage(UIImage(named: "chat"), for: .normal) //setBackgroundImage(UIImage(named: "user (-1"), for: .normal)
+        btn1.addTarget(self, action: #selector(btnEditprofilClick(_:)), for: .touchUpInside)
+       
+        let chat = UIBarButtonItem(customView: btn1)
+        
+        let btn2 = UIButton()  //UIButton(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
+                 
+                btn2.frame = CGRect(x: 0.0, y: 0.0, width: 10, height: 10)
+               btn2.setImage(UIImage(named: "Orders"), for: .normal) //setBackgroundImage(UIImage(named: "user (-1"), for: .normal)
+               btn2.addTarget(self, action: #selector(btnEditprofilClick(_:)), for: .touchUpInside)
+              
+               let order = UIBarButtonItem(customView: btn2)
+        
+        
+        
+         self.navigationItem.setRightBarButtonItems([chat, order], animated: true)
+    }
+    
+    @objc func btnEditprofilClick(_ sender: Any){
+                 
+                
+                 
+             }
+    
     func addNavigationButton()
        {
            let btn1 = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -302,6 +356,7 @@ extension UIImageView {
          self.layer.mask = mask
     }
     func roundImg (){
+        self.clipsToBounds = true
         self.layer.cornerRadius = layer.frame.height / 2
     }
     
@@ -507,3 +562,35 @@ extension UIViewController {
 }
 
 
+extension UIApplication {
+    
+
+    var statusBarView: UIView? {
+        if #available(iOS 13.0, *) {
+            let tag = 38482458
+            if let statusBar = self.keyWindow?.viewWithTag(tag) {
+                return statusBar
+            } else {
+                let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+                statusBarView.tag = tag
+                
+                self.keyWindow?.addSubview(statusBarView)
+                return statusBarView
+            }
+        } else {
+            if responds(to: Selector(("statusBar"))) {
+                return value(forKey: "statusBar") as? UIView
+            }
+        }
+        return nil
+    }
+    
+    func setStatusBar(color: UIColor = #colorLiteral(red: 0.06274239719, green: 0.2067543268, blue: 0.2775997818, alpha: 1)){
+        let view = UIApplication.shared.statusBarView
+        if let statusBarView = view  {
+              statusBarView.backgroundColor = color
+        }
+    }
+    
+    
+}

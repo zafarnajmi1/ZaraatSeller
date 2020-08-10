@@ -18,6 +18,12 @@ class TotalSalesVC: DemoBaseViewController,IndicatorInfoProvider {
     
    // @IBOutlet weak var myview: UIView!
     
+    @IBOutlet weak var pendingView: UIView!
+    @IBOutlet weak var cancelView: UIView!
+    @IBOutlet weak var totalView: UIView!
+    @IBOutlet weak var pkrView: UIView!
+    @IBOutlet weak var newcustomerView: UIView!
+    @IBOutlet weak var customerView: UIView!
     var barchart : BarsChart!
     
     @IBOutlet var chartView: BarChartView!
@@ -26,7 +32,21 @@ class TotalSalesVC: DemoBaseViewController,IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
+        pendingView.roundView()
+         cancelView.roundView()
+         totalView.roundView()
+         pkrView.roundView()
+        newcustomerView.roundView()
+         customerView.roundView()
+        
+        
+        self.title = "Sale"
+        addBackButton()
+        setNavigationBar()
+        UIApplication.shared.setStatusBar()
 //        let chartConfig = BarsChartConfig( valsAxisConfig: ChartAxisConfig(from: 0, to: 1000, by: 100))
 //            
 //         let frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 300)

@@ -55,9 +55,9 @@ class VendorPackageVC: BaseVC,deleteFeature {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let height = clView.collectionViewLayout.collectionViewContentSize.height
-        clHeight.constant = height + 20
-        self.view.layoutIfNeeded()
+//        let height = clView.collectionViewLayout.collectionViewContentSize.height
+//        clHeight.constant = height + 20
+//        self.view.layoutIfNeeded()
     }
     
     @IBOutlet weak var marketView: UIView!
@@ -109,9 +109,9 @@ class VendorPackageVC: BaseVC,deleteFeature {
    // }
     func setUpVenroType(){
         // viewpackage.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        marketView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        viewCategory.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        vendorTypeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        marketView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        viewCategory.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        vendorTypeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
     }
     
     

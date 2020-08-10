@@ -25,8 +25,8 @@ class FeaturesViewVC: UIViewController {
     var features : Features?
     override func viewDidLoad() {
         super.viewDidLoad()
-        editView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        deleteView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
+        editView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
+        deleteView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
         self.title = "View Features"
         addBackButton()
         setupOfFeatures()

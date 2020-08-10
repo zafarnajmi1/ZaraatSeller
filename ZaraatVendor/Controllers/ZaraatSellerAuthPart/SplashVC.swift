@@ -66,6 +66,7 @@ class SplashVC: BaseVC {
                         ShareData.hideProgress()
                           ShareData.hideProgress()
                           Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
+                        self.moveOnLogin()
                       }
     
                   }, Failure: {error in

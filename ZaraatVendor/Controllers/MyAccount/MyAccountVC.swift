@@ -25,6 +25,13 @@ class MyAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+          navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationButtons()
+          setNavigationBar()
+          UIApplication.shared.setStatusBar()
+        
         self.title = "My Account"
 //        self.navigationController?.navigationBar.isHidden =  true
         self.userimg.roundImg()
@@ -58,15 +65,15 @@ class MyAccountVC: UIViewController {
     func configMenu() {
         
         menuArray.removeAll()
-        menuArray.append(menu(title: "Manage Your Business Profile", img: UIImage.init(named: "tradecenter")))
-        menuArray.append(menu(title: "Notification System", img: UIImage.init(named: "notification")))
-        menuArray.append(menu(title: "Change Password", img: UIImage.init(named: "changepassword")))
-        menuArray.append(menu(title: "Switch Language", img: UIImage.init(named: "switchlanguage")))
-        menuArray.append(menu(title: "Upgrade Account", img: UIImage.init(named: "upgradeaccount")))
-        menuArray.append(menu(title: "Help Center", img: UIImage.init(named: "helpcenter-1")))
-        menuArray.append(menu(title: "Reviews And Feedback Of Products", img: UIImage.init(named: "reviewandfeedback")))
-        menuArray.append(menu(title: "Learn More", img: UIImage.init(named: "learnmore-1")))
-        menuArray.append(menu(title: "Log Out", img: UIImage.init(named: "logout-1")))
+        menuArray.append(menu(title: "Manage Your Business Profile", img: UIImage.init(named: "businessinfo")))
+        menuArray.append(menu(title: "Notification System", img: UIImage.init(named: "notificationsystem")))
+        menuArray.append(menu(title: "Switch Language", img: UIImage.init(named: "switchlangugae")))
+        menuArray.append(menu(title: "Upgrade Account", img: UIImage.init(named: "Upgrade (1)")))
+        menuArray.append(menu(title: "Change Password", img: UIImage.init(named: "password")))
+        menuArray.append(menu(title: "Help Center", img: UIImage.init(named: "helpcenter")))
+        menuArray.append(menu(title: "Reviews And Feedback Of Products", img: UIImage.init(named: "reviewsandfeedback")))
+        menuArray.append(menu(title: "Learn More", img: UIImage.init(named: "learnmore")))
+        menuArray.append(menu(title: "Log Out", img: UIImage.init(named: "logout")))
     }
 
     
@@ -124,9 +131,11 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
         case 0:
            moveOnBusinProfile()
         case 2:
-            moveOnChangePAssword()
+           break
+        case 3 :
+             moveOnPkgs()
         case 4 :
-            moveOnPkgs()
+            moveOnChangePAssword()
         case 5:
             moveOnSupport()
         case 6:
@@ -160,7 +169,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "SupportVC") as? SupportVC
               
-           
+            vc?.hidesBottomBarWhenPushed =  true
               self.navigationController?.pushViewController(vc!, animated: true)
 
         } else {
@@ -168,7 +177,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "SupportVC") as? SupportVC
                
-           
+           vc?.hidesBottomBarWhenPushed =  true
               self.navigationController?.pushViewController(vc!, animated: true)
         }
         
@@ -186,7 +195,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
                 let vc =  storyBoard.instantiateViewController(withIdentifier: "RestPasswordVC") as? RestPasswordVC
                 
-             
+             vc?.hidesBottomBarWhenPushed =  true
                 self.navigationController?.pushViewController(vc!, animated: true)
 
           } else {
@@ -194,7 +203,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
                 let vc =  storyBoard.instantiateViewController(withIdentifier: "RestPasswordVC") as? RestPasswordVC
                  
-             
+             vc?.hidesBottomBarWhenPushed =  true
                 self.navigationController?.pushViewController(vc!, animated: true)
           }
           
@@ -206,7 +215,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
 
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "MainPakAgesVC") as? MainPakAgesVC
-              
+              vc?.hidesBottomBarWhenPushed =  true
            
               self.navigationController?.pushViewController(vc!, animated: true)
 
@@ -215,7 +224,7 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "MainPakAgesVC") as? MainPakAgesVC
                
-           
+           vc?.hidesBottomBarWhenPushed =  true 
               self.navigationController?.pushViewController(vc!, animated: true)
         }
         
@@ -299,14 +308,14 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
 
                     let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
                     let vc =  storyBoard.instantiateViewController(withIdentifier: "FeedBackVC") as? FeedBackVC
-               
+               vc?.hidesBottomBarWhenPushed =  true
                     self.navigationController?.pushViewController(vc!, animated: true)
 
               } else {
 
                     let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
                     let vc =  storyBoard.instantiateViewController(withIdentifier: "FeedBackVC") as? FeedBackVC
-                    
+                    vc?.hidesBottomBarWhenPushed =  true
                     self.navigationController?.pushViewController(vc!, animated: true)
               }
               

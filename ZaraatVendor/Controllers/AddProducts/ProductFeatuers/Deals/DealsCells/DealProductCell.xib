@@ -14,7 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DealProductCell" id="qa9-Wf-F7Q" customClass="DealProductCell" customModule="ZaraatVendor" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DealProductCell" id="qa9-Wf-F7Q" customClass="DealProductCell" customModule="Zaraat_Seller" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="173" height="51"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -45,7 +45,7 @@
                             <constraint firstAttribute="width" constant="18" id="ctF-Aa-fxi"/>
                             <constraint firstAttribute="height" constant="18" id="mfR-b9-hJE"/>
                         </constraints>
-                        <state key="normal" image="Cross-1"/>
+                        <state key="normal" image="Delete"/>
                         <connections>
                             <action selector="deleteAction:" destination="qa9-Wf-F7Q" eventType="touchUpInside" id="ims-wv-SrQ"/>
                         </connections>
@@ -69,6 +69,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Cross-1" width="25" height="25"/>
+        <image name="Delete" width="25" height="25"/>
     </resources>
 </document>

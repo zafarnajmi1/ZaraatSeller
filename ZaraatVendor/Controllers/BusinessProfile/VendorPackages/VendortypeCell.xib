@@ -7,14 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Regular.otf">
+        <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VendortypeCell" id="gTV-IL-0wX" customClass="VendortypeCell" customModule="ZaraatVendor" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VendortypeCell" id="gTV-IL-0wX" customClass="VendortypeCell" customModule="Zaraat_Seller" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="173" height="51"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -45,7 +45,7 @@
                             <constraint firstAttribute="height" constant="18" id="iTv-va-wz7"/>
                             <constraint firstAttribute="width" constant="18" id="m2S-1Z-WJh"/>
                         </constraints>
-                        <state key="normal" image="Cross-1"/>
+                        <state key="normal" image="Delete"/>
                         <connections>
                             <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2SJ-sd-31M"/>
                         </connections>
@@ -69,6 +69,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Cross-1" width="25" height="25"/>
+        <image name="Delete" width="25" height="25"/>
     </resources>
 </document>

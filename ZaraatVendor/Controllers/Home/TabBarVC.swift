@@ -16,6 +16,12 @@ class TabBarVC: UITabBarController {
             self.navigationController?.navigationBar.isHidden =  true
     //         self.navigationItem.hidesBackButton = false
           cinfigTabbar()
+    
+    let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = textAttributes
+          
+            setNavigationBar()
+            UIApplication.shared.setStatusBar()
             
         }
         

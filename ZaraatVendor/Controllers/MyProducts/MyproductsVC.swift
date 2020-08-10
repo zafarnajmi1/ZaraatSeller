@@ -35,8 +35,11 @@ class MyproductsVC: UIViewController,manageProduct {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+       self.navigationController?.navigationBar.isHidden =  false
+        setNavigationBar()
+        UIApplication.shared.setStatusBar()
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -46,7 +49,7 @@ class MyproductsVC: UIViewController,manageProduct {
         self.title = "My Products"
         self.addBackButton()
         btnaddproduct.roundButton()
-        mainVoew.viewSetUp(radius: 8, color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), borderwidth: 1)
+        mainVoew.viewSetUp(radius: Int(mainVoew.layer.frame.height / 2), color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), borderwidth: 1)
         tblView.register(UINib.init(nibName: "MyProductCell", bundle: nil), forCellReuseIdentifier: "MyProductCell")
         UIView.animate(withDuration: 0.1, animations: {
             self.tabBarController?.tabBar.isHidden = true
@@ -60,7 +63,9 @@ class MyproductsVC: UIViewController,manageProduct {
         super.viewWillAppear(animated)
         getProductApi()
     }
-
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
     @objc func refresh(_ sender: Any) {
            
            getProductApi()

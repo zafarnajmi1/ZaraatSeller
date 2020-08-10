@@ -20,17 +20,17 @@ class MainPakAgesVC: ButtonBarPagerTabStripViewController {
                 settings.style.buttonBarLeftContentInset = 0
                 settings.style.buttonBarRightContentInset = 0
                 settings.style.buttonBarMinimumInteritemSpacing = 0
-                settings.style.selectedBarBackgroundColor = #colorLiteral(red: 1, green: 0.5065565109, blue: 0.06153503805, alpha: 1)
+                settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                  settings.style.selectedBarHeight  = 4
                 settings.style.selectedBarVerticalAlignment = .bottom
 
                 changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
                     guard changeCurrentIndex == true else { return }
-                    oldCell?.label.textColor = #colorLiteral(red: 1, green: 0.5065565109, blue: 0.06153503805, alpha: 1)
+                    oldCell?.label.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                     oldCell?.contentView.backgroundColor = #colorLiteral(red: 0.9958658814, green: 1, blue: 0.9999271035, alpha: 1)
                     oldCell?.label.font = UIFont.init(name: "Poppins-Bold", size: 16)
                     newCell?.label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                    newCell?.contentView.backgroundColor =  #colorLiteral(red: 1, green: 0.5065565109, blue: 0.06153503805, alpha: 1)
+                    newCell?.contentView.backgroundColor =  #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                     newCell?.label.font = UIFont.init(name: "Poppins-Bold", size: 16)
        
     }

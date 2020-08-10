@@ -19,7 +19,7 @@ class DiamondPkgVC: UIViewController , IndicatorInfoProvider{
     @IBOutlet weak var tblView: UITableView!
         override func viewDidLoad() {
             super.viewDidLoad()
-            btnupgrade.layer.cornerRadius = 8
+            btnupgrade.roundButton()
             tblView.register(UINib.init(nibName: "PkgsCell", bundle: nil), forCellReuseIdentifier: "PkgsCell")
         }
         

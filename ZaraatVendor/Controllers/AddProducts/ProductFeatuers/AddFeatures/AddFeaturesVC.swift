@@ -75,7 +75,7 @@ class AddFeaturesVC: UIViewController {
     descriptionEnView.layer.cornerRadius = 10
     descriptionEnView.layer.borderWidth = 1
     descriptionEnView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
-        featuresStatusView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+        //featuresStatusView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
     descriptionViewurdu.layer.cornerRadius = 10
     descriptionViewurdu.layer.borderWidth = 1
@@ -84,19 +84,19 @@ class AddFeaturesVC: UIViewController {
     txtdescEn.delegate = self
      txtdescEn.textColor = UIColor.lightGray
      txtdescEn.text = "Description(En)"
-    txtdescEn.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+    txtdescEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
     
     
     
     txtdescriptionUrdu.delegate = self
      txtdescriptionUrdu.textColor = UIColor.lightGray
      txtdescriptionUrdu.text = "Description(urdu)"
-    txtdescriptionUrdu.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+    txtdescriptionUrdu.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
     
     
     
-     titlViewEn.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-    titleViewurdu.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+     //titlViewEn.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+    //titleViewurdu.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
     }
     
     
@@ -190,13 +190,13 @@ extension AddFeaturesVC: UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Description(En)" {
             textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
         }
         else if textView.text == "Description(urdu)"{
             
             textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
         }
       
@@ -214,14 +214,14 @@ extension AddFeaturesVC: UITextViewDelegate{
         if textView == txtdescEn {
             if textView.text == ""{
             textView.text = "Description(En)"
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }
         }
         else if textView == txtdescriptionUrdu {
             if textView.text == ""{
                 textView.text = "Description(urdu)"
-                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+                textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
             }
         }

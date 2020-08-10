@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Regular.ttf">
+        <array key="Poppins-Regular.otf">
             <string>Poppins-Regular</string>
         </array>
         <array key="Poppins-SemiBold.ttf">
@@ -40,38 +40,40 @@
                                     <constraint firstAttribute="width" constant="164" id="FST-D1-fX1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.51850742100000002" blue="0.085079647600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNj-Ev-43D">
-                                <rect key="frame" x="81" y="47" width="103" height="20"/>
+                                <rect key="frame" x="81" y="47" width="103" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-fV-5Oa">
-                                <rect key="frame" x="186" y="47" width="42.5" height="20"/>
+                                <rect key="frame" x="186" y="47" width="42.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-24-37T">
-                                <rect key="frame" x="253" y="24" width="107" height="48"/>
+                                <rect key="frame" x="240" y="28" width="120" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANAGE PRODUCTS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuG-wl-2nn">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="48"/>
-                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wI-7P-m7i">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                         <connections>
                                             <action selector="manageProductAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uWb-Pj-mhe"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.51850742100000002" blue="0.085079647600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.83529411760000005" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="cuG-wl-2nn" firstAttribute="top" secondItem="ejg-24-37T" secondAttribute="top" id="37x-pi-mDJ"/>
                                     <constraint firstAttribute="trailing" secondItem="cuG-wl-2nn" secondAttribute="trailing" id="CdT-oW-Bro"/>
@@ -80,19 +82,19 @@
                                     <constraint firstAttribute="bottom" secondItem="1wI-7P-m7i" secondAttribute="bottom" id="Xu7-Gv-AYS"/>
                                     <constraint firstItem="cuG-wl-2nn" firstAttribute="leading" secondItem="ejg-24-37T" secondAttribute="leading" id="aPS-EY-3aJ"/>
                                     <constraint firstAttribute="bottom" secondItem="cuG-wl-2nn" secondAttribute="bottom" id="b97-io-uHt"/>
-                                    <constraint firstAttribute="width" constant="107" id="bQP-ey-zdX"/>
-                                    <constraint firstAttribute="height" constant="48" id="kup-KW-vI8"/>
+                                    <constraint firstAttribute="width" constant="120" id="bQP-ey-zdX"/>
+                                    <constraint firstAttribute="height" constant="40" id="kup-KW-vI8"/>
                                     <constraint firstItem="1wI-7P-m7i" firstAttribute="top" secondItem="ejg-24-37T" secondAttribute="top" id="oa9-HV-MNa"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnR-CE-MZ4">
-                                <rect key="frame" x="81" y="67" width="50" height="20"/>
+                                <rect key="frame" x="81" y="64" width="49" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phr-Rm-g36">
-                                <rect key="frame" x="133" y="67" width="42.5" height="20"/>
+                                <rect key="frame" x="132" y="64" width="42.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.1098136529" blue="0.1097853258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

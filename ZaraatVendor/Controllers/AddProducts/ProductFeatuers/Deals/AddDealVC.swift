@@ -122,28 +122,28 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
         txtdescriptionEn.delegate = self
          txtdescriptionEn.textColor = UIColor.lightGray
          txtdescriptionEn.text = "Description(En)"
-        txtdescriptionEn.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdescriptionEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         
         
         txtdescriptionUrdu.delegate = self
          txtdescriptionUrdu.textColor = UIColor.lightGray
          txtdescriptionUrdu.text = "Description(urdu)"
-        txtdescriptionUrdu.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdescriptionUrdu.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
-        productListView.layer.borderWidth = 1
-        productListView.layer.borderColor = #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1)
-        productListView.layer.cornerRadius =  8
+        //productListView.layer.borderWidth = 1
+        //productListView.layer.borderColor = #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1)
+        //productListView.layer.cornerRadius =  8
         
         
-         titleEnView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        titleUrduView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        dealPriceView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        ViedoView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-         imageView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-         startDateView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-         endDateView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        productView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//         titleEnView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        titleUrduView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        dealPriceView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        ViedoView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//         imageView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//         startDateView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//         endDateView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        productView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
         descriptionEnView.layer.cornerRadius = 10
         descriptionEnView.layer.borderWidth = 1
@@ -152,7 +152,7 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
         descriptionUrduView.layer.cornerRadius = 10
         descriptionUrduView.layer.borderWidth = 1
         descriptionUrduView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
-        dealStatusView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+        //dealStatusView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         //self.txtaddress.delegate =  self
         btnAddDeal.roundButton()
     }
@@ -422,21 +422,22 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
                             self.img = photo.image
                             print(photo.originalImage)
                             print("i am here ",photo.image)
-
+                            self.dealimgupload(img: self.img ?? UIImage())
                         case .video(let video):
                             print(video.url.baseURL?.absoluteURL)
                             print(video.url.lastPathComponent)
                             self.videourl = video.url.resolvingSymlinksInPath()
                             print(self.videourl)
+                            self.dealVideoupload(url:self.videourl!)
 
                         }
                     }
 
-                    if self.videoimge == false {
-                        self.dealimgupload(img: self.img ?? UIImage())
-                    } else {
-                        self.dealVideoupload(url:self.videourl!)
-                    }
+//                    if self.videoimge == false {
+//                        self.dealimgupload(img: self.img ?? UIImage())
+//                    } else {
+//                        self.dealVideoupload(url:self.videourl!)
+//                    }
 //                    self.uploadGalleryApi(img: self.ProImg)
                     picker.dismiss(animated: true, completion: nil)
                 }
@@ -691,14 +692,14 @@ extension AddDealVC: UITextViewDelegate{
         if textView == txtdescriptionEn {
             if textView.text == ""{
             textView.text = "Description(En)"
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }
         }
         else if textView == txtdescriptionUrdu {
             if textView.text == ""{
                 textView.text = "Description(urdu)"
-                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+                textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
             }
         }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import  DZNEmptyDataSet
 class CouponsListVC: UIViewController,manageCoupon {
     
     
@@ -19,7 +19,12 @@ class CouponsListVC: UIViewController,manageCoupon {
     var couponList = [Coupons]()
     
     var couponid = 0
-    
+    fileprivate func setupDelegates(){
+        self.tblView.emptyDataSetSource = self as DZNEmptyDataSetSource
+        self.tblView.emptyDataSetDelegate = self as DZNEmptyDataSetDelegate
+        self.tblView.tableFooterView = UIView()
+        self.tblView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
          self.tblView.tableFooterView =  UIView.init(frame: .zero)
@@ -72,6 +77,9 @@ class CouponsListVC: UIViewController,manageCoupon {
              ShareData.hideProgress()
             if Response.success == 1 {
                 self.couponList =  Response.coupons ?? []
+                if self.couponList.count == 0 {
+                    self.setupDelegates()
+                }
                 self.tblView.reloadData()
             } else {
                  ShareData.hideProgress()
@@ -145,6 +153,37 @@ extension CouponsListVC:UITableViewDelegate,UITableViewDataSource {
         
         return cell!
     }
+    
+    
+}
+extension CouponsListVC: DZNEmptyDataSetSource,DZNEmptyDataSetDelegate {
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Sorry there is no data available"
+        let attribs = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 19),
+            NSAttributedString.Key.foregroundColor: UIColor.darkGray
+        ]
+        
+        return NSAttributedString(string: text, attributes: attribs)
+    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> NSAttributedString! {
+        let text = "Try Again!"
+        let attribs = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.5818647146, green: 0.8263530135, blue: 0.2647219598, alpha: 1)
+            ] as [NSAttributedString.Key : Any] as [NSAttributedString.Key : Any]
+        
+        return NSAttributedString(string: text, attributes: attribs)
+    }
+    
+        func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!){
+           getCouponsList()
+           
+        }
+    
+    
     
     
 }

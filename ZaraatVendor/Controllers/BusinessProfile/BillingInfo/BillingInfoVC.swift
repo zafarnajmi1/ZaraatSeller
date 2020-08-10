@@ -22,7 +22,7 @@ class BillingInfoVC: UIViewController {
     
     @IBOutlet weak var billingAddressView: UIView!
     
-    @IBOutlet weak var billingZipCodeView: UIView!
+    //@IBOutlet weak var billingZipCodeView: UIView!
     
    // @IBOutlet weak var billingCountryView: UIView!
     
@@ -36,7 +36,7 @@ class BillingInfoVC: UIViewController {
     
     @IBOutlet weak var shippingAddressView: UIView!
     
-    @IBOutlet weak var shippingAddressZipcodeView: UIView!
+    //@IBOutlet weak var shippingAddressZipcodeView: UIView!
     
    // @IBOutlet weak var shippingCountry: UIView!
     
@@ -65,7 +65,7 @@ class BillingInfoVC: UIViewController {
     
     @IBOutlet weak var txtbilingAddress: UITextField!
     
-    @IBOutlet weak var txtbillingZipcode: UITextField!
+    //@IBOutlet weak var txtbillingZipcode: UITextField!
     
     
     
@@ -75,7 +75,7 @@ class BillingInfoVC: UIViewController {
     @IBOutlet weak var txtshippingaddress: UITextField!
     
     
-    @IBOutlet weak var txtshippingZip: UITextField!
+    //@IBOutlet weak var txtshippingZip: UITextField!
     
    // @IBOutlet weak var txtshippingcountry: UITextField!
     
@@ -109,6 +109,7 @@ class BillingInfoVC: UIViewController {
         self.title = "Business Profile"
         self.txtshippingaddress.delegate =  self
         self.txtbilingAddress.delegate =  self
+         btnsubmit.roundButton()
          addBackButton()
         setUpView()
        // countiresApi()
@@ -128,11 +129,11 @@ class BillingInfoVC: UIViewController {
         txtbilingAddress.text =  editvendorsBProfile?.billing_address
         
         txtbilingpersonname.text =  editvendorsBProfile?.billing_person_name
-        txtbillingZipcode.text = editvendorsBProfile?.billing_zipcode
+        //txtbillingZipcode.text = editvendorsBProfile?.billing_zipcode
         
         
         txtshippingaddress.text =  editvendorsBProfile?.shipping_address
-        txtshippingZip.text =  editvendorsBProfile?.shipping_zipcode
+        //txtshippingZip.text =  editvendorsBProfile?.shipping_zipcode
         txtshippingpersonname.text = editvendorsBProfile?.shipping_person_name
         
         
@@ -146,32 +147,32 @@ class BillingInfoVC: UIViewController {
     }
     
     func setUpView(){
-        billingView.viewconfig(radius: 5)
-        bankView.viewSetUp(radius: 5, color: #colorLiteral(red: 0.1410522163, green: 0.3398962617, blue: 0.1778770983, alpha: 1), borderwidth: 1)
-        businessInfoView.viewSetUp(radius: 5, color: #colorLiteral(red: 0.1410522163, green: 0.3398962617, blue: 0.1778770983, alpha: 1), borderwidth: 1)
+//        billingView.viewconfig(radius: 5)
+//        bankView.viewSetUp(radius: 5, color: #colorLiteral(red: 0.1410522163, green: 0.3398962617, blue: 0.1778770983, alpha: 1), borderwidth: 1)
+//        businessInfoView.viewSetUp(radius: 5, color: #colorLiteral(red: 0.1410522163, green: 0.3398962617, blue: 0.1778770983, alpha: 1), borderwidth: 1)
         
         
-        
-        shippingPersonView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        
-        
-        shippingAddressView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        
-         shippingAddressZipcodeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//
+//        shippingPersonView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//
+//
+//        shippingAddressView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//
+//         shippingAddressZipcodeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
         // shippingCountry.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
         // shippingstateView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
-        btnsubmit.roundbuttonRadius(borderwidth: 2)
+       
         
         
         
-        billingPersonView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        
-         billingAddressView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
-        
-         billingZipCodeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        billingPersonView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        
+//         billingAddressView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+//        
+//         billingZipCodeView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
          //billingCountryView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
@@ -317,7 +318,7 @@ class BillingInfoVC: UIViewController {
             //self.txtshippingcity.text = txtblinCity.text
             self.txtshippingaddress.text = txtbilingAddress.text
             //self.txtshippingcountry.text = txtbilingCountry.text
-            self.txtshippingZip.text = txtbillingZipcode.text
+            //self.txtshippingZip.text = txtbillingZipcode.text
             self.txtshippingpersonname.text = txtbilingpersonname.text
             
         } else {
@@ -331,7 +332,7 @@ class BillingInfoVC: UIViewController {
            // self.txtshippingcity.text = ""
             self.txtshippingaddress.text = ""
            // self.txtshippingcountry.text = ""
-            self.txtshippingZip.text = ""
+            //self.txtshippingZip.text = ""
             self.txtshippingpersonname.text = ""
         }
         
@@ -416,11 +417,11 @@ class BillingInfoVC: UIViewController {
             params.params.updateValue(ShareData.shareInfo.userInfo?.vendors?.vendor_id ?? "", forKey: "vendor_id")
             params.params.updateValue(txtbilingpersonname.text!, forKey: "billing_person_name")
             params.params.updateValue(txtbilingAddress.text!, forKey: "billing_address")
-            params.params.updateValue(txtbillingZipcode.text!, forKey: "billing_zipcode")
+            //params.params.updateValue(txtbillingZipcode.text!, forKey: "billing_zipcode")
             
             params.params.updateValue(txtshippingpersonname.text!, forKey: "shipping_person_name")
             params.params.updateValue(txtshippingaddress.text!, forKey: "shipping_address")
-            params.params.updateValue(txtshippingZip.text!, forKey: "shipping_zipcode")
+            //params.params.updateValue(txtshippingZip.text!, forKey: "shipping_zipcode")
             
             params.params.updateValue("1", forKey: "shipping_status")
             params.params.updateValue("1", forKey: "billing_status")
@@ -471,20 +472,24 @@ class BillingInfoVC: UIViewController {
          if txtbilingAddress.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Billing Address ", messagetype: 0)
             return false
-        }else if txtbillingZipcode.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Billing Zip Code ", messagetype: 0)
-            return false
-        }else if txtbilingpersonname.text == "" {
+        }
+//         else if txtbillingZipcode.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Billing Zip Code ", messagetype: 0)
+//            return false
+//        }
+         else if txtbilingpersonname.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Billing Person Name ", messagetype: 0)
             return false
         }
         else if txtshippingaddress.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Shipping Address ", messagetype: 0)
             return false
-        }else if txtshippingZip.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Shipping Zip Code ", messagetype: 0)
-            return false
-        }else if txtshippingpersonname.text == "" {
+        }
+//         else if txtshippingZip.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Shipping Zip Code ", messagetype: 0)
+//            return false
+//        }
+         else if txtshippingpersonname.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Shipping Person Name ", messagetype: 0)
             return false
         }
@@ -497,11 +502,11 @@ class BillingInfoVC: UIViewController {
         params.params.updateValue(ShareData.shareInfo.userInfo?.vendors?.vendor_id ?? "", forKey: "vendor_id")
         params.params.updateValue(txtbilingpersonname.text!, forKey: "billing_person_name")
         params.params.updateValue(txtbilingAddress.text!, forKey: "billing_address")
-        params.params.updateValue(txtbillingZipcode.text!, forKey: "billing_zipcode")
+        //params.params.updateValue(txtbillingZipcode.text!, forKey: "billing_zipcode")
         
         params.params.updateValue(txtshippingpersonname.text!, forKey: "shipping_person_name")
         params.params.updateValue(txtshippingaddress.text!, forKey: "shipping_address")
-        params.params.updateValue(txtshippingZip.text!, forKey: "shipping_zipcode")
+       // params.params.updateValue(txtshippingZip.text!, forKey: "shipping_zipcode")
         
         params.params.updateValue("1", forKey: "shipping_status")
         params.params.updateValue("1", forKey: "billing_status")

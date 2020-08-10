@@ -101,14 +101,14 @@ class AddVeriationVC: UIViewController {
     func setVariation(){
         
         btnaddVariation.roundButton()
-         titleEnView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+         //titleEnView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
-          titleUrduView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+          //titleUrduView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
            
-           priceView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+         //  priceView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
            
            
-           stockview.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
+          // stockview.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
         
           
                     attributeView.layer.cornerRadius = 10
@@ -129,14 +129,14 @@ class AddVeriationVC: UIViewController {
         txtdescriptionEn.delegate = self
          txtdescriptionEn.textColor = UIColor.lightGray
          txtdescriptionEn.text = "Description(En)"
-        txtdescriptionEn.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdescriptionEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         
         
         txtdescriptionurdu.delegate = self
          txtdescriptionurdu.textColor = UIColor.lightGray
          txtdescriptionurdu.text = "Description(urdu)"
-        txtdescriptionurdu.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdescriptionurdu.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
        
         
@@ -465,13 +465,13 @@ extension AddVeriationVC : UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
            if textView.text == "Description(En)" {
                textView.text = ""
-               textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+               textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
            }
            else if textView.text == "Description(urdu)"{
                
                textView.text = ""
-               textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+               textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
            }
          
@@ -489,14 +489,14 @@ extension AddVeriationVC : UITextViewDelegate{
            if textView == txtdescriptionEn {
                if textView.text == ""{
                textView.text = "Description(En)"
-               textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+               textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
                }
            }
            else if textView == txtdescriptionurdu {
                if textView.text == ""{
                    textView.text = "Description(urdu)"
-                   textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+                   textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                   
                }
            }

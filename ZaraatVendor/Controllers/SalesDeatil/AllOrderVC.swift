@@ -16,7 +16,10 @@ class AllOrderVC: UIViewController,IndicatorInfoProvider {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Orders"
+     addBackButton()
+        setNavigationBar()
+        UIApplication.shared.setStatusBar()
         tblView.register(UINib.init(nibName: "AllOrderCell", bundle: nil), forCellReuseIdentifier: "AllOrderCell")
     }
     
