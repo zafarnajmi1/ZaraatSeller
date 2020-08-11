@@ -47,7 +47,7 @@ class SplashVC: BaseVC {
         
         func LoginVendor() {
     
-                  let dic : [String:Any] = ["email" : ShareData.shareInfo.email!,"password":ShareData.shareInfo.password!]
+                  let dic : [String:Any] = ["email" : ShareData.shareInfo.email ?? "","password":ShareData.shareInfo.password ?? ""]
                ShareData.showProgress()
                   userhandler.login(parms: dic, Success: {response in
                     ShareData.hideProgress()
@@ -55,17 +55,17 @@ class SplashVC: BaseVC {
                       if response.success == 1{
                        ShareData.shareInfo.userInfo = response
     
-                       if response.vendors?.status == 0 {
-                           self.moveOnBusinessProfile()
-                       }else {
+                      // if response.vendors?.status == 0 {
+                           //self.moveOnBusinessProfile()
+                      // }else {
                             self.movetoHome()
-                       }
+                       //}
     
                           //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
                       }else {
                         ShareData.hideProgress()
-                          ShareData.hideProgress()
-                          Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
+                          
+                          //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
                         self.moveOnLogin()
                       }
     

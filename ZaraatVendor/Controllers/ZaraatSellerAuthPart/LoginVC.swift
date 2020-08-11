@@ -96,11 +96,12 @@ class LoginVC: BaseVC,UITextFieldDelegate {
                     ShareData.shareInfo.email = self.txtlogin.text!
                     ShareData.shareInfo.password = self.txtpassword.text!
                     ShareData.shareInfo.autologin =  true
-                    if response.vendors?.status == 0 {
-                        self.moveOnBusinessProfile()
-                    }else {
+                   
+                   // if response.vendors?.status == 0 {
+                        //self.moveOnBusinessProfile()
+                    //}else {
                          self.movetoHome()
-                    }
+                    //}
     
                        //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
                    }else {

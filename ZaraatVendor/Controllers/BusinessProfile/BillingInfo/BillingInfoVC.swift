@@ -435,7 +435,7 @@ class BillingInfoVC: UIViewController {
                 ShareData.hideProgress()
                 if response.success == 1 {
                      Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
-                   
+                    self.LoginVendor()
                         self.movetoHome()
                     
                 } else {
@@ -526,7 +526,7 @@ class BillingInfoVC: UIViewController {
                        ShareData.hideProgress()
                        if response.success == 1 {
                             Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
-                        
+                        self.LoginVendor()
                           self.movetoHome()
                         
                        } else {
@@ -540,6 +540,38 @@ class BillingInfoVC: UIViewController {
                    })
     }
     
+    
+    
+    
+        func LoginVendor() {
+    
+                  let dic : [String:Any] = ["email" : ShareData.shareInfo.email ?? "","password":ShareData.shareInfo.password ?? ""]
+               ShareData.showProgress()
+                  userhandler.login(parms: dic, Success: {response in
+                    ShareData.hideProgress()
+                      ShareData.hideProgress()
+                      if response.success == 1{
+                       ShareData.shareInfo.userInfo = response
+    
+                      // if response.vendors?.status == 0 {
+                           //self.moveOnBusinessProfile()
+                      // }else {
+                           // self.movetoHome()
+                       //}
+    
+                          //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
+                      }else {
+                        ShareData.hideProgress()
+                          
+                          //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
+                        //self.moveOnLogin()
+                      }
+    
+                  }, Failure: {error in
+                      ShareData.hideProgress()
+                      //Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
+                  })
+              }
 }
 //MARK:- AutoCompleteAddress
 extension BillingInfoVC: UITextFieldDelegate {

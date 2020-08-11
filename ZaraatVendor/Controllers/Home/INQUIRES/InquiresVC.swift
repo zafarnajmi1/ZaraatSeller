@@ -26,6 +26,7 @@ class InquiresVC: UIViewController,IndicatorInfoProvider,InquiriesReply {
                   tblview.addSubview(refreshControl)
         }
         @objc func refresh() {
+            refreshControl.endRefreshing()
             print("Iam Fresh")
         }
     func replyinquireis(cell: InquiresCell) {

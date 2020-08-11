@@ -38,7 +38,7 @@ class MyAccountVC: UIViewController {
         tblView.register(UINib.init(nibName: "MyCccountCell", bundle: nil), forCellReuseIdentifier: "MyCccountCell")
         tblView.register(UINib.init(nibName: "CompleteProfileCell", bundle: nil), forCellReuseIdentifier: "CompleteProfileCell")
         
-        self.userimg.setPath(string: ShareData.shareInfo.userInfo?.vendors?.logo, "username")
+        self.userimg.setPath(string: ShareData.shareInfo.userInfo?.vendors?.logo, "App Icon")
         
         self.lblemail.text = ShareData.shareInfo.userInfo?.vendors?.email
         self.lblusername.text =  ShareData.shareInfo.userInfo?.vendors?.owners_name

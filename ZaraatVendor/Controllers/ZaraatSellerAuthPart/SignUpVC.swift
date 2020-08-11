@@ -83,10 +83,12 @@ class SignUpVC: BaseVC {
         } else if  txtemail.text == "" {
            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Email", messagetype: 0)
             return false
-        } else if  txtemail.text?.isValidEmail == false {
-           Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Valid Email", messagetype: 0)
-            return false
-        } else if  txtphonenumber.text == "" {
+         }
+            //else if  txtemail.text?.isValidEmail == false {
+//           Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Valid Email", messagetype: 0)
+//            return false
+//        }
+        else if  txtphonenumber.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Phone Number ", messagetype: 0)
             return false
         } else if  txtpassword.text == "" {
@@ -118,11 +120,11 @@ class SignUpVC: BaseVC {
                 ShareData.shareInfo.email = self.txtemail.text!
                 ShareData.shareInfo.password = self.txtpassword.text!
                 ShareData.shareInfo.autologin =  true
-                if response.vendors?.status == 0 || response.vendors?.status == nil  {
-                    self.moveOnBusinessProfile()
-                }else {
+                //if response.vendors?.status == 0 || response.vendors?.status == nil  {
+                   // self.moveOnBusinessProfile()
+                //}else {
                      self.movetoHome()
-                }
+                //}
             }else {
                 ShareData.hideProgress()
                 Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)

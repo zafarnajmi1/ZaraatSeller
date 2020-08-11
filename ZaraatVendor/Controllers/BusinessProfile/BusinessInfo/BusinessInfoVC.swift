@@ -92,9 +92,9 @@ class BusinessInfoVC: UIViewController {
     @IBOutlet weak var txtanswer: UITextField!
     
     
-    @IBOutlet weak var logiView: UIView!
+    //@IBOutlet weak var logiView: UIView!
     
-    @IBOutlet weak var txtlogo: UITextField!
+   // @IBOutlet weak var txtlogo: UITextField!
     
     @IBOutlet weak var txtdiscription: UITextView!
     
@@ -132,7 +132,7 @@ class BusinessInfoVC: UIViewController {
         txtdescriptionUr.delegate = self
          txtdescriptionUr.textColor = UIColor.lightGray
          txtdescriptionUr.text = "Write about Your business(urdu)"
-        txtdescriptionUr.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdescriptionUr.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         descriptionUrView.layer.cornerRadius = 10
         descriptionUrView.layer.borderWidth = 1
@@ -141,7 +141,7 @@ class BusinessInfoVC: UIViewController {
         txtdiscription.delegate = self
          txtdiscription.textColor = UIColor.lightGray
          txtdiscription.text = "Write about Your Business(en)"
-        txtdiscription.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+        txtdiscription.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
        
         discriptinView.layer.cornerRadius = 10
         discriptinView.layer.borderWidth = 1
@@ -162,8 +162,14 @@ class BusinessInfoVC: UIViewController {
         super.viewWillAppear(animated)
         if fromMyaccount ==  true {
             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  false 
+            self.navigationController?.navigationBar.isHidden =  false
+            
+            self.txtemail.text =  ShareData.shareInfo.userInfo?.vendors?.email
+            self.txtphone.text = ShareData.shareInfo.userInfo?.vendors?.phone
             setupEditBProfile()
+        } else {
+            self.txtemail.text =  ShareData.shareInfo.userInfo?.vendors?.email
+            self.txtphone.text = ShareData.shareInfo.userInfo?.vendors?.phone
         }
        
     }
@@ -171,7 +177,9 @@ class BusinessInfoVC: UIViewController {
     
     func setupEditBProfile() {
         //self.txtcity.text = editvendorsBProfile?.cities
-        self.txtlogo.text = editvendorsBProfile?.logo
+        //self.txtlogo.text = editvendorsBProfile?.logo
+        if editvendorsBProfile?.business_type != "null" {
+            
         self.txtemail.text = editvendorsBProfile?.email
         self.txtphone.text = editvendorsBProfile?.phone
         //self.txtstate.text = editvendorsBProfile?.states
@@ -200,7 +208,7 @@ class BusinessInfoVC: UIViewController {
         
         self.params.params.updateValue(editvendorsBProfile?.vendor_longitude ?? 0, forKey: "vendor_longitude")
         self.params.params.updateValue(editvendorsBProfile?.vendor_latitude ?? 0, forKey: "vendor_latitude")
-       
+        }
     }
     
     
@@ -275,12 +283,17 @@ class BusinessInfoVC: UIViewController {
                 
             
               
-        businesstypeDropdown.dataSource = ["Import/ Export", "Personal", "Reatiler", "Trade Mark"]
+        businesstypeDropdown.dataSource = ["Personal","Business"]
                 
                 businesstypeDropdown.selectionAction = { [unowned self] (index: Int, item: String) in
                     print(index)
                     self.txtbusinessType.text = item
                     self.params.params.updateValue(self.txtbusinessType.text!, forKey: "business_type")
+                    if item == "Personal" {
+                        self.companyNameView.isHidden = true
+                    } else {
+                        self.companyNameView.isHidden = false
+                    }
                 }
                 businesstypeDropdown.show()
         
@@ -520,16 +533,20 @@ class BusinessInfoVC: UIViewController {
 //            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Owner Name", messagetype: 0)
 //            return false
 //        } else
-            if txtbusinessType.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Business Type (e.g Personal,Business)", messagetype: 0)
-            return false
-        }  else if txtemail.text == "" {
+//            if txtbusinessType.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Business Type (e.g Personal,Business)", messagetype: 0)
+//            return false
+//        }
+//            else
+        if txtemail.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Email", messagetype: 0)
             return false
-        } else if txtemail.text?.isValidEmail == false  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Valid Email", messagetype: 0)
-            return false
-        } else if txtphone.text == ""  {
+        }
+                //else if txtemail.text?.isValidEmail == false  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Valid Email", messagetype: 0)
+//            return false
+//        }
+            else if txtphone.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Phone Number", messagetype: 0)
             return false
         } else if txtanswer.text == ""  {
@@ -541,22 +558,28 @@ class BusinessInfoVC: UIViewController {
         } else if txtquestion.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Question", messagetype: 0)
             return false
-        }else if txtlegalName.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Legal Name (e.g zaraat.com)", messagetype: 0)
-            return false
-        }else if txtcompanyName.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Company Name", messagetype: 0)
-            return false
-            } else if txtbusinessNumber.text?.isValidCode == false  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 11234567-2) ", messagetype: 0)
-            return false
-        }else if txtDocumentAttachment.text == ""  {
+        }
+//            else if txtlegalName.text == ""  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Legal Name (e.g zaraat.com)", messagetype: 0)
+//            return false
+//        }
+//            else if txtcompanyName.text == ""  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Company Name", messagetype: 0)
+//            return false
+//            }
+//            else if txtbusinessNumber.text?.isValidCode == false  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 11234567-2) ", messagetype: 0)
+//            return false
+//        }
+        else if txtDocumentAttachment.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Document (e.g image)", messagetype: 0)
             return false
-        }else if txtlogo.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Logo (e.g image)", messagetype: 0)
-            return false
-        }else if txtdiscription.text == ""  {
+        }
+//            else if txtlogo.text == ""  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Logo (e.g image)", messagetype: 0)
+//            return false
+//        }
+            else if txtdiscription.text == ""  {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description About Your Business(en)", messagetype: 0)
             return false
         }
@@ -629,16 +652,16 @@ extension BusinessInfoVC : UIImagePickerControllerDelegate,UINavigationControlle
             ShareData.hideProgress()
             self.docurl = response.path ?? ""
             
-            if self.logo == true {
-                self.txtlogo.text = "Logo has Uploaded"
-                  self.Documentpath1 = response.path ?? ""
-            self.params.params.updateValue(response.path ?? "", forKey: "logo")
-            } else {
+//            if self.logo == true {
+//                self.txtlogo.text = "Logo has Uploaded"
+//                  self.Documentpath1 = response.path ?? ""
+//            self.params.params.updateValue(response.path ?? "", forKey: "logo")
+//            } else {
                 self.txtDocumentAttachment.text = "Document has Uploaded"
                 self.Documentpath = response.path ?? ""
             self.params.params.updateValue(response.path ?? "", forKey: "business_document")
                 
-            }
+            //}
         }, Failure: {error in
             
             ShareData.hideProgress()
@@ -708,13 +731,13 @@ extension BusinessInfoVC: UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Write about Your Business(en)" {
             textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
         }
         else if textView.text == "Write about Your business(urdu)"{
             
             textView.text = ""
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
         }
       
@@ -732,14 +755,14 @@ extension BusinessInfoVC: UITextViewDelegate{
         if textView == txtdiscription {
             if textView.text == ""{
             textView.text = "Write about Your Business(en)"
-            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+            textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }
         }
         else if textView == txtdescriptionUr {
             if textView.text == ""{
                 textView.text = "Write about Your business(urdu)"
-                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
+                textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
             }
         }

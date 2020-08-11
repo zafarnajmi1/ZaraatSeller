@@ -87,17 +87,22 @@ class VendorPackageVC: BaseVC,deleteFeature {
         //self.title = "Business Profile"
         setuppkg()
         addBackButton()
-       
+        self.title = "Select Category"
         clView.register(UINib.init(nibName: "VendortypeCell", bundle: nil), forCellWithReuseIdentifier: "VendortypeCell")
         self.setUpVenroType()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        addBackButton()
+        self.navigationController?.navigationBar.isHidden =  false
+        setNavigationBar()
+        UIApplication.shared.setStatusBar()
         if fromMyaccount ==  true {
-             addBackButton()
-            self.navigationController?.navigationBar.isHidden =  false
-            btnMarket.isUserInteractionEnabled =  false
+//             addBackButton()
+//            self.navigationController?.navigationBar.isHidden =  false
+            //btnMarket.isUserInteractionEnabled =  false
             editprofileApiCall()
         } else {
             btnMarket.isUserInteractionEnabled =  true
@@ -140,7 +145,7 @@ class VendorPackageVC: BaseVC,deleteFeature {
     
     
     func setUpEditBProfile() {
-        
+        if  self.editvendorsBProfile?.market != "null" {
         self.txtmarket.text =  self.editvendorsBProfile?.market
         self.params.params.updateValue(self.editvendorsBProfile?.market! ?? "", forKey:"market" )
         self.txtvendortype.text = self.editvendorsBProfile?.vendor_type
@@ -168,7 +173,9 @@ class VendorPackageVC: BaseVC,deleteFeature {
 ////        self.txtchildCategory.text = editvendorsBProfile?.child_subcategory_title_en
 //        self.txtpkg.text = editvendorsBProfile?.package_name
 //        self.params.params.updateValue(self.editvendorsBProfile?.categories_id! ?? "" , forKey:"vendor_category_id" )
+        
           self.categoriApiCall(marketType:self.editvendorsBProfile?.market! ?? "")
+        }
     }
     
     

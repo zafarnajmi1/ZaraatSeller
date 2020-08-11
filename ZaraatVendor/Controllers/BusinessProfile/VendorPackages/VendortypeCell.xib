@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Regular.ttf">
+        <array key="Poppins-Regular.otf">
             <string>Poppins-Regular</string>
         </array>
     </customFonts>
@@ -64,6 +64,7 @@
             <size key="customSize" width="173" height="51"/>
             <connections>
                 <outlet property="lbltitle" destination="b6A-rq-MbY" id="HE6-zR-pEd"/>
+                <outlet property="mainView" destination="uYP-Jo-94g" id="0UF-NR-5zk"/>
             </connections>
             <point key="canvasLocation" x="221.01449275362322" y="124.21875"/>
         </collectionViewCell>

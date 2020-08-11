@@ -14,8 +14,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "730"
-            endingLineNumber = "730"
+            startingLineNumber = "753"
+            endingLineNumber = "753"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "723"
-            endingLineNumber = "723"
+            startingLineNumber = "746"
+            endingLineNumber = "746"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "700"
-            endingLineNumber = "700"
+            startingLineNumber = "723"
+            endingLineNumber = "723"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "704"
-            endingLineNumber = "704"
+            startingLineNumber = "727"
+            endingLineNumber = "727"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "706"
-            endingLineNumber = "706"
+            startingLineNumber = "729"
+            endingLineNumber = "729"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "708"
-            endingLineNumber = "708"
+            startingLineNumber = "731"
+            endingLineNumber = "731"
             landmarkName = "textViewDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
+            startingLineNumber = "519"
+            endingLineNumber = "519"
             landmarkName = "moveonBankDetail()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "509"
+            endingLineNumber = "509"
             landmarkName = "moveonBankDetail()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "514"
+            endingLineNumber = "514"
             landmarkName = "moveonBankDetail()"
             landmarkType = "7">
          </BreakpointContent>
@@ -385,70 +385,6 @@
             startingLineNumber = "222"
             endingLineNumber = "222"
             landmarkName = "textFieldDidEndEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "42F3C6F1-5C43-44CF-9146-CE250ACE8F13"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/NetworkHandlerCall&apos;s/UserHandler/Userhandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "getCategries(parms:Success:Failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F34DD7C4-EE55-482F-825C-44DB73EAB72D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/NetworkHandlerCall&apos;s/UserHandler/Userhandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getCategries(parms:Success:Failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EB49729D-FA3E-4F70-A049-01D6CA6B64AD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/NetworkHandlerCall&apos;s/UserHandler/Userhandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "getCategries(parms:Success:Failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F64932CC-5213-4AD3-9A3F-482B5791CA0A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/NetworkHandlerCall&apos;s/UserHandler/Userhandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "getCategries(parms:Success:Failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -663,16 +599,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C68BFD04-A888-406F-906D-DB57145284FC"
+            uuid = "BE8B9CA1-1D4B-4971-94F5-6A13BC1BA09C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/ZaraatSellerAuthPart/SplashVC.swift"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "CheckLogin()"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A5810B9-E60C-4AB5-89B8-6735517649B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D1B8159-E868-4918-8150-7C412875BD85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

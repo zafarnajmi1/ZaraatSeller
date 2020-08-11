@@ -145,6 +145,7 @@ class HomeVC: UIViewController {
     @IBAction func SaleAction(_ sender: UIButton) {
         
         
+        if ShareData.shareInfo.userInfo?.vendors?.status == 1 {
         if UIDevice.current.userInterfaceIdiom == .pad {
                    
                let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
@@ -159,12 +160,37 @@ class HomeVC: UIViewController {
                    //hidesBottomBarWhenPushed = true
                self.navigationController?.pushViewController(vc!, animated: true)
                }
-        
+        } else {
+            alertMessage(message: "Please Fill The Business Profile", completionHandler: {
+                self.moveOnBusinProfile()
+            })
+        }
     }
     
     
+    func moveOnBusinProfile() {
+           if UIDevice.current.userInterfaceIdiom == .pad {
+
+                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
+                 let vc =  storyBoard.instantiateViewController(withIdentifier: "VendorPackageVC") as? VendorPackageVC
+                  vc!.fromMyaccount =  true
+               vc?.hidesBottomBarWhenPushed =  true
+                 self.navigationController?.pushViewController(vc!, animated: true)
+
+           } else {
+
+                 let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
+                 let vc =  storyBoard.instantiateViewController(withIdentifier: "VendorPackageVC") as? VendorPackageVC
+                  vc!.fromMyaccount =  true
+               vc?.hidesBottomBarWhenPushed =  true
+                 self.navigationController?.pushViewController(vc!, animated: true)
+           }
+           
+       }
+    
+    
     @IBAction func myProductAction(_ sender: UIButton) {
-        
+        if ShareData.shareInfo.userInfo?.vendors?.status == 1 {
         if UIDevice.current.userInterfaceIdiom == .pad {
             
         let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
@@ -178,6 +204,11 @@ class HomeVC: UIViewController {
         let vc =  storyBoard.instantiateViewController(withIdentifier: "MyproductsVC") as? MyproductsVC
             //hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        } else {
+            alertMessage(message: "Please Fill The Business Profile", completionHandler: {
+                self.moveOnBusinProfile()
+            })
         }
     }
     
@@ -211,7 +242,7 @@ class HomeVC: UIViewController {
 //
 //              })
 //        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
-        
+        if ShareData.shareInfo.userInfo?.vendors?.status == 1 {
         if UIDevice.current.userInterfaceIdiom == .pad {
 
         let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
@@ -225,6 +256,11 @@ class HomeVC: UIViewController {
         let vc =  storyBoard.instantiateViewController(withIdentifier: "AllOrderVC") as? AllOrderVC
             //hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        } else {
+            alertMessage(message: "Please Fill The Business Profile", completionHandler: {
+                self.moveOnBusinProfile()
+            })
         }
     }
     

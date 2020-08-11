@@ -35,6 +35,7 @@ class OrderVC: UIViewController,IndicatorInfoProvider {
     
     
     @objc func refresh() {
+        refreshControl.endRefreshing()
         print("Iam Fresh")
     }
 
