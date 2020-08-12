@@ -20,6 +20,8 @@ class VariationListVC: UIViewController {
     @IBOutlet weak var lblprice: UILabel!
     @IBOutlet weak var lblstock: UILabel!
     
+    @IBOutlet weak var attributeView: UIView!
+    @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var editView: UIView!
     
     var attributsList =  [Attributes]()
@@ -28,6 +30,15 @@ class VariationListVC: UIViewController {
         super.viewDidLoad()
         tblView.tableFooterView =  UIView(frame: .zero)
         addBackButton()
+        detailView.layer.cornerRadius = 8
+        detailView.layer.borderColor =  #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+        detailView.layer.borderWidth =  1
+        
+        
+        attributeView.layer.cornerRadius = 8
+        attributeView.layer.borderColor =  #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+        attributeView.layer.borderWidth =  1
+        
         editView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
                deleteView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
         self.title = "Variation List"
@@ -55,10 +66,10 @@ class VariationListVC: UIViewController {
                 self.variationid = (response.variation?.variation_id)!
                 print("variationid",response.variation?.variation_id)
                 self.variationid = (response.variation?.variation_id)!
-                self.lblprice.text = "VariAtion Price : " + (response.variation?.variation_price)!
-                self.lblstock.text = "VariAtion Stock : " + (response.variation?.variation_stock)!
-                self.lbltitleEn.text =  "VariAtion Title(en) : " + (response.variation?.variation_title_en)!
-                self.lbltitleUrdu.text = "VariAtion title(urdu) : " + (response.variation?.variation_title_urdu)!
+                self.lblprice.text = "Variation Price : " + (response.variation?.variation_price)!
+                self.lblstock.text = "Variation Stock : " + (response.variation?.variation_stock)!
+                self.lbltitleEn.text =  "Variation Title(eng) : " + (response.variation?.variation_title_en)!
+                self.lbltitleUrdu.text = "Variation title(urdu) : " + (response.variation?.variation_title_urdu)!
                 self.attributsList =  response.variation?.attributes ?? []
                 self.tblView.reloadData()
                 
@@ -157,10 +168,10 @@ extension VariationListVC:  UITableViewDataSource,UITableViewDelegate,VariationH
             
             if AttributeList.isSelected ?? false {
 
-                headerView.arrowDown.image = UIImage(named: "dropdown")
+                headerView.arrowDown.image = UIImage(named: "downarrow")
             }
             else{
-                headerView.arrowDown.image = UIImage(named: "dropdown-1")
+                headerView.arrowDown.image = UIImage(named: "downarrow-1")
             }
             headerView.delegate = self
             return headerView
@@ -244,11 +255,11 @@ extension VariationListVC:  UITableViewDataSource,UITableViewDelegate,VariationH
         print(category.attribute_title)
         if category.isSelected == true {
             category.isSelected = false
-            header.arrowDown.image = UIImage(named: "dropdown")
+            header.arrowDown.image = UIImage(named: "downarrow")
         }
         else{
            category.isSelected = true
-           header.arrowDown.image = UIImage(named: "dropdown-1")
+           header.arrowDown.image = UIImage(named: "downarrow-1")
         }
         
         tblView.beginUpdates()

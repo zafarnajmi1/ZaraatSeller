@@ -194,6 +194,8 @@ class BankDetailVC: UIViewController {
 
     
     @IBAction func skipAction(_ sender: UIButton) {
+        //params.params.updateValue("1", forKey: "bank_status")
+        params.params.removeValue(forKey: "bank_id")
         moveOnAdderess()
     }
     

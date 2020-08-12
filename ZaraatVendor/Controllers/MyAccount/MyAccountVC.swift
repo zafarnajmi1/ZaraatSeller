@@ -30,6 +30,7 @@ class MyAccountVC: UIViewController {
           navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationButtons()
           setNavigationBar()
+        self.tblView.tableFooterView =  UIView(frame: .zero)
           UIApplication.shared.setStatusBar()
         
         self.title = "My Account"
@@ -66,13 +67,13 @@ class MyAccountVC: UIViewController {
         
         menuArray.removeAll()
         menuArray.append(menu(title: "Manage Your Business Profile", img: UIImage.init(named: "businessinfo")))
-        menuArray.append(menu(title: "Notification System", img: UIImage.init(named: "notificationsystem")))
-        menuArray.append(menu(title: "Switch Language", img: UIImage.init(named: "switchlangugae")))
+        //menuArray.append(menu(title: "Notification System", img: UIImage.init(named: "notificationsystem")))
+        //menuArray.append(menu(title: "Switch Language", img: UIImage.init(named: "switchlangugae")))
         menuArray.append(menu(title: "Upgrade Account", img: UIImage.init(named: "Upgrade (1)")))
         menuArray.append(menu(title: "Change Password", img: UIImage.init(named: "password")))
         menuArray.append(menu(title: "Help Center", img: UIImage.init(named: "helpcenter")))
-        menuArray.append(menu(title: "Reviews And Feedback Of Products", img: UIImage.init(named: "reviewsandfeedback")))
-        menuArray.append(menu(title: "Learn More", img: UIImage.init(named: "learnmore")))
+        //menuArray.append(menu(title: "Reviews And Feedback Of Products", img: UIImage.init(named: "reviewsandfeedback")))
+        //menuArray.append(menu(title: "Learn More", img: UIImage.init(named: "learnmore")))
         menuArray.append(menu(title: "Log Out", img: UIImage.init(named: "logout")))
     }
 
@@ -130,19 +131,13 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
         switch indx {
         case 0:
            moveOnBusinProfile()
-        case 2:
-           break
+        case 1:
+           moveOnPkgs()
+        case 2 :
+             moveOnChangePAssword()
         case 3 :
-             moveOnPkgs()
-        case 4 :
-            moveOnChangePAssword()
-        case 5:
             moveOnSupport()
-        case 6:
-           
-           
-            moveOnFeedBack()
-        case 8:
+        case 4 :
           alertForLogout()
         default:
             break

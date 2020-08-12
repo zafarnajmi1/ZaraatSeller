@@ -14,8 +14,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "BusinessInfoVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -40,22 +40,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3ADE3100-8AC6-4B6F-B018-CC37C6C907BC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
-            landmarkName = "BusinessInfoVC"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F0944B73-D2D3-4B6F-BB81-D20626E38C63"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -71,6 +55,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F0944B73-D2D3-4B6F-BB81-D20626E38C63"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
+            landmarkName = "BusinessInfoVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "31B1EBAC-F968-455D-9DAA-82F79CF4EFD0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -78,8 +78,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "753"
-            endingLineNumber = "753"
+            startingLineNumber = "752"
+            endingLineNumber = "752"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "746"
-            endingLineNumber = "746"
+            startingLineNumber = "745"
+            endingLineNumber = "745"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "723"
-            endingLineNumber = "723"
+            startingLineNumber = "722"
+            endingLineNumber = "722"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "727"
-            endingLineNumber = "727"
+            startingLineNumber = "726"
+            endingLineNumber = "726"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "729"
-            endingLineNumber = "729"
+            startingLineNumber = "728"
+            endingLineNumber = "728"
             landmarkName = "BusinessInfoVC"
             landmarkType = "21">
          </BreakpointContent>
@@ -158,57 +158,9 @@
             filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "731"
-            endingLineNumber = "731"
+            startingLineNumber = "730"
+            endingLineNumber = "730"
             landmarkName = "textViewDidBeginEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DAEC25DB-68B1-41F1-A542-23FE773FF049"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "519"
-            endingLineNumber = "519"
-            landmarkName = "moveonBankDetail()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0538B561-B7B0-4BAF-8639-3B2ADBB6A2EF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
-            landmarkName = "moveonBankDetail()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6B1DFD12-2063-49A8-9943-76A357E3D63F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "514"
-            endingLineNumber = "514"
-            landmarkName = "moveonBankDetail()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -311,22 +263,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C8294756-7D39-4498-A34A-B2445EE6CB30"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "getViewPrpduct()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "53D7F5F0-7D36-4E64-9E3B-60CD989C27BF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -369,22 +305,6 @@
             startingLineNumber = "620"
             endingLineNumber = "620"
             landmarkName = "createProductApi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B0D70453-5ECE-4D2E-8637-909C87CFFA6F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/AddProducts/ProductFeatuers/ProductOnSales/AddSaleVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -503,22 +423,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "649EFB07-3C3B-4216-85DD-FECDC6854773"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/AddProducts/ProductFeatuers/ProductOnSales/AddSaleVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
-            landmarkName = "textFieldDidEndEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "59B82E0D-1F32-4B82-BF7C-FADC4E160AFF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -599,48 +503,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE8B9CA1-1D4B-4971-94F5-6A13BC1BA09C"
+            uuid = "99E798BF-AA33-47F0-874D-769BA316B8EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BillingInfo/BillingInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
+            landmarkName = "submitAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0A5810B9-E60C-4AB5-89B8-6735517649B2"
+            uuid = "8779FC61-C966-4D74-9D91-C2D98BFBD724"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BillingInfo/BillingInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "537"
+            endingLineNumber = "537"
+            landmarkName = "businessPrfileSkipAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8D1B8159-E868-4918-8150-7C412875BD85"
+            uuid = "D5CE80FF-611E-41BE-A5E4-B33491A3E787"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/BusinessProfile/BusinessInfo/BusinessInfoVC.swift"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BankDetail/BankDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "moveOnAdderess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8328031B-A5D4-4BEA-B70A-4976D2D7CE14"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/BusinessProfile/BankDetail/BankDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "moveOnAdderess()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

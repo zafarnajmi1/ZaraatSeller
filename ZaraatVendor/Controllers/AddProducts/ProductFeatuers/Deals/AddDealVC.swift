@@ -121,7 +121,7 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
         
         txtdescriptionEn.delegate = self
          txtdescriptionEn.textColor = UIColor.lightGray
-         txtdescriptionEn.text = "Description(En)"
+         txtdescriptionEn.text = "Description(eng)"
         txtdescriptionEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         
@@ -552,12 +552,13 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Deal Products", messagetype: 0)
             return false
         } else if txttitleen.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Deal Title(en)", messagetype: 0)
-            return false
-        } else if txttitleUrdu.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Deal Title (urdu)", messagetype: 0)
+            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Deal Title(eng)", messagetype: 0)
             return false
         }
+        //else if txttitleUrdu.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter The Deal Title (urdu)", messagetype: 0)
+//            return false
+//        }
         return true
     }
     
@@ -666,7 +667,7 @@ extension AddDealVC: UITextViewDelegate{
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Description(En)" {
+        if textView.text == "Description(eng)" {
             textView.text = ""
             textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
             
@@ -691,7 +692,7 @@ extension AddDealVC: UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView == txtdescriptionEn {
             if textView.text == ""{
-            textView.text = "Description(En)"
+            textView.text = "Description(eng)"
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }

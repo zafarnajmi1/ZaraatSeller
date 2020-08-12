@@ -101,7 +101,7 @@ class BillingInfoVC: UIViewController {
     var stateDropdown = DropDown()
     var countryDropdown = DropDown()
     
-    var checkaddress : Bool? = false
+    var checkaddress : Bool? = true
     
     
     override func viewDidLoad() {
@@ -307,9 +307,9 @@ class BillingInfoVC: UIViewController {
     
     @IBAction func cehckBoxAction(_ sender: UIButton) {
         
-        if checkaddress ==  false {
-            checkaddress =  true
-            checkboximg.image = UIImage.init(named: "Tickfilled")
+        if checkaddress ==  true  {
+            checkaddress =  false
+            checkboximg.image = UIImage.init(named: "tick")
             
 //            btncity.isUserInteractionEnabled = false
 //            btnstate.isUserInteractionEnabled = false
@@ -323,8 +323,8 @@ class BillingInfoVC: UIViewController {
             
         } else {
             
-           checkboximg.image = UIImage.init(named: "tick")
-            checkaddress =  false
+           checkboximg.image = UIImage.init(named: "Tickfilled")
+            checkaddress =  true 
 //            btncity.isUserInteractionEnabled = true
 //            btnstate.isUserInteractionEnabled = true
 //            btncountry.isUserInteractionEnabled = true
@@ -452,6 +452,14 @@ class BillingInfoVC: UIViewController {
     }
     
     
+    
+    
+    
+//    ["business_registration_num": "12345678-9", "shipping_longitude": "74.3587", "vendor_branch_code": "1234", "billing_person_name": "ended", "vendor_account_number": "12345678", "vendor_category_id": [29], "business_document": "https://zaraatbin.s3.us-east-2.amazonaws.com/images/vendors/documents/1597215318.", "company_name": "test", "business_status": "1", "market": "ecommerce", "vendor_account_title": "QWERTY", "legal_name": "zaraat", "shipping_latitude": "31.5204", "business_phone": "1234567", "bank_status": "1", "vendor_latitude": "31.5203696", "billing_longitude": "74.3587", "billing_address": "Lahore, Punjab, Pakistan", "question": 1, "billing_status": "1", "description_urdu": "Asdfghj", "logo": "", "vendor_id": 174, "shipping_person_name": "weigh", "bank_id": 10, "bussiness_email": "testonetwo@gmail.com", "vendor_type": "Supplier", "shipping_address": "Lahore, Punjab, Pakistan", "description": "Asdfgh", "business_type": "Business", "status": "1", "address": "Lahore, Punjab, Pakistan", "shipping_status": "1", "answer": "asdfg", "package": "1", "billing_latitude": "31.5204", "vendor_longitude": "74.3587473"]
+    
+    
+    
+    
     func movetoHome(){
         if UIDevice.current.userInterfaceIdiom == .pad {
 
@@ -515,6 +523,12 @@ class BillingInfoVC: UIViewController {
         businessPrfileSkipAction()
         
     }
+    
+//    ["bank_id": 10, "address": "Lahore, Punjab, Pakistan", "shipping_latitude": "31.5204", "billing_address": "Lahore, Punjab, Pakistan", "shipping_person_name": "weigh", "bussiness_email": "testonetwo@gmail.com", "shipping_address": "Lahore, Punjab, Pakistan", "company_name": "test", "description_urdu": "Asdfghj", "logo": "https://zaraatbin.s3.us-east-2.amazonaws.com/images/vendors/documents/1597215318.", "business_status": "1", "description": "Asdfgh", "question": 1, "legal_name": "zaraat", "vendor_id": 174, "vendor_longitude": "74.3587473", "market": "ecommerce", "billing_latitude": "31.5204", "billing_status": "1", "answer": "asdfg", "status": "1", "vendor_category_id": [29], "vendor_latitude": "31.5203696", "billing_longitude": "74.3587", "shipping_longitude": "74.3587", "billing_person_name": "ended", "business_registration_num": "12345678-9", "shipping_status": "1", "package": "1", "vendor_type": "Supplier", "business_document": "", "business_phone": "1234567", "bank_status": "1", "business_type": "Business"]
+    
+    
+    
+    
     
     
     func businessPrfileSkipAction(){

@@ -435,9 +435,9 @@ func formatedDatetype(string: String)-> String {
     let dateFormatter = DateFormatter()
     let tempLocale = dateFormatter.locale // save locale temporarily
     dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     let date = dateFormatter.date(from: string)!
-    dateFormatter.dateFormat = "d MMM yyyy"//"dd-MM-yyyy"//"MMM d, yyyy" ; //"dd-MM-yyyy HH:mm:ss"
+    dateFormatter.dateFormat = "dd-MMM-yyyy"//"dd-MM-yyyy"//"MMM d, yyyy" ; //"dd-MM-yyyy HH:mm:ss"
     dateFormatter.locale = tempLocale // reset the locale --> but no need here
     let dateString = dateFormatter.string(from: date)
         return dateString

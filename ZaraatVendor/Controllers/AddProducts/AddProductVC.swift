@@ -189,7 +189,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         if checktype ==  true
         {
             self.title = "Edit Product"
-            btnadproduct.setTitle("EIDT PRODUCT", for: .normal)
+            btnadproduct.setTitle("EDIT PRODUCT", for: .normal)
         }else {
         self.title = "Add Product"
         }
@@ -434,7 +434,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
             if response.success == 1 {
                 self.subcategoryList =  response.subcategories ?? []
             } else {
-                 Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message ?? "", messagetype: 0)
+                 //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message ?? "", messagetype: 0)
             }
         }, Failure: {error in
             

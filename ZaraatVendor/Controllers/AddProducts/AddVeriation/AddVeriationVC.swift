@@ -128,7 +128,7 @@ class AddVeriationVC: UIViewController {
         
         txtdescriptionEn.delegate = self
          txtdescriptionEn.textColor = UIColor.lightGray
-         txtdescriptionEn.text = "Description(En)"
+         txtdescriptionEn.text = "Description(eng)"
         txtdescriptionEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         
@@ -220,12 +220,13 @@ class AddVeriationVC: UIViewController {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Stock", messagetype: 0)
           return false
         } else if txtdescriptionEn.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(en)", messagetype: 0)
-          return false
-        } else if txtdescriptionurdu.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(urdu)", messagetype: 0)
+            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(eng)", messagetype: 0)
           return false
         }
+        //else if txtdescriptionurdu.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(urdu)", messagetype: 0)
+//          return false
+//        }
         return true
     }
     
@@ -382,11 +383,11 @@ extension AddVeriationVC:  UITableViewDataSource,UITableViewDelegate,VariationHe
        
         if category.isSelected == true {
             category.isSelected = false
-            header.arrowDown.image = UIImage(named: "dropdown")
+            header.arrowDown.image = UIImage(named: "downarrow")
         }
         else{
            category.isSelected = true
-           header.arrowDown.image = UIImage(named: "dropdown-1")
+           header.arrowDown.image = UIImage(named: "downarrow-1")
         }
         
         tblView.beginUpdates()
@@ -463,7 +464,7 @@ extension AddVeriationVC:  UITableViewDataSource,UITableViewDelegate,VariationHe
 }
 extension AddVeriationVC : UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
-           if textView.text == "Description(En)" {
+           if textView.text == "Description(eng)" {
                textView.text = ""
                textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
@@ -488,7 +489,7 @@ extension AddVeriationVC : UITextViewDelegate{
        func textViewDidEndEditing(_ textView: UITextView) {
            if textView == txtdescriptionEn {
                if textView.text == ""{
-               textView.text = "Description(En)"
+               textView.text = "Description(eng)"
                textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
                }

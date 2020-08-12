@@ -98,6 +98,12 @@ class VendorPackageVC: BaseVC,deleteFeature {
         addBackButton()
         self.navigationController?.navigationBar.isHidden =  false
         setNavigationBar()
+        
+        if ShareData.shareInfo.userInfo?.vendors?.status == 1 {
+            btnMarket.isUserInteractionEnabled =  false
+        } else {
+            btnMarket.isUserInteractionEnabled =  true
+        }
         UIApplication.shared.setStatusBar()
         if fromMyaccount ==  true {
 //             addBackButton()

@@ -44,7 +44,7 @@ class EditProfileVC: UIViewController {
         self.txtname.text = userprofile?.owners_name
         self.txtemail.text =  userprofile?.email
         self.txtphone.text =  userprofile?.phone
-        self.userimg.setPath(string: userprofile?.logo , "account_geray")
+        self.userimg.setPath(string: userprofile?.logo , "name")
         
         
     }

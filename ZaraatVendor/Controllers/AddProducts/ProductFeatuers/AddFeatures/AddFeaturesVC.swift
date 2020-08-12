@@ -83,7 +83,7 @@ class AddFeaturesVC: UIViewController {
         
     txtdescEn.delegate = self
      txtdescEn.textColor = UIColor.lightGray
-     txtdescEn.text = "Description(En)"
+     txtdescEn.text = "Description(eng)"
     txtdescEn.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
     
     
@@ -145,10 +145,11 @@ class AddFeaturesVC: UIViewController {
         } else if txtdescEn.text! == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(en)", messagetype: 0)
             return false
-        } else if txttitleurdu.text! == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Title(urdu)", messagetype: 0)
-            return false
         }
+        //else if txttitleurdu.text! == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Title(urdu)", messagetype: 0)
+//            return false
+//        }
         return true
     }
     
@@ -188,7 +189,7 @@ extension AddFeaturesVC: UITextViewDelegate{
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Description(En)" {
+        if textView.text == "Description(eng)" {
             textView.text = ""
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
@@ -213,7 +214,7 @@ extension AddFeaturesVC: UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView == txtdescEn {
             if textView.text == ""{
-            textView.text = "Description(En)"
+            textView.text = "Description(eng)"
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }

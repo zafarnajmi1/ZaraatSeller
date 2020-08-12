@@ -48,9 +48,9 @@ class DealDetailVC: UIViewController {
             ShareData.hideProgress()
             if response.success == 1 {
                 self.dealDetail = response.deal
-                
+               
                 self.lblprice.text =  "Price :" +  (response.deal?.deal_price)!
-                self.lblendDate.text = "End Date :" + (response.deal?.deal_end_date)!
+                self.lblendDate.text = "End Date :" + (formatedDatetype(string: ((response.deal?.deal_end_date)!)))
                 
                 self.lblstartDate.text = "Start Date :" +  (response.deal?.deal_start_date)!
 

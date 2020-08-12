@@ -47,7 +47,7 @@ class ViewProfileVC: UIViewController {
                 self.phone.text =  successResponse.vendors?.phone
                 self.email.text = successResponse.vendors?.email
                 self.name.text =  successResponse.vendors?.owners_name
-                self.userimg.setPath(string: successResponse.vendors?.logo , "account_geray")
+                self.userimg.setPath(string: successResponse.vendors?.logo , "name")
             } else {
                 ShareData.hideProgress()
             }
@@ -62,7 +62,7 @@ class ViewProfileVC: UIViewController {
         self.phone.text =  self.userprofile?.phone
         self.email.text = self.userprofile?.email
         self.name.text =  self.userprofile?.owners_name
-        self.userimg.setPath(string: self.userprofile?.logo , "account_geray")
+        self.userimg.setPath(string: self.userprofile?.logo , "name")
     }
     @IBAction func editAction(_ sender: UIButton) {
         if UIDevice.current.userInterfaceIdiom == .pad {

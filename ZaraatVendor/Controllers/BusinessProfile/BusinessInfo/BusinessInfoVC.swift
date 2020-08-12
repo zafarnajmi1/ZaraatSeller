@@ -164,8 +164,7 @@ class BusinessInfoVC: UIViewController {
             addBackButton()
             self.navigationController?.navigationBar.isHidden =  false
             
-            self.txtemail.text =  ShareData.shareInfo.userInfo?.vendors?.email
-            self.txtphone.text = ShareData.shareInfo.userInfo?.vendors?.phone
+            
             setupEditBProfile()
         } else {
             self.txtemail.text =  ShareData.shareInfo.userInfo?.vendors?.email
@@ -203,8 +202,8 @@ class BusinessInfoVC: UIViewController {
         
         self.params.params.updateValue(self.editvendorsBProfile?.question_id ?? 0, forKey: "question")
         
-        self.params.params.updateValue(editvendorsBProfile?.logo ?? "", forKey: "business_document")
-        self.params.params.updateValue(editvendorsBProfile?.business_document ?? "", forKey: "logo")
+        //self.params.params.updateValue(editvendorsBProfile?.logo ?? "", forKey: "business_document")
+        self.params.params.updateValue(editvendorsBProfile?.business_document ?? "", forKey: "business_document")
         
         self.params.params.updateValue(editvendorsBProfile?.vendor_longitude ?? 0, forKey: "vendor_longitude")
         self.params.params.updateValue(editvendorsBProfile?.vendor_latitude ?? 0, forKey: "vendor_latitude")
@@ -571,10 +570,10 @@ class BusinessInfoVC: UIViewController {
 //            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Business Register Number (e.g 11234567-2) ", messagetype: 0)
 //            return false
 //        }
-        else if txtDocumentAttachment.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Document (e.g image)", messagetype: 0)
-            return false
-        }
+//        else if txtDocumentAttachment.text == ""  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Document (e.g image)", messagetype: 0)
+//            return false
+//        }
 //            else if txtlogo.text == ""  {
 //            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Select The Busines Logo (e.g image)", messagetype: 0)
 //            return false
@@ -583,10 +582,10 @@ class BusinessInfoVC: UIViewController {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description About Your Business(en)", messagetype: 0)
             return false
         }
-        else if txtdescriptionUr.text == ""  {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description About Your Business(urud)", messagetype: 0)
-            return false
-        }
+//        else if txtdescriptionUr.text == ""  {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description About Your Business(urud)", messagetype: 0)
+//            return false
+//        }
         return true
     }
     

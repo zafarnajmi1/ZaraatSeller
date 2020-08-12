@@ -11,6 +11,9 @@ import UIKit
 class FeaturesViewVC: UIViewController {
     
     
+    @IBOutlet weak var urduView: UIView!
+    @IBOutlet weak var engView: UIView!
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var lbltitleEn: UILabel!
     @IBOutlet weak var editView: UIView!
     
@@ -25,17 +28,34 @@ class FeaturesViewVC: UIViewController {
     var features : Features?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        urduView.layer.cornerRadius = 8
+        urduView.layer.borderWidth = 1
+        urduView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+        
+        engView.layer.cornerRadius = 8
+        engView.layer.borderWidth = 1
+        engView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+        
+        titleView.layer.cornerRadius = 8
+        titleView.layer.borderWidth = 1
+        titleView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+        
+        
         editView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
         deleteView.roundViewAndBorder(border: 0, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
         self.title = "View Features"
         addBackButton()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupOfFeatures()
     }
     
-    
     func setupOfFeatures() {
         self.featuresid =  (features?.feature_id)!
-        self.lbltitleEn.text = "Feature Title(en)   : " +  (features?.feature_title_en)!
+        self.lbltitleEn.text = "Feature Title(eng)   : " +  (features?.feature_title_en)!
         self.lbltitleurdu.text  =  "Feature Title(urdu)  : " + (features?.feature_title_urdu)!
         self.lbldescriptionEn.text =    (features?.feature_desc_en)!
         self.lbldescriptionurdu.text =  (features?.feature_desc_urdu)!

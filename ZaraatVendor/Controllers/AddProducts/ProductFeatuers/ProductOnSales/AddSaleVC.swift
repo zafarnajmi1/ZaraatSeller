@@ -8,6 +8,7 @@
 
 import UIKit
 import  DropDown
+import  SkyFloatingLabelTextField
 class AddSaleVC: UIViewController ,UITextFieldDelegate{
 var ProductdropDown = DropDown()
     @IBOutlet weak var txtSaleprice: UITextField!
@@ -26,8 +27,10 @@ var ProductdropDown = DropDown()
     @IBOutlet weak var salePriceView: UIView!
     @IBOutlet weak var discoutView: UIView!
     @IBOutlet weak var endDateView: UIView!
-    @IBOutlet weak var txtdiscount: UITextField!
+    //@IBOutlet weak var txtdiscount: UITextField!
     
+    @IBOutlet weak var txtdiscount: SkyFloatingLabelTextField!
+//    @IBOutlet weak var txtmydiscount: UITextField!
     @IBOutlet weak var txtstatus: UITextField!
     @IBOutlet weak var statusView: UIView!
     let startdatePicker = UIDatePicker()
@@ -47,10 +50,14 @@ var ProductdropDown = DropDown()
         super.viewDidLoad()
         print(saleid)
     print(productid)
+        
+        
+        
+        self.txtdiscount.delegate =  self
         self.txtstartDate.delegate = self
-       
+
         self.txtendDate.delegate = self
-         self.txtdiscount.delegate =  self
+         
         addBackButton()
         setUpSale()
         getProductApi()
@@ -64,12 +71,18 @@ var ProductdropDown = DropDown()
             self.title = "Add Sale"
              self.btnAddSale.setTitle("Add Sale", for: .normal)
             
-            self.txtSaleprice.text = "200"
+            //self.txtSaleprice.text = "200"
         }
          
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.txtdiscount.delegate =  self
+//              self.txtstartDate.delegate = self
+//
+//              self.txtendDate.delegate = self
+    }
     
     
     
@@ -169,33 +182,8 @@ var ProductdropDown = DropDown()
 
         
     }
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if textField == self.txtstartDate {
-//            let datePicker = startdatePicker
-//            textField.inputView = datePicker
-//            datePicker.datePickerMode = .date
-//            datePicker.minimumDate = Date()
-//           datePicker.addTarget(self, action: #selector(pickerChnaged(_:)), for: UIControl.Event.valueChanged)
-//        } else if textField == self.txtendDate  {
-//            let datePicker = edndatePicker
-//            textField.inputView = datePicker
-//            datePicker.datePickerMode = .date
-//            datePicker.minimumDate = Date()
-//            datePicker.addTarget(self, action: #selector(pickerChnaged1(_:)), for: UIControl.Event.valueChanged)
-//        }
-//    }
-    
 
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        if textField == self.txtstartDate {
-//            txtstartDate.resignFirstResponder()
-//        } else if textField == self.txtendDate {
-//            txtendDate.resignFirstResponder()
-//        }
-//
-//        return true
-//    }
-    
+
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == self.txtstartDate {
@@ -210,25 +198,32 @@ var ProductdropDown = DropDown()
             datePicker.datePickerMode = .date
             datePicker.minimumDate = Date()
             datePicker.addTarget(self, action: #selector(pickerChnaged1(_:)), for: UIControl.Event.valueChanged)
+        } else if textField ==  txtdiscount{
+            txtdiscount.delegate = self
+            print("i am ok")
+            //txtdiscount.becomeFirstResponder()
+            //txtdiscount.addTarget(self, action: #selector(myvalue), for: UIControl.Event.valueChanged)
         }
          return true
     }
-    
 
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
         if textField == txtdiscount {
         let value  =  Float(self.txtactualPrice.text!)
-        
+
             let disco = Float(txtdiscount.text!)
             let calculate =  disco! / 100
             let cal = value! * calculate
             let exactVal = value! - cal
-            
+
         print(" i am here :",exactVal, "" , cal," ", value)
         self.txtSaleprice.text = "\(exactVal)"
         }
     }
-
+    
+       
 
     func setUpSale(){
         btnAddSale.roundButton()
