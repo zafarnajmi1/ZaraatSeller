@@ -63,10 +63,12 @@ class AddCouponVC: UIViewController,UITextFieldDelegate {
             if checktype ==  false {
                self.title = "Edit Coupon"
                 self.setCouponValue()
+                txtcode.isUserInteractionEnabled =  false
                 btncoupon.setTitle("Edit Coupon", for: .normal)
                 btndelete.isHidden =  false
             }else {
                self.title = "Add Coupon"
+                txtcode.isUserInteractionEnabled =  true 
                  btndelete.isHidden =  true
             }
     }

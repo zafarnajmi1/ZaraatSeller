@@ -139,10 +139,12 @@ class AddFeaturesVC: UIViewController {
         if txttitleEn.text! == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Title(en)", messagetype: 0)
             return false
-        } else if txttitleurdu.text! == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Title(urdu)", messagetype: 0)
-            return false
-        } else if txtdescEn.text! == "" {
+        }
+//        else if txttitleurdu.text! == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Title(urdu)", messagetype: 0)
+//            return false
+//        }
+        else if txtdescEn.text! == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Description(en)", messagetype: 0)
             return false
         }

@@ -27,9 +27,9 @@ class SalesListCell: UITableViewCell {
     
     
     func setdata(obj:Sales){
-        self.lbldate.text = "Expiry Date : " + (obj.end_date ?? "")
+        self.lbldate.text = "Expiry Date : " + (formatedDatetype(string: ((obj.end_date)!)))
         self.lbltitle.text = obj.produt?.product_title_en
         self.lblprice.text = "Discount Price :" + (obj.sale_price ?? "")
-        self.img.setPath(string: obj.produt?.image?[0].file_path, "Grey Logo")
+        self.img.setPath(string: obj.produt?.image?[0].file_path, "Zaraat logo vertical png ( White ) (1)")
     }
 }

@@ -175,7 +175,7 @@ class TotalSalesVC: DemoBaseViewController,IndicatorInfoProvider {
                 chartView.data?.notifyDataChanged()
                 chartView.notifyDataSetChanged()
             } else {
-                set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
+                set1 = BarChartDataSet(entries: yVals, label: "The year 2020")
                 set1.colors = ChartColorTemplates.material()
                 set1.drawValuesEnabled = false
                 

@@ -21,6 +21,7 @@ class MyAccountVC: UIViewController {
         var img: UIImage?
     }
     
+    var userprofile : UserProfile?
     var menuArray = [menu]()
     
     override func viewDidLoad() {
@@ -39,15 +40,33 @@ class MyAccountVC: UIViewController {
         tblView.register(UINib.init(nibName: "MyCccountCell", bundle: nil), forCellReuseIdentifier: "MyCccountCell")
         tblView.register(UINib.init(nibName: "CompleteProfileCell", bundle: nil), forCellReuseIdentifier: "CompleteProfileCell")
         
-        self.userimg.setPath(string: ShareData.shareInfo.userInfo?.vendors?.logo, "App Icon")
         
-        self.lblemail.text = ShareData.shareInfo.userInfo?.vendors?.email
-        self.lblusername.text =  ShareData.shareInfo.userInfo?.vendors?.owners_name
        configMenu()
          getcurrentpkgApi()
+        
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserProfile()
+    }
+    func getUserProfile() {
+        ShareData.showProgress()
+        userhandler.userprofile(Success: {successResponse in
+            ShareData.hideProgress()
+            if successResponse.success == 1 {
+               
+                self.userprofile =  successResponse
+                self.lblemail.text = successResponse.vendors?.email
+                self.lblusername.text =  successResponse.vendors?.owners_name
+                self.userimg.setPath(string: successResponse.vendors?.logo , "name")
+            } else {
+                ShareData.hideProgress()
+            }
+        }, Failure: {error in
+            ShareData.hideProgress()
+        })
+    }
     
     
     func getcurrentpkgApi() {
@@ -85,6 +104,7 @@ class MyAccountVC: UIViewController {
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "ViewProfileVC") as? ViewProfileVC
             vc?.hidesBottomBarWhenPushed =  true
+                 vc?.userprofile = userprofile
               self.navigationController?.pushViewController(vc!, animated: true)
 
         } else {
@@ -92,6 +112,7 @@ class MyAccountVC: UIViewController {
               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
               let vc =  storyBoard.instantiateViewController(withIdentifier: "ViewProfileVC") as? ViewProfileVC
               vc?.hidesBottomBarWhenPushed =  true
+            vc?.userprofile = userprofile
               self.navigationController?.pushViewController(vc!, animated: true)
         }
         

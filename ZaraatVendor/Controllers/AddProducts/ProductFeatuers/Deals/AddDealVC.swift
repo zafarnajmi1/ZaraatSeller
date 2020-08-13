@@ -585,7 +585,8 @@ class AddDealVC: UIViewController,deleteDealProduct,UITextFieldDelegate {
         userhandler.createVendorDeal(params: dic, Success: {response in
             ShareData.hideProgress()
             if response.success ==  1 {
-                Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
+                self.navigationController?.popViewController(animated: true)
+                //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 1)
             } else {
                 ShareData.hideProgress()
                  Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)

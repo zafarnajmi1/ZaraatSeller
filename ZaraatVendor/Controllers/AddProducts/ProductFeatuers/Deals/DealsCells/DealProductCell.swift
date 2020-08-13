@@ -12,11 +12,14 @@ protocol  deleteDealProduct {
 }
 class DealProductCell: UICollectionViewCell {
 
+    @IBOutlet weak var mainview: UIView!
     var delegate:deleteDealProduct?
     @IBOutlet weak var lbltitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        mainview.layer.cornerRadius = 8
+        mainview.layer.borderColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        mainview.layer.borderWidth = 0.5
     }
 
     @IBAction func deleteAction(_ sender: UIButton) {

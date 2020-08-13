@@ -52,10 +52,10 @@ class DealDetailVC: UIViewController {
                 self.lblprice.text =  "Price :" +  (response.deal?.deal_price)!
                 self.lblendDate.text = "End Date :" + (formatedDatetype(string: ((response.deal?.deal_end_date)!)))
                 
-                self.lblstartDate.text = "Start Date :" +  (response.deal?.deal_start_date)!
+                self.lblstartDate.text = "Start Date :" +  (formatedDatetype(string: ((response.deal?.deal_start_date)!)))
 
                   self.lbldealname.text = response.deal?.deal_title_en
-                self.dealimg.setPath(string: response.deal?.deal_image ?? "", "Grey Logo")
+                self.dealimg.setPath(string: response.deal?.deal_image ?? "", "Zaraat logo vertical png ( White ) (1) ")
                 
                 self.videourl = URL(string: response.deal?.deal_video ?? "")
                 

@@ -64,6 +64,7 @@
             <size key="customSize" width="173" height="51"/>
             <connections>
                 <outlet property="lbltitle" destination="Yte-ao-Ty7" id="GmP-n2-MvN"/>
+                <outlet property="mainview" destination="J7g-iw-XYj" id="GRA-W3-B0S"/>
             </connections>
             <point key="canvasLocation" x="337" y="87"/>
         </collectionViewCell>

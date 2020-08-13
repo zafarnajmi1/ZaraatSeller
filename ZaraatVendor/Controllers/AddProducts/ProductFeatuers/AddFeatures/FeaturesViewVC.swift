@@ -58,7 +58,15 @@ class FeaturesViewVC: UIViewController {
         self.lbltitleEn.text = "Feature Title(eng)   : " +  (features?.feature_title_en)!
         self.lbltitleurdu.text  =  "Feature Title(urdu)  : " + (features?.feature_title_urdu)!
         self.lbldescriptionEn.text =    (features?.feature_desc_en)!
-        self.lbldescriptionurdu.text =  (features?.feature_desc_urdu)!
+        
+        if features?.feature_desc_urdu == "" || (features?.feature_desc_urdu!.isEmpty)! ||  features?.feature_desc_urdu == " " {
+            self.urduView.isHidden =  true
+        } else {
+             self.urduView.isHidden =  false
+            self.lbldescriptionurdu.text =  (features?.feature_desc_urdu)!
+        }
+        
+        
     }
 
     @IBAction func editAction(_ sender: UIButton) {

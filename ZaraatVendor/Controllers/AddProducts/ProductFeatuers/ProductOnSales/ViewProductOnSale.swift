@@ -42,11 +42,12 @@ class ViewProductOnSale: UIViewController {
         userhandler.getSingleSale(id: saleid, Success: {response in
              ShareData.hideProgress()
             if response.success == 1 {
-                self.lblprice.text = "Actuall Price :" +  (response.sale?.actual_price)!
+                self.lblexpiryDate.text =  "Expiry Date: " + formatedDatetype(string:(response.sale?.end_date)! )
+                self.lblprice.text = "Actual Price: " +  (response.sale?.actual_price)!
                 self.id = response.sale?.onsale_id ?? 0
-                self.lbldicount.text = "Discount :" +  "\(response.sale?.discount_percent! ?? 0)" + "%"
+                self.lbldicount.text = "Discount : " +  "\(response.sale?.discount_percent! ?? 0)" + "%"
                 self.lbldiscountPrice.text = "Sale Price : " +  (response.sale?.sale_price)!
-                self.img.setPath(string: response.product?.image![0].file_path, "Grey Logo")
+                self.img.setPath(string: response.product?.image![0].file_path, "Zaraat logo vertical png ( White ) (1)")
                 self.lblproductname.text = response.product?.product_title_en
             } else {
                 ShareData.hideProgress()

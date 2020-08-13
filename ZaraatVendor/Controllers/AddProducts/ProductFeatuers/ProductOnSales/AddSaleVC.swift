@@ -110,9 +110,9 @@ var ProductdropDown = DropDown()
         userhandler.getSingleSale(id: saleid, Success: {response in
              ShareData.hideProgress()
             if response.success == 1 {
-                self.txtendDate.text =  response.sale?.end_date
+                self.txtendDate.text =  formatedDatetype(string: (response.sale?.end_date)!)
                 self.id = (response.sale?.onsale_id)!
-                self.txtstartDate.text =  response.sale?.start_date
+                self.txtstartDate.text =  formatedDatetype(string: (response.sale?.start_date)!)
                 self.txtproduct.text =  response.product?.product_title_en
                 self.productid = (response.sale?.product_id)!
                 self.txtactualPrice.text =  response.sale?.actual_price

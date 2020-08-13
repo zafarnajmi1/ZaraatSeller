@@ -225,7 +225,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 
                   self.catid = self.viewproduct?.category?.categories_id ?? 0
                 self.subcatid = self.viewproduct?.subcategory?.subcategory_id ?? 0
-                
+                self.subcategoryApi(id: self.catid)
                 if self.viewproduct?.child_subcategory?.child_categories_id != nil {
                     self.txtchildCategory.text =  self.viewproduct?.child_subcategory?.child_subcategory_title_en
                    
@@ -478,7 +478,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 self.childList =  response.childsubcategories ?? []
                } else {
                 self.subCategoryView.isHidden = true
-                   Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
+                   //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message!, messagetype: 0)
                }
            }, Failure: {error in
                 Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
@@ -542,10 +542,12 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         } else if txttitleEn.text == "" {
              Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Englisg Title", messagetype: 0)
              return false
-        } else if txttitleUrdu.text == "" {
-            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Urdu Title", messagetype: 0)
-             return false
-        } else if  txtvendorPrice.text == "" {
+        }
+//        else if txttitleUrdu.text == "" {
+//            Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Urdu Title", messagetype: 0)
+//             return false
+//        }
+        else if  txtvendorPrice.text == "" {
             Zalert.ZshareAlert.showAlert(title: "Alert", message: "Please Enter Vendor Price", messagetype: 0)
              return false
         } else if txtsupplyer.text == "" {
@@ -618,7 +620,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func createProductApi(){
         
-        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!]
+        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!, "product_length":self.txtLength.text!,"product_width": self.txtwidth.text!]
         
         
         print("Check Data",dic)
@@ -668,7 +670,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func updateProductApi(){
             
-            let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!]
+            let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!,"product_length":self.txtLength.text!,"product_width": self.txtwidth.text!]
            // userhandler.UplodGallery(img: img, Success: {successResponse in
             //            ShareData.hideProgress()
             //            self.imageGallery = successResponse

@@ -106,7 +106,7 @@ class PkgDetailVC: UIViewController {
             ShareData.hideProgress()
             ShareData.shareInfo.pkg =  response.my_package
             self.lblvendorname.text =  response.user?.owners_name
-            self.lblvendorPhone.text =  "Phone :" +  (response.user?.phone)!
+            self.lblvendorPhone.text =  "Phone : +92-" +  (response.user?.phone)!
             self.lblvendorAdress.text = response.user?.address
             self.lblVendorEmail.text = "Email :" +  (response.user?.email)!
             

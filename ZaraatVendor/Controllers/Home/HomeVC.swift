@@ -216,7 +216,7 @@ class HomeVC: UIViewController {
     
     @IBAction func inboxAction(_ sender: UIButton) {
           
-        self.alertMessage(message: "Chat Comining Soon...", completionHandler: {
+        self.alertMessage(message: "Chat coming soon...", completionHandler: {
             
         })
 //        if UIDevice.current.userInterfaceIdiom == .pad {

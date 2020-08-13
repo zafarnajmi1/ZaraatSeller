@@ -1884,18 +1884,18 @@
 			baseConfigurationReference = 3FD7B3AAA956CB0A978E776B /* Pods-ZaraatVendor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2;
-				DEVELOPMENT_TEAM = CDPRJ86Z6R;
+				CURRENT_PROJECT_VERSION = 1.3;
+				DEVELOPMENT_TEAM = 3VQ7UM9A59;
 				INFOPLIST_FILE = ZaraatVendor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ARW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
-				PROVISIONING_PROFILE_SPECIFIER = zaraatSellerProfileDev;
+				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1906,18 +1906,18 @@
 			baseConfigurationReference = 99679711226C3816B895D9C1 /* Pods-ZaraatVendor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2;
-				DEVELOPMENT_TEAM = CDPRJ86Z6R;
+				CURRENT_PROJECT_VERSION = 1.3;
+				DEVELOPMENT_TEAM = 3VQ7UM9A59;
 				INFOPLIST_FILE = ZaraatVendor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ARW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
-				PROVISIONING_PROFILE_SPECIFIER = zaraatSellerProfileDev;
+				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

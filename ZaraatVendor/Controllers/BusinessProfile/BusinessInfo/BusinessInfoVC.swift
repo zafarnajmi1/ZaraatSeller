@@ -131,7 +131,7 @@ class BusinessInfoVC: UIViewController {
         self.title = "Business Profile"
         txtdescriptionUr.delegate = self
          txtdescriptionUr.textColor = UIColor.lightGray
-         txtdescriptionUr.text = "Write about Your business(urdu)"
+         txtdescriptionUr.text = "Write about your business(urdu)"
         txtdescriptionUr.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
         
         descriptionUrView.layer.cornerRadius = 10
@@ -140,7 +140,7 @@ class BusinessInfoVC: UIViewController {
         
         txtdiscription.delegate = self
          txtdiscription.textColor = UIColor.lightGray
-         txtdiscription.text = "Write about Your Business(en)"
+         txtdiscription.text = "Write about your business(eng)"
         txtdiscription.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
        
         discriptinView.layer.cornerRadius = 10
@@ -197,7 +197,7 @@ class BusinessInfoVC: UIViewController {
         self.txtDocumentAttachment.text = editvendorsBProfile?.business_document
         
          self.Documentpath = editvendorsBProfile?.business_document ?? ""
-         self.Documentpath1 = editvendorsBProfile?.logo ?? ""
+         //self.Documentpath1 = editvendorsBProfile?.logo ?? ""
         self.params.params.updateValue(self.txtbusinessType.text!, forKey: "business_type")
         
         self.params.params.updateValue(self.editvendorsBProfile?.question_id ?? 0, forKey: "question")
@@ -728,12 +728,12 @@ extension BusinessInfoVC: UITextViewDelegate{
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Write about Your Business(en)" {
+        if textView.text == "Write about your business(eng)" {
             textView.text = ""
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
         }
-        else if textView.text == "Write about Your business(urdu)"{
+        else if textView.text == "Write about your business(urdu)"{
             
             textView.text = ""
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
@@ -753,14 +753,14 @@ extension BusinessInfoVC: UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView == txtdiscription {
             if textView.text == ""{
-            textView.text = "Write about Your Business(en)"
+            textView.text = "Write about your business(eng)"
             textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
             
             }
         }
         else if textView == txtdescriptionUr {
             if textView.text == ""{
-                textView.text = "Write about Your business(urdu)"
+                textView.text = "Write about your business(urdu)"
                 textView.textColor = #colorLiteral(red: 0.03339828178, green: 0.1443648934, blue: 0.1944116354, alpha: 1)
                
             }

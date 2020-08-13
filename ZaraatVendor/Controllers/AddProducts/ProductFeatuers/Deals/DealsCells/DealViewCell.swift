@@ -30,8 +30,8 @@ class DealViewCell: UITableViewCell {
     func SetaData(obj:Deals){
         self.lbltitle.text = obj.deal_title_en
         self.lblprice.text = "Price :" + (obj.deal_price ?? "")
-        self.lblstarDate.text =  "Start Date :" +  (obj.deal_start_date ?? "")
-        self.lblEndDate.text = "End Date :" + (obj.deal_end_date ?? "")
-        self.img.setPath(string: obj.deal_image, "Grey Logo")
+        self.lblstarDate.text =  "Start Date :" +  ((formatedDatetype(string: ((obj.deal_start_date)!))))
+        self.lblEndDate.text = "End Date :" + ((formatedDatetype(string: ((obj.deal_end_date)!))))
+        self.img.setPath(string: obj.deal_image, "Zaraat logo vertical png ( White ) (1)")
     }
 }
