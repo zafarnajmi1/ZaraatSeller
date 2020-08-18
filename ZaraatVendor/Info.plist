@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>App Transport Security Settings</key>
-	<dict>
-		<key>Allow Arbitrary Loads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -23,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -40,18 +37,24 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>$(PRODUCT_NAME) Will Use Photo And Gallery To Upload Profile Image </string>
 	<key>NSCameraUsageDescription</key>
 	<string>This App Will Access Camere to Upload User Profile  image</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) will access your location  </string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>$(PRODUCT_NAME) location use.</string>
+	<string>$(PRODUCT_NAME) will access your location    </string>
 	<key>NSLocationUsageDescription</key>
-	<string>$(PRODUCT_NAME) location use.</string>
+	<string>$(PRODUCT_NAME) will access your location  </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) location use.</string>
+	<string>$(PRODUCT_NAME) will access your location  </string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>This App Will Access MicroPhone  to Upload User Voice Note</string>
+	<string>This App Will Access MicroPhone  To Upload User Voice Note</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) Will Use Photo And Gallery To Upload Profile Image </string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) photos and video use.</string>
+	<string>$(PRODUCT_NAME) Will Use Photo and Gallery To Upload Profile Image </string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.otf</string>

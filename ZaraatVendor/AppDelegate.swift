@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // CrispSDK.configure(websiteID: "")
         //AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs
 //AIzaSyDTr8Ay74_TINfjRARbVN4H0BtGbpzv8DE
-
+//AIzaSyB4P9e-8w_vrv1X0TWFOJCJQwdRvhwckxs
+            //AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs
         return true
     }
 

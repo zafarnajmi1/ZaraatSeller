@@ -588,7 +588,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         let salePrcie = Float(self.txtvendorPrice.text!)
         let calculateCm = (Float(self.comission) ?? 0) / 100
        
-        let totalValue = (salePrcie!) * (calculateCm)
+        let totalValue = (salePrcie ?? 0) * (calculateCm)
         let sumcm = totalValue + salePrcie!
         self.txtsaleprice.text = "\(sumcm)"
     }

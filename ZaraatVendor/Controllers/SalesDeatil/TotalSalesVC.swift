@@ -9,7 +9,7 @@
 import UIKit
 import  XLPagerTabStrip
 import  Charts
-import  SwiftCharts
+//import  SwiftCharts
 class TotalSalesVC: DemoBaseViewController,IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "TOTAL SALE")
@@ -24,7 +24,7 @@ class TotalSalesVC: DemoBaseViewController,IndicatorInfoProvider {
     @IBOutlet weak var pkrView: UIView!
     @IBOutlet weak var newcustomerView: UIView!
     @IBOutlet weak var customerView: UIView!
-    var barchart : BarsChart!
+    //var barchart : BarsChart!
     
     @IBOutlet var chartView: BarChartView!
     

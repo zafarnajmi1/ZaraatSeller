@@ -1,12 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - AppAuth (1.3.0):
-    - AppAuth/Core (= 1.3.0)
-    - AppAuth/ExternalUserAgent (= 1.3.0)
-  - AppAuth/Core (1.3.0)
-  - AppAuth/ExternalUserAgent (1.3.0)
   - BadgeHub (0.1.1)
-  - CardIO (5.4.1)
   - Charts (3.4.0):
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
@@ -14,20 +8,6 @@ PODS:
   - DLRadioButton (1.4.12)
   - DropDown (2.3.13)
   - DZNEmptyDataSet (1.8.1)
-  - FBSDKCoreKit (6.0.0):
-    - FBSDKCoreKit/Basics (= 6.0.0)
-    - FBSDKCoreKit/Core (= 6.0.0)
-  - FBSDKCoreKit/Basics (6.0.0)
-  - FBSDKCoreKit/Core (6.0.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (6.0.0):
-    - FBSDKLoginKit/Login (= 6.0.0)
-  - FBSDKLoginKit/Login (6.0.0):
-    - FBSDKCoreKit (~> 6.0.0)
-  - FBSDKShareKit (6.0.0):
-    - FBSDKShareKit/Share (= 6.0.0)
-  - FBSDKShareKit/Share (6.0.0):
-    - FBSDKCoreKit (~> 6.0.0)
   - Firebase/Core (6.18.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.3.0)
@@ -96,10 +76,6 @@ PODS:
     - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
-  - GoogleSignIn (5.0.2):
-    - AppAuth (~> 1.2)
-    - GTMAppAuth (~> 1.0)
-    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (6.5.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -118,15 +94,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.1):
     - GoogleUtilities/Logger
-  - GTMAppAuth (1.0.0):
-    - AppAuth/Core (~> 1.0)
-    - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.3.1):
-    - GTMSessionFetcher/Full (= 1.3.1)
-  - GTMSessionFetcher/Core (1.3.1)
-  - GTMSessionFetcher/Full (1.3.1):
-    - GTMSessionFetcher/Core (= 1.3.1)
-  - InstagramLogin (1.3.0)
   - IQKeyboardManagerSwift (6.5.5)
   - KRActivityIndicatorView (3.0.5)
   - KRProgressHUD (3.4.5):
@@ -137,15 +104,6 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - NVActivityIndicatorView (4.8.0):
-    - NVActivityIndicatorView/Presenter (= 4.8.0)
-  - NVActivityIndicatorView/Presenter (4.8.0)
-  - PayPal-iOS-SDK (2.18.1):
-    - PayPal-iOS-SDK/CardIO (= 2.18.1)
-    - PayPal-iOS-SDK/Core (= 2.18.1)
-  - PayPal-iOS-SDK/CardIO (2.18.1):
-    - CardIO (~> 5.4.1)
-  - PayPal-iOS-SDK/Core (2.18.1)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
   - PryntTrimmerView (4.0.0)
@@ -158,7 +116,6 @@ PODS:
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
   - SteviaLayout (4.7.3)
-  - SwiftCharts (0.6.5)
   - SwiftMessages (7.0.1):
     - SwiftMessages/App (= 7.0.1)
   - SwiftMessages/App (7.0.1)
@@ -177,25 +134,17 @@ DEPENDENCIES:
   - DLRadioButton
   - DropDown
   - DZNEmptyDataSet
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
   - Firebase/Core
   - Firebase/Messaging
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
-  - GoogleSignIn
-  - InstagramLogin
   - IQKeyboardManagerSwift
   - KRProgressHUD
   - KWVerificationCodeView
-  - NVActivityIndicatorView
-  - PayPal-iOS-SDK
   - SDWebImage
   - SkyFloatingLabelTextField
   - Socket.IO-Client-Swift
-  - SwiftCharts
   - SwiftMessages
   - SwiftyMenu
   - XLPagerTabStrip
@@ -204,17 +153,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AppAuth
     - BadgeHub
-    - CardIO
     - Charts
     - Cosmos
     - DLRadioButton
     - DropDown
     - DZNEmptyDataSet
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -230,18 +174,12 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlacePicker
     - GooglePlaces
-    - GoogleSignIn
     - GoogleUtilities
-    - GTMAppAuth
-    - GTMSessionFetcher
-    - InstagramLogin
     - IQKeyboardManagerSwift
     - KRActivityIndicatorView
     - KRProgressHUD
     - KWVerificationCodeView
     - nanopb
-    - NVActivityIndicatorView
-    - PayPal-iOS-SDK
     - PromisesObjC
     - Protobuf
     - PryntTrimmerView
@@ -251,7 +189,6 @@ SPEC REPOS:
     - Socket.IO-Client-Swift
     - Starscream
     - SteviaLayout
-    - SwiftCharts
     - SwiftMessages
     - SwiftyMenu
     - XLPagerTabStrip
@@ -259,17 +196,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
   BadgeHub: 8632dc9ab9cfb1bee903ebd40f9de77d29323dc7
-  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
-  FBSDKLoginKit: fa57df1b967fe0e147b25bede6ea4e9cdf4d64be
-  FBSDKShareKit: 210dcda2603042cf73f31983fc99df4dac06f1d8
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
@@ -285,18 +217,12 @@ SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
-  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
-  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
-  GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
-  InstagramLogin: 55a3ab7aa6ee3f75bf06fdec1bb8f1e01e2c0b00
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   KRActivityIndicatorView: 912bc0413d98340f384b12a4e1e6aa8f42fb377d
   KRProgressHUD: df4cdc3a1baf708d4276a089ee34d133fa9a6f3e
   KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  PayPal-iOS-SDK: 70d56697aef502c130b9840e31dea5c6b8a350e1
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
@@ -306,12 +232,11 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
-  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyMenu: fff2eb1dea4771c61c9c718a111f4836930288ec
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 3b88ca0c50134af2856c48c481572c98a8b8b65b
 
-PODFILE CHECKSUM: 191c3f3b138b6c11e6ccd1cfad65010efcb9e4c5
+PODFILE CHECKSUM: 061b21d969b42ccad268d1a37480139541e0d3ae
 
 COCOAPODS: 1.9.1

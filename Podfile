@@ -12,13 +12,13 @@ target 'ZaraatVendor' do
  pod 'Alamofire', '~> 4.0'
  #pod 'AlamofireObjectMapper'
  #pod 'AlamofireImage'
- pod 'NVActivityIndicatorView'
+ #pod 'NVActivityIndicatorView'
  pod 'DLRadioButton'
- pod 'FBSDKCoreKit'
- pod 'FBSDKLoginKit'
- pod 'FBSDKShareKit'
- pod 'GoogleSignIn'
- pod 'InstagramLogin'
+ #pod 'FBSDKCoreKit'
+ #pod 'FBSDKLoginKit'
+ #pod 'FBSDKShareKit'
+ #pod 'GoogleSignIn'
+ #pod 'InstagramLogin'
  pod 'DropDown'
  pod 'SDWebImage'
  pod 'GooglePlaces'
@@ -29,7 +29,7 @@ target 'ZaraatVendor' do
 
 
  pod 'DZNEmptyDataSet'
- pod 'PayPal-iOS-SDK'
+# pod 'PayPal-iOS-SDK'
  pod 'BadgeHub'
 
  pod 'Firebase/Core'
@@ -37,7 +37,7 @@ target 'ZaraatVendor' do
  
  pod 'Cosmos'
  pod 'Charts'
- pod 'SwiftCharts'
+ #pod 'SwiftCharts'
  pod 'KRProgressHUD'
  pod 'YPImagePicker'
  pod 'SwiftyMenu'

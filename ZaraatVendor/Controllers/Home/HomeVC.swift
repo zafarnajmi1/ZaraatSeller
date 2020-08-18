@@ -35,7 +35,7 @@ class HomeVC: UIViewController {
         self.setTabs()
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
          navigationController?.navigationBar.titleTextAttributes = textAttributes
-       navigationButtons()
+       //navigationButtons()
          setNavigationBar()
          UIApplication.shared.setStatusBar()
         //self.navigationController?.navigationBar.isHidden =  true

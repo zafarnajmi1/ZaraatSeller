@@ -29,7 +29,7 @@ class MyAccountVC: UIViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
           navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationButtons()
+       // navigationButtons()
           setNavigationBar()
         self.tblView.tableFooterView =  UIView(frame: .zero)
           UIApplication.shared.setStatusBar()
