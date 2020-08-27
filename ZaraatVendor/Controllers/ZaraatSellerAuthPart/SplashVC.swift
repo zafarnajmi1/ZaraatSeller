@@ -54,7 +54,7 @@ class SplashVC: BaseVC {
                       ShareData.hideProgress()
                       if response.success == 1{
                        ShareData.shareInfo.userInfo = response
-    
+                        print(ShareData.shareInfo.userInfo?.vendors?.status)
                       // if response.vendors?.status == 0 {
                            //self.moveOnBusinessProfile()
                       // }else {

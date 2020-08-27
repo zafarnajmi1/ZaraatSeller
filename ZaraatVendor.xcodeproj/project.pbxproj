@@ -267,6 +267,9 @@
 		CED428EF249B836000344829 /* ViewProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED428EE249B836000344829 /* ViewProductsModel.swift */; };
 		CED428F2249B8A4F00344829 /* cellSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED428F0249B8A4F00344829 /* cellSlider.xib */; };
 		CED428F3249B8A4F00344829 /* cellSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED428F1249B8A4F00344829 /* cellSlider.swift */; };
+		CEE194F324ED08D80049ACFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE194F224ED08D70049ACFF /* GoogleService-Info.plist */; };
+		CEE194F424ED08D80049ACFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE194F224ED08D70049ACFF /* GoogleService-Info.plist */; };
+		CEE194F524ED08D80049ACFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE194F224ED08D70049ACFF /* GoogleService-Info.plist */; };
 		CEEA00122484EF9B006904C6 /* ViewProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA00112484EF9B006904C6 /* ViewProfileVC.swift */; };
 		CEEA00142484EFAA006904C6 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA00132484EFAA006904C6 /* EditProfileVC.swift */; };
 		CEEA2D1924B3377300E659D0 /* UpdateSaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA2D1824B3377300E659D0 /* UpdateSaleModel.swift */; };
@@ -508,6 +511,7 @@
 		CED428EE249B836000344829 /* ViewProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProductsModel.swift; sourceTree = "<group>"; };
 		CED428F0249B8A4F00344829 /* cellSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cellSlider.xib; path = ../../../../../../Downloads/CarInsurance2/CarInsurance/Controllers/Home/cellSlider.xib; sourceTree = "<group>"; };
 		CED428F1249B8A4F00344829 /* cellSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cellSlider.swift; path = ../../../../../../Downloads/CarInsurance2/CarInsurance/Controllers/Home/cellSlider.swift; sourceTree = "<group>"; };
+		CEE194F224ED08D70049ACFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEEA00112484EF9B006904C6 /* ViewProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileVC.swift; sourceTree = "<group>"; };
 		CEEA00132484EFAA006904C6 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		CEEA2D1824B3377300E659D0 /* UpdateSaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSaleModel.swift; sourceTree = "<group>"; };
@@ -1059,6 +1063,7 @@
 				CEBFC1712420986A00D6ADA1 /* SceneDelegate.swift */,
 				CEBFC17B2420986D00D6ADA1 /* Assets.xcassets */,
 				CEBFC17D2420986D00D6ADA1 /* LaunchScreen.storyboard */,
+				CEE194F224ED08D70049ACFF /* GoogleService-Info.plist */,
 				CEBFC1802420986D00D6ADA1 /* Info.plist */,
 				CEBFC1782420986A00D6ADA1 /* ZaraatVendor.xcdatamodeld */,
 			);
@@ -1384,6 +1389,7 @@
 				CEBFC17F2420986D00D6ADA1 /* LaunchScreen.storyboard in Resources */,
 				4312C1F92433019800E9B2DF /* MyProductCell.xib in Resources */,
 				CED428E7249B2E3100344829 /* FeedCell.xib in Resources */,
+				CEE194F324ED08D80049ACFF /* GoogleService-Info.plist in Resources */,
 				CE46F00324AB2A0500248D94 /* DealProductCell.xib in Resources */,
 				CE4D33B124ACBAFA0098BCCB /* SalesListCell.xib in Resources */,
 				CE4D33A124AC97010098BCCB /* DealDetailsCell.xib in Resources */,
@@ -1430,6 +1436,7 @@
 				CEAE713B24CEB18F0057DB9C /* Poppins-Light.otf in Resources */,
 				CEAE715324CEB18F0057DB9C /* Poppins-SemiBold.otf in Resources */,
 				CEAE716E24CEB18F0057DB9C /* Poppins-Regular.otf in Resources */,
+				CEE194F424ED08D80049ACFF /* GoogleService-Info.plist in Resources */,
 				CEAE716B24CEB18F0057DB9C /* Poppins-Medium.otf in Resources */,
 				CEAE716224CEB18F0057DB9C /* Poppins-Thin.otf in Resources */,
 				CEAE714D24CEB18F0057DB9C /* Poppins-Bold.ttf in Resources */,
@@ -1460,6 +1467,7 @@
 				CEAE713C24CEB18F0057DB9C /* Poppins-Light.otf in Resources */,
 				CEAE715424CEB18F0057DB9C /* Poppins-SemiBold.otf in Resources */,
 				CEAE716F24CEB18F0057DB9C /* Poppins-Regular.otf in Resources */,
+				CEE194F524ED08D80049ACFF /* GoogleService-Info.plist in Resources */,
 				CEAE716C24CEB18F0057DB9C /* Poppins-Medium.otf in Resources */,
 				CEAE716324CEB18F0057DB9C /* Poppins-Thin.otf in Resources */,
 				CEAE714E24CEB18F0057DB9C /* Poppins-Bold.ttf in Resources */,
@@ -1886,13 +1894,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 3VQ7UM9A59;
 				INFOPLIST_FILE = ZaraatVendor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
@@ -1908,13 +1917,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 3VQ7UM9A59;
 				INFOPLIST_FILE = ZaraatVendor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;

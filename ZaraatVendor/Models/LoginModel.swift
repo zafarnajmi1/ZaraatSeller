@@ -22,7 +22,7 @@ struct LoginModel : Codable {
 
            case errors = "errors"
            case token = "token"
-           case vendors = "vendors"
+           case vendors = "vendor"
            case token_type = "token_type"
            case expires_in = "expires_in"
            case message = "message"
