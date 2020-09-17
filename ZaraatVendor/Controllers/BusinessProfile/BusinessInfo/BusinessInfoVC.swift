@@ -160,16 +160,16 @@ class BusinessInfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.txtemail.text =  ShareData.shareInfo.email
+        self.txtphone.text =  ShareData.shareInfo.phone
         if fromMyaccount ==  true {
             addBackButton()
             self.navigationController?.navigationBar.isHidden =  false
             
             
             setupEditBProfile()
-        } else {
-            self.txtemail.text =  ShareData.shareInfo.userInfo?.vendors?.email
-            self.txtphone.text = ShareData.shareInfo.userInfo?.vendors?.phone
         }
+        
        
     }
     

@@ -52,6 +52,16 @@ class ShareData {
             return UserDefaults.standard.string(forKey:  "email")
         }
     }
+    
+    var phone:String?{
+           set{
+               UserDefaults.standard.set(newValue , forKey: "phone")
+               UserDefaults.standard.synchronize()
+           }
+           get{
+               return UserDefaults.standard.string(forKey:  "phone")
+           }
+       }
     var autologin:Bool?{
         set{
             UserDefaults.standard.set(newValue , forKey: "autologin")

@@ -119,6 +119,7 @@ class SignUpVC: BaseVC {
                 ShareData.shareInfo.userInfo = response
                 ShareData.shareInfo.email = self.txtemail.text!
                 ShareData.shareInfo.password = self.txtpassword.text!
+                ShareData.shareInfo.phone =  self.txtphonenumber.text!
                 ShareData.shareInfo.autologin =  true
                 //if response.vendors?.status == 0 || response.vendors?.status == nil  {
                    // self.moveOnBusinessProfile()
