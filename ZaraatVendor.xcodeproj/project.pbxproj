@@ -63,6 +63,8 @@
 		CE24931C24A20E5300B51A3A /* AddSaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24931B24A20E5300B51A3A /* AddSaleVC.swift */; };
 		CE24931E24A2177F00B51A3A /* AddCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24931D24A2177F00B51A3A /* AddCouponVC.swift */; };
 		CE24932024A217A400B51A3A /* AddFeaturesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24931F24A217A400B51A3A /* AddFeaturesVC.swift */; };
+		CE2746952514CF640052C12A /* Zaraat Seller Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE2746942514CF630052C12A /* Zaraat Seller Guide.pdf */; };
+		CE2746982514D2F00052C12A /* ZarratSellerGuidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2746972514D2F00052C12A /* ZarratSellerGuidVC.swift */; };
 		CE28329C248916960046AEE4 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28329B248916960046AEE4 /* UserProfileModel.swift */; };
 		CE46EFFE24AB219C00248D94 /* DeleteProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46EFFD24AB219B00248D94 /* DeleteProductModel.swift */; };
 		CE46F00224AB2A0500248D94 /* DealProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46F00024AB2A0500248D94 /* DealProductCell.swift */; };
@@ -365,6 +367,8 @@
 		CE24931B24A20E5300B51A3A /* AddSaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSaleVC.swift; sourceTree = "<group>"; };
 		CE24931D24A2177F00B51A3A /* AddCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVC.swift; sourceTree = "<group>"; };
 		CE24931F24A217A400B51A3A /* AddFeaturesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeaturesVC.swift; sourceTree = "<group>"; };
+		CE2746942514CF630052C12A /* Zaraat Seller Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Zaraat Seller Guide.pdf"; sourceTree = "<group>"; };
+		CE2746972514D2F00052C12A /* ZarratSellerGuidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZarratSellerGuidVC.swift; sourceTree = "<group>"; };
 		CE28329B248916960046AEE4 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		CE46EFFD24AB219B00248D94 /* DeleteProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductModel.swift; sourceTree = "<group>"; };
 		CE46F00024AB2A0500248D94 /* DealProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealProductCell.swift; sourceTree = "<group>"; };
@@ -803,6 +807,14 @@
 			path = ProductFeatuers;
 			sourceTree = "<group>";
 		};
+		CE2746962514D1780052C12A /* ZaraatSellerGuid */ = {
+			isa = PBXGroup;
+			children = (
+				CE2746972514D2F00052C12A /* ZarratSellerGuidVC.swift */,
+			);
+			path = ZaraatSellerGuid;
+			sourceTree = "<group>";
+		};
 		CE46F00424AB44A100248D94 /* Deals */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,6 +1064,7 @@
 		CEBFC16E2420986A00D6ADA1 /* ZaraatVendor */ = {
 			isa = PBXGroup;
 			children = (
+				CE2746942514CF630052C12A /* Zaraat Seller Guide.pdf */,
 				CEAE717F24CEB1C40057DB9C /* ZaraatSellerShareData */,
 				CEAE712224CEB1580057DB9C /* ZaraatSelleFonts */,
 				CEAE711B24CEB0210057DB9C /* Extenssionss */,
@@ -1091,6 +1104,7 @@
 		CEBFC1A224209CD000D6ADA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE2746962514D1780052C12A /* ZaraatSellerGuid */,
 				CE0F06B224C16D30006ABD0A /* PakagesVC's */,
 				CED428E1249B2DE300344829 /* FeedBackAndReviews */,
 				CECABE312492399A00AAA233 /* Chart */,
@@ -1381,6 +1395,7 @@
 				CEAE716424CEB18F0057DB9C /* Poppins-ExtraBold.otf in Resources */,
 				CEAE716A24CEB18F0057DB9C /* Poppins-Medium.otf in Resources */,
 				CE999F5C24238EA500A62352 /* MyCccountCell.xib in Resources */,
+				CE2746952514CF640052C12A /* Zaraat Seller Guide.pdf in Resources */,
 				CEBFC25D2420E5AD00D6ADA1 /* OrderCell.xib in Resources */,
 				CEAE715B24CEB18F0057DB9C /* Poppins-ExtraLight.otf in Resources */,
 				CEAE714C24CEB18F0057DB9C /* Poppins-Bold.ttf in Resources */,
@@ -1580,6 +1595,7 @@
 				4312C1F22433011000E9B2DF /* MyproductsVC.swift in Sources */,
 				CEBFC2522420D79F00D6ADA1 /* MyAccountVC.swift in Sources */,
 				CED428E3249B2E1900344829 /* FeedBackVC.swift in Sources */,
+				CE2746982514D2F00052C12A /* ZarratSellerGuidVC.swift in Sources */,
 				CED3FF3124AF302800AE60BF /* DeleteCouponModel.swift in Sources */,
 				CE999F5824234BD500A62352 /* BusinessInfoVC.swift in Sources */,
 				CEEA00142484EFAA006904C6 /* EditProfileVC.swift in Sources */,
@@ -1901,7 +1917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
@@ -1924,7 +1940,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;

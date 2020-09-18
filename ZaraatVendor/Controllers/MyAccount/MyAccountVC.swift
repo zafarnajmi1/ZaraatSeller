@@ -91,6 +91,7 @@ class MyAccountVC: UIViewController {
         menuArray.append(menu(title: "Upgrade Account", img: UIImage.init(named: "Upgrade (1)")))
         menuArray.append(menu(title: "Change Password", img: UIImage.init(named: "password")))
         menuArray.append(menu(title: "Help Center", img: UIImage.init(named: "helpcenter")))
+        menuArray.append(menu(title: "Zaraat Seller Guide", img: UIImage.init(named: "SellerGuide")))
         //menuArray.append(menu(title: "Reviews And Feedback Of Products", img: UIImage.init(named: "reviewsandfeedback")))
         //menuArray.append(menu(title: "Learn More", img: UIImage.init(named: "learnmore")))
         menuArray.append(menu(title: "Log Out", img: UIImage.init(named: "logout")))
@@ -158,7 +159,9 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
              moveOnChangePAssword()
         case 3 :
             moveOnSupport()
-        case 4 :
+        case 4:
+            moveOnGuid()
+        case 5 :
           alertForLogout()
         default:
             break
@@ -200,7 +203,25 @@ extension MyAccountVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    
+    func moveOnGuid() {
+         if UIDevice.current.userInterfaceIdiom == .pad {
+
+               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Ipad, bundle: nil)
+               let vc =  storyBoard.instantiateViewController(withIdentifier: "ZarratSellerGuidVC") as? ZarratSellerGuidVC
+               
+             vc?.hidesBottomBarWhenPushed =  true
+               self.navigationController?.pushViewController(vc!, animated: true)
+
+         } else {
+
+               let storyBoard = UIStoryboard.init(name: ShareData.shareInfo.Iphone, bundle: nil)
+               let vc =  storyBoard.instantiateViewController(withIdentifier: "ZarratSellerGuidVC") as? ZarratSellerGuidVC
+                
+            vc?.hidesBottomBarWhenPushed =  true
+               self.navigationController?.pushViewController(vc!, animated: true)
+         }
+         
+     }
     
     
     

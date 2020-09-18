@@ -188,5 +188,11 @@ class LoginVC: BaseVC,UITextFieldDelegate {
         }
         
 
-
+    @IBAction func GuidAction(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ZarratSellerGuidVC") as! ZarratSellerGuidVC
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
 }
