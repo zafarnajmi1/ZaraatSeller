@@ -38,7 +38,7 @@ class MyProductCell: UITableViewCell {
         lbltons.text = obj.product_stock ?? ""
         lbltons2.text = obj.stock_threshold ?? ""
         img.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        img.sd_setImage(with: URL(string: obj.images![0].file_path ?? ""), placeholderImage: UIImage(named: "Grey Logo (1)"))
+        img.sd_setImage(with: URL(string: obj.images?[0].file_path ?? ""), placeholderImage: UIImage(named: "Grey Logo (1)"))
         
         lblproductName.text =  obj.product_title_en
     }

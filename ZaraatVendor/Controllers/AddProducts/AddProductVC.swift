@@ -27,7 +27,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     var cemeraimg = UIImagePickerController()
        var galleryimage = UIImagePickerController()
-    var imageGallery : AddGallery?
+    
 //    @IBOutlet weak var stackStock: UIStackView!
 //   // @IBOutlet weak var stackColor: UIStackView!
 //    @IBOutlet weak var stackHeight: UIStackView!
@@ -178,9 +178,10 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     var subcatid = 0
     var childcatid = 0
     var viewproduct: ViewProductsModel?
-    var productGallary = [Gallery]()
+    var productGallary = [Gallery]() // for  updating
+    var imageGallery : AddGallery? // for upload
     var productdata : AddProductsModel?
-    
+    var ProimgsPath = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden =  false
@@ -218,7 +219,11 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
             if successResponse.status == 1 {
                 self.viewproduct =  successResponse
                 self.productGallary.removeAll()
+                self.ProimgsPath.removeAll()
                 self.productGallary =  successResponse.gallery ?? []
+                for item in self.productGallary {
+                    self.ProimgsPath.append(item.file_path ?? "")
+                }
                 self.txttitleEn.text =  self.viewproduct?.product?.product_title_en
                 self.txttitleUrdu.text =  self.viewproduct?.product?.product_title_urdu
                 
@@ -289,73 +294,12 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func formConfig(){
         
-//        txtView.delegate = self
-//         txtView.textColor = UIColor.lightGray
-//         txtView.text = "Discription(urdu)"
-//        txtView.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
-//
-//
-//        txtdescriptionEN.delegate = self
-//         txtdescriptionEN.textColor = UIColor.lightGray
-//         txtdescriptionEN.text = "Discription(en)"
-//        txtdescriptionEN.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
+
         
         headerView.viewSetUp(radius: Int(headerView.layer.frame.height / 2), color: #colorLiteral(red: 0.7955924273, green: 0.8120230436, blue: 0.8036844134, alpha: 1), borderwidth: 1)
        
         
-        //vendorView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        
-//         stockView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//       categoryView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//         subCategoryView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//         titleView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-      //supplyView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        
-      // productSizeView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-         //productWeithView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        
-       // productColorView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        
-      // productHeightView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-        
-//         stastusView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//       vendorPriceView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//
-//        titleUrduView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//
-//        supplyabilityView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//        threshView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//       stockProductView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//
-//
-//        lengthView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//         widthView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//
-//         HeightView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//        salePriceView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-//        self.skuView.roundViewAndBorder(border: 1, color: #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1))
-         
-//        descriptionENView.layer.cornerRadius = 10
-//        descriptionENView.layer.borderWidth = 1
-//        descriptionENView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
-//
-//
-//
-//
-//
-//        discriptionView.layer.cornerRadius = 10
-//        discriptionView.layer.borderWidth = 1
-//        discriptionView.layer.borderColor = #colorLiteral(red: 0.7643175721, green: 0.7766392827, blue: 0.7724317908, alpha: 1)
+   
         
         imageView.layer.cornerRadius = 10
         imageView.layer.borderWidth = 1
@@ -364,30 +308,6 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         
     }
 
-
-    
-    
-//    @IBAction func variableAction(_ sender: UIButton) {
-//        btnVariable.setBackgroundImage(UIImage.init(named: "Tickfilled"), for: .normal)
-//        btnproductType.setBackgroundImage(UIImage.init(named: "tick"), for: .normal)
-//        viewheight.constant = 379
-//
-//        stackStock.isHidden = false
-//       stackColor.isHidden = false
-//        stackHeight.isHidden = false
-//    }
-    
-//
-//    @IBAction func simpleAction(_ sender: UIButton) {
-//        btnVariable.setBackgroundImage(UIImage.init(named: "tick"), for: .normal)
-//
-//         btnproductType.setBackgroundImage(UIImage.init(named: "Tickfilled"), for: .normal)
-//         viewheight.constant = 200
-//
-//         stackStock.isHidden = true
-//        stackColor.isHidden = true
-//         stackHeight.isHidden = true
-//    }
     
     
     func getvendorProductsApi() {
@@ -620,26 +540,19 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
     
     func createProductApi(){
         
-        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!, "product_length":self.txtLength.text!,"product_width": self.txtwidth.text!]
+        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!, "product_weight": txtproductWeight.text!, "product_length":self.txtLength.text!,"product_width": self.txtwidth.text!,"featured_image":self.imageGallery?.image_paths?[0] ?? "","avatar": self.imageGallery?.image_paths ?? ""  ]
         
         
         print("Check Data",dic)
         
         
-       // userhandler.UplodGallery(img: img, Success: {successResponse in
-        //            ShareData.hideProgress()
-        //            self.imageGallery = successResponse
-        //        }, Failure: {error in
-        //
-        //            ShareData.hideProgress()
-        //            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
-        //        } )
+      
         
         ShareData.showProgress()
             
             
             
-            userhandler.addProducts(parms: dic, img: ProImg, Success: {successResponse in
+            userhandler.addProducts(parms: dic, Success: {successResponse in
                 ShareData.hideProgress()
                 if successResponse.success == 1 {
                     Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 1)
@@ -652,34 +565,17 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 ShareData.hideProgress()
                 Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
             })
-//        userhandler.addProducts(param: dic , Success: {successResponse in
-//            ShareData.hideProgress()
-//            if successResponse.success == 1 {
-//                Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 1)
-//                self.navigationController?.popViewController(animated: true)
-//            } else {
-//                ShareData.hideProgress()
-//                Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 0)
-//            }
-//        }, Failure: {error in
-//            ShareData.hideProgress()
-//            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
-//        })
+
     }
     
     
     func updateProductApi(){
             
-            let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!,"product_length":self.txtLength.text!,"product_width": self.txtwidth.text!]
-           // userhandler.UplodGallery(img: img, Success: {successResponse in
-            //            ShareData.hideProgress()
-            //            self.imageGallery = successResponse
-            //        }, Failure: {error in
-            //
-            //            ShareData.hideProgress()
-            //            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
-            //        } )
+        let dic:[String:Any] =  ["category_id": "\(self.catid)","subcategory_id":"\(self.subcatid)","child_subcategory_id":"\(self.childcatid)","product_title_en":txttitleEn.text!,"product_title_urdu":txttitleUrdu.text!,"vendor_price":txtvendorPrice.text!,"selling_price":txtsaleprice.text!,"stock_threshold":txtthreshhold.text!,"product_type":"1", "product_stock":txtstock.text!, "product_supply_ability":txtsupplyer.text!, "product_status":txtstatus.text!, "product_sku":txtsku.text!, "product_barcode":"",  "product_height": txtheight.text!,"product_weight": txtproductWeight.text!,"product_length":self.txtLength.text!,"product_width": self.txtwidth.text!, "featured_image": self.productGallary[0].file_path ?? "","avatar": self.ProimgsPath ]
+           
             
+        
+        
         
          print(dic)
         
@@ -688,7 +584,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 
                 
                 
-        userhandler.updateProducts(id:"\(self.viewproduct?.product?.products_id ?? 0)",parms: dic, img: ProImg, Success: {successResponse in
+        userhandler.updateProducts(id:"\(self.viewproduct?.product?.products_id ?? 0)",parms: dic, Success: {successResponse in
                     ShareData.hideProgress()
                     if successResponse.success == 1 {
                         Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 1)
@@ -701,89 +597,8 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                     ShareData.hideProgress()
                     Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
                 })
-    //        userhandler.addProducts(param: dic , Success: {successResponse in
-    //            ShareData.hideProgress()
-    //            if successResponse.success == 1 {
-    //                Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 1)
-    //                self.navigationController?.popViewController(animated: true)
-    //            } else {
-    //                ShareData.hideProgress()
-    //                Zalert.ZshareAlert.showAlert(title: "Alert", message: successResponse.message!, messagetype: 0)
-    //            }
-    //        }, Failure: {error in
-    //            ShareData.hideProgress()
-    //            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
-    //        })
+    
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    func PickImag()
-    {
-        let alert = UIAlertController(title: "Please Select an Option", message: "", preferredStyle: .actionSheet)
-        
-        let Gallry = UIAlertAction(title: "Photo Library", style: .default){ (Picimg) in self.GalleryPic()
-        }
-        let camraimg = UIAlertAction(title: "Camera", style: .default){ (ac) in self.cemeraPic()
-        }
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel){(action) in self.cancel()
-            
-        }
-        
-        alert.addAction(Gallry)
-        alert.addAction(camraimg)
-        alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
-        
-    }
-    func cancel()
-    {
-        self.galleryimage.dismiss(animated: true, completion: nil)
-    }
-    
-    func cemeraPic()
-    {
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            cemeraimg.sourceType = .camera
-            cemeraimg.delegate = self
-            cemeraimg.allowsEditing = false
-            present(cemeraimg, animated: true, completion: nil)
-        }
-        else {
-            
-            let alert = UIAlertController(title: "Camera", message: "Camera is not available", preferredStyle: .actionSheet)
-            let alertaction = UIAlertAction(title: "Cancel", style: .cancel)
-            alert.addAction(alertaction)
-            present(alert, animated: true, completion: nil)
-            
-        }
-    }
-    func GalleryPic()
-    {
-        if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary))
-        {
-            galleryimage.delegate = self
-            galleryimage.allowsEditing = false
-            galleryimage.sourceType = UIImagePickerController.SourceType.photoLibrary
-            present(galleryimage, animated: true, completion: nil)
-            
-        }else{
-            
-            print("Image is not Available")
-            
-        }
-        
-    }
-    
-    
-    
-    
     
     
     
@@ -905,44 +720,9 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
             // YPImagePickerConfiguration.shared.wordings.libraryTitle = "Gallery2"
             
 
-            /* Multiple media implementation */
-//            picker.didFinishPicking { [unowned picker] items, cancelled in
-//
-//                if cancelled {
-//                    print("Picker was canceled")
-//                    picker.dismiss(animated: true, completion: nil)
-//                    return
-//                }
-//                _ = items.map { print("🧀 \($0)") }
-//
-//                self.selectedItems = items
-//
-//                if let firstItem = items.first {
-//                    switch firstItem {
-//                    case .photo(let photo):
-//                        print("i am image", photo.image)
-//                        //self.uploadGalleryApi(img: [photo.image])
-//                        //self.selectedImageV.image = photo.image
-//                        picker.dismiss(animated: true, completion: nil)
-//                    case .video(let video):
-//                        //self.selectedImageV.image = video.thumbnail
-//
-//                        let assetURL = video.url
-//                        let playerVC = AVPlayerViewController()
-//                        let player = AVPlayer(playerItem: AVPlayerItem(url:assetURL))
-//                        playerVC.player = player
-//
-//                        picker.dismiss(animated: true, completion: { [weak self] in
-//                            self?.present(playerVC, animated: true, completion: nil)
-//                            //print("😀 \(String(describing: self?.resolutionForLocalVideo(url: assetURL)!))")
-//                        })
-//                    }
-//                }
-//            }
-
-            
             
             picker.didFinishPicking { [unowned picker] items, cancelled in
+                   
                 for item in items {
                     switch item {
                     case .photo(let photo):
@@ -953,40 +733,15 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                     }
                 }
                 self.clView.reloadData()
-                //self.uploadGalleryApi(img: self.ProImg)
+                if self.ProImg.count != 0 {
+                    self.uploadGalleryApi(img: self.ProImg)
+                }
                 picker.dismiss(animated: true, completion: nil)
             }
             
             
             
-            
-            
-            
-            
-            /* Single Photo implementation. */
-            // picker.didFinishPicking { [unowned picker] items, _ in
-            //     self.selectedItems = items
-            //     self.selectedImageV.image = items.singlePhoto?.image
-            //     picker.dismiss(animated: true, completion: nil)
-            // }
-
-            /* Single Video implementation. */
-            //picker.didFinishPicking { [unowned picker] items, cancelled in
-            //    if cancelled { picker.dismiss(animated: true, completion: nil); return }
-            //
-            //    self.selectedItems = items
-            //    self.selectedImageV.image = items.singleVideo?.thumbnail
-            //
-            //    let assetURL = items.singleVideo!.url
-            //    let playerVC = AVPlayerViewController()
-            //    let player = AVPlayer(playerItem: AVPlayerItem(url:assetURL))
-            //    playerVC.player = player
-            //
-            //    picker.dismiss(animated: true, completion: { [weak self] in
-            //        self?.present(playerVC, animated: true, completion: nil)
-            //        print("😀 \(String(describing: self?.resolutionForLocalVideo(url: assetURL)!))")
-            //    })
-            //}
+       
 
             present(picker, animated: true, completion: nil)
         }
@@ -994,57 +749,6 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
 }
 
 
-//extension AddProductVC: UITextViewDelegate{
-//
-//
-//    func textViewDidBeginEditing(_ textView: UITextView) {
-//        if textView.text == "Discription(en)" {
-//            textView.text = ""
-//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-//
-//        }
-//        else if textView.text == "Discription(urdu)"{
-//
-//            textView.text = ""
-//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-//
-//        }
-//
-//
-//    }
-//
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        if text == "\n" {
-//            textView.resignFirstResponder()
-//        }
-//        return true
-//    }
-//
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        if textView == txtdescriptionEN {
-//            if textView.text == ""{
-//            textView.text = "Discription(en)"
-//            textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-//
-//            }
-//        }
-//        else if textView == txtdescriptionUr {
-//            if textView.text == ""{
-//                textView.text = "Discription(urdu)"
-//                textView.textColor = #colorLiteral(red: 0.3449268937, green: 0.348911345, blue: 0.3571794033, alpha: 1)
-//
-//            }
-//        }
-//
-//
-//    }
-//
-//
-//
-//
-//
-//
-//}
 
 extension AddProductVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -1096,7 +800,7 @@ extension AddProductVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
                 if  indexPath.section == 0 {
                     showPicker()
-                         //PickImag()
+                         
                 } else {
                     
                 }
@@ -1107,17 +811,7 @@ extension AddProductVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
 }
 extension AddProductVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let img =  (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
-        self.ProImg.removeAll()
-        self.ProImg.append(img)
-        self.clView.reloadData()
-        //self.docimg = img
-        //uploadGalleryApi(img:self.ProImg)
-        dismiss(animated: true, completion: nil)
-    }
-    
+   
     
     
     func deleteproductImg(cell: ViewImageCell) {
@@ -1132,17 +826,20 @@ extension AddProductVC : UIImagePickerControllerDelegate,UINavigationControllerD
         self.clView.reloadData()
         
     }
-//    func uploadGalleryApi(img:[UIImage]) {
-//        ShareData.showProgress()
-//        userhandler.UplodGallery(img: img, Success: {successResponse in
-//            ShareData.hideProgress()
-//            self.imageGallery = successResponse
-//        }, Failure: {error in
-//
-//            ShareData.hideProgress()
-//            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
-//        } )
-//    }
+    
+    func uploadGalleryApi(img:[UIImage]) {
+        ShareData.showProgress()
+       
+        
+        userhandler.UplodGallery(img: img, Success: {successResponse in
+            ShareData.hideProgress()
+            self.imageGallery = successResponse
+        }, Failure: {error in
+
+            ShareData.hideProgress()
+            Zalert.ZshareAlert.showAlert(title: "Alert", message: error.message, messagetype: 0)
+        } )
+    }
 
     
     func deleteImgGallery(id:Int){

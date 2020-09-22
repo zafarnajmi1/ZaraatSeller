@@ -401,20 +401,20 @@ class func PostRequest(url: String, parameters: Parameters?, success:@escaping (
         Manger.upload(multipartFormData: {(multipart) in
             for item  in gellaryimg {
               let data =  item.jpegData(compressionQuality: 0.4)
-                print(data!)
-                multipart.append(data!, withName: fileName, fileName: fileName, mimeType: type)
+                print("i am data", data!)
+                multipart.append(data!, withName: fileName, fileName: "\( NSUUID().uuidString).jpeg", mimeType: type)
             }
 //            if let data = userimg.jpegData(compressionQuality: 0.6)
 //            {
 //                print(data)
 //                multipart.append(data, withName: fileName, fileName: fileName, mimeType: type)
 //            }
-                        for(key, values ) in parameters!
-                        {
-                            multipart.append((values as! String).data(using: String.Encoding.utf8)!, withName: key)
-                            print(values)
-                            print(values)
-                        }
+//                        for(key, values ) in parameters!
+//                        {
+//                            multipart.append((values as! String).data(using: String.Encoding.utf8)!, withName: key)
+//                            print(values)
+//                            print(values)
+//                        }
             
         }, usingThreshold: UInt64.init(), to: url, method: .post, headers: Headers, encodingCompletion:{(result) in
             switch(result)

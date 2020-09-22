@@ -526,59 +526,76 @@ class userhandler {
     }
     
     
-//    class  func UplodGallery(img: [UIImage], Success: @escaping (AddGallery) -> Void, Failure: @escaping(NetworkError) -> Void){
-//        let url = Constant.MainUrl + Constant.URLs.addGalleryimages
-//        Networkhandler.UploadImage1(url: url, filename: "avatar[]", parameters: nil, gellaryimg: img, Progress: {progress in
-//            print(progress)
-//        }, Success: {successResponse in
-//            do {
-//            print("MyResponse : ", successResponse)
-//                let responseModel = try JSONDecoder().decode(AddGallery.self, from: successResponse.data!)
-//                Success(responseModel)
-//            }
-//            catch {
-//                print("Response Error")
-//            }} , Falioure: {Error in
-//                Failure(Error)
-//
-//        })
-//
-//    }
-    class  func addProducts(parms: [String:Any],img: [UIImage], Success: @escaping (AddProductsModel) -> Void, Failure: @escaping(NetworkError) -> Void){
-        let url = Constant.MainUrl + Constant.URLs.AddProduct//Constant.MainUrl + Constant.URLs.addGalleryimages
-        Networkhandler.UploadImage1(url: url, filename: "avatar[]", parameters: parms, gellaryimg: img, Progress: {progress in
+    class  func UplodGallery(img: [UIImage], Success: @escaping (AddGallery) -> Void, Failure: @escaping(NetworkError) -> Void){
+        let url = Constant.MainUrl + Constant.URLs.addGalleryimages
+        Networkhandler.UploadImage1(url: url, filename: "avatar[]", parameters: nil, gellaryimg: img, Progress: {progress in
             print(progress)
         }, Success: {successResponse in
             do {
             print("MyResponse : ", successResponse)
-                let responseModel = try JSONDecoder().decode(AddProductsModel.self, from: successResponse.data!)
+                let responseModel = try JSONDecoder().decode(AddGallery.self, from: successResponse.data!)
                 Success(responseModel)
             }
             catch {
                 print("Response Error")
             }} , Falioure: {Error in
                 Failure(Error)
-                
+
         })
-        
+
     }
     
-    class  func updateProducts(id:String,parms: [String:Any],img: [UIImage], Success: @escaping (AddProductsModel) -> Void, Failure: @escaping(NetworkError) -> Void){
-         let url = Constant.MainUrl + Constant.URLs.updateProduct + "\(id)"//Constant.MainUrl + Constant.URLs.addGalleryimages
-         Networkhandler.UploadImage1(url: url, filename: "avatar[]", parameters: parms, gellaryimg: img, Progress: {progress in
-             print(progress)
-         }, Success: {successResponse in
-             do {
+    
+    
+    class  func addProducts(parms: [String:Any], Success: @escaping (AddProductsModel) -> Void, Failure: @escaping(NetworkError) -> Void){
+        let url = Constant.MainUrl + Constant.URLs.AddProduct
+        Networkhandler.PostRequest(url: url, parameters: parms, success: {  successResponse in
+            
+            do {
              print("MyResponse : ", successResponse)
                  let responseModel = try JSONDecoder().decode(AddProductsModel.self, from: successResponse.data!)
                  Success(responseModel)
              }
              catch {
                  print("Response Error")
-             }} , Falioure: {Error in
-                 Failure(Error)
-                 
-         })
+             }
+        }, Falioure: {  Error in
+            Failure(Error)
+        })
+        
+    }
+    
+    class  func updateProducts(id:String,parms: [String:Any], Success: @escaping (AddProductsModel) -> Void, Failure: @escaping(NetworkError) -> Void){
+         let url = Constant.MainUrl + Constant.URLs.updateProduct + "\(id)"//Constant.MainUrl + Constant.URLs.addGalleryimages
+        Networkhandler.PostRequest(url: url, parameters: parms, success: {  successResponse in
+            
+            do {
+             print("MyResponse : ", successResponse)
+                 let responseModel = try JSONDecoder().decode(AddProductsModel.self, from: successResponse.data!)
+                 Success(responseModel)
+             }
+             catch {
+                 print("Response Error")
+             }
+        }, Falioure: {  Error in
+            Failure(Error)
+        })
+        
+        
+//        (url: url, filename: "avatar[]", parameters: parms, gellaryimg: img, Progress: {progress in
+//             print(progress)
+//         }, Success: {successResponse in
+//             do {
+//             print("MyResponse : ", successResponse)
+//                 let responseModel = try JSONDecoder().decode(AddProductsModel.self, from: successResponse.data!)
+//                 Success(responseModel)
+//             }
+//             catch {
+//                 print("Response Error")
+//             }} , Falioure: {Error in
+//                 Failure(Error)
+//
+//         })
          
      }
     

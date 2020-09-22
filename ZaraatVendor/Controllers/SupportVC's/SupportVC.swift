@@ -11,7 +11,7 @@ import UIKit
 class SupportVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     var titleArr = ["Contact Through Mail : support@zaraat.com","Contact Through Phone : 042-35787542"]
-    var imageArr = [UIImage.init(named:"email" ),UIImage.init(named:"phone" )] 
+    var imageArr = [UIImage.init(named:"email" ),UIImage.init(named:"phone" )]
     override func viewDidLoad() {
         super.viewDidLoad()
 //        UIView.animate(withDuration: 0.1, animations: {
