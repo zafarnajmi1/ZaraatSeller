@@ -270,8 +270,8 @@
             filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "542"
-            endingLineNumber = "542"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
             landmarkName = "createProductApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -558,8 +558,8 @@
             filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "546"
-            endingLineNumber = "546"
+            startingLineNumber = "553"
+            endingLineNumber = "553"
             landmarkName = "createProductApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -568,22 +568,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D1D2A13B-AE38-48F9-A3C9-4A7D13F4255E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "573"
-            endingLineNumber = "573"
-            landmarkName = "updateProductApi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9BA0089C-2852-4E84-8B2D-33966E389E68"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -599,6 +583,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "9BA0089C-2852-4E84-8B2D-33966E389E68"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
+            landmarkName = "updateProductApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "F33EAE1B-E3D4-410B-BC36-B101743F114D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -606,9 +606,57 @@
             filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "583"
-            endingLineNumber = "583"
+            startingLineNumber = "590"
+            endingLineNumber = "590"
             landmarkName = "updateProductApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AC52A48-8EAC-45ED-BE46-B1768AF30EB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "519"
+            endingLineNumber = "519"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD819DB3-DF89-4838-B7F7-410E92701C7B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "517"
+            endingLineNumber = "517"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B98674A-A290-4AC9-A038-921698158517"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZaraatVendor/Controllers/AddProducts/AddProductVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
+            landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

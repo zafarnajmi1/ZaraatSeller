@@ -250,7 +250,13 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
                 
                 self.txtsubcategory.text =  self.viewproduct?.subcategory?.subcategory_title_en
                 
-                
+                self.comission = self.viewproduct?.subcategory?.commission ?? ""
+                let salePrcie = Float("\(self.viewproduct?.product?.vendor_price ?? "")")
+                       let calculateCm = (Float(self.comission) ?? 0) / 100
+                      
+                       let totalValue = (salePrcie ?? 0) * (calculateCm)
+                       let sumcm = totalValue + salePrcie!
+                       self.txtsaleprice.text = "\(sumcm)"
                 
                 
                 
@@ -353,6 +359,7 @@ class AddProductVC: UIViewController,deleteImg, UITextFieldDelegate {
         userhandler.ProductAddGetSucCategories(id: id, Success: {response in
             if response.success == 1 {
                 self.subcategoryList =  response.subcategories ?? []
+                
             } else {
                  //Zalert.ZshareAlert.showAlert(title: "Alert", message: response.message ?? "", messagetype: 0)
             }
