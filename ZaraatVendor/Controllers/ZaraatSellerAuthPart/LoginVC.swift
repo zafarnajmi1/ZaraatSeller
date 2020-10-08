@@ -15,9 +15,9 @@ class LoginVC: BaseVC,UITextFieldDelegate {
         @IBOutlet weak var txtpassword: UITextField!
         @IBOutlet weak var btnlogin: UIButton!
         
-      
+       @IBOutlet weak var btnpass: UIButton!
     @IBOutlet weak var txtlogin: SkyFloatingLabelTextFieldWithIcon!
-    
+    var passClick = true 
         
    // @IBOutlet weak var txtemail: UITextField!
     
@@ -52,6 +52,18 @@ class LoginVC: BaseVC,UITextFieldDelegate {
         }
         
         
+    
+    @IBAction func passshowhidAction(_ sender: UIButton) {
+           if(passClick == true) {
+               txtpassword.isSecureTextEntry = false
+               btnpass.setBackgroundImage(UIImage.init(named: "showpass"), for: .normal)
+           } else {
+               txtpassword.isSecureTextEntry = true
+               btnpass.setBackgroundImage(UIImage.init(named: "hidePass"), for: .normal)
+           }
+
+           passClick = !passClick
+       }
         
 
         @IBAction func loginAction(_ sender: UIButton) {

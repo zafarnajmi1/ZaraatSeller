@@ -22,7 +22,7 @@ class Constant {
     }
    
     static var MainUrl : String {
-        return "http://apiengine.zaraat.com/api/vendors/"
+        return "https://apiengine.zaraat.com/api/vendors/"
        
         // "http://dev.nsols.pk/public/api/vendors/"
     }

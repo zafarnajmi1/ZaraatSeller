@@ -34,7 +34,7 @@ target 'ZaraatVendor' do
 
  pod 'Firebase/Core'
  pod 'Firebase/Messaging'
- 
+ pod 'Firebase/Analytics'
  pod 'Cosmos'
  pod 'Charts'
  #pod 'SwiftCharts'

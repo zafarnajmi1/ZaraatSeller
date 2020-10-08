@@ -8,6 +8,8 @@ PODS:
   - DLRadioButton (1.4.12)
   - DropDown (2.3.13)
   - DZNEmptyDataSet (1.8.1)
+  - Firebase/Analytics (6.18.0):
+    - Firebase/Core
   - Firebase/Core (6.18.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.3.0)
@@ -134,6 +136,7 @@ DEPENDENCIES:
   - DLRadioButton
   - DropDown
   - DZNEmptyDataSet
+  - Firebase/Analytics
   - Firebase/Core
   - Firebase/Messaging
   - GoogleMaps
@@ -237,6 +240,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 3b88ca0c50134af2856c48c481572c98a8b8b65b
 
-PODFILE CHECKSUM: 061b21d969b42ccad268d1a37480139541e0d3ae
+PODFILE CHECKSUM: f7e5bd0c2e7de845fae0ccf6ec967d92cf3ed28e
 
 COCOAPODS: 1.9.1

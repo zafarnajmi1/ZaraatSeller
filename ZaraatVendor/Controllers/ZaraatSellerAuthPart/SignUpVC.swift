@@ -12,7 +12,9 @@ class SignUpVC: BaseVC {
    var mydropwdown = DropDown()
     @IBOutlet weak var btnsignUp: UIButton!
    
-//    @IBOutlet weak var usernameView: UIView!
+    @IBOutlet weak var btnconformpass: UIButton!
+    @IBOutlet weak var btnpass: UIButton!
+    //    @IBOutlet weak var usernameView: UIView!
 //    @IBOutlet weak var emailView: UIView!
 //    @IBOutlet weak var passwordView: UIView!
 //
@@ -29,7 +31,8 @@ class SignUpVC: BaseVC {
     @IBOutlet weak var txtpassword: UITextField!
     @IBOutlet weak var txtconfirmpassword: UITextField!
     @IBOutlet weak var txtphonenumber: UITextField!
-    
+    var passClick = true
+     var ConfirmpassClick = true
     //@IBOutlet weak var txtcity: UITextField!
     
 //    @IBOutlet weak var txtanswer: UITextField!
@@ -62,6 +65,37 @@ class SignUpVC: BaseVC {
         //answerView.addInnerShadow(topColor: #colorLiteral(red: 0.8939016461, green: 0.8940303922, blue: 0.8938735127, alpha: 1))
     }
 
+    
+    
+    @IBAction func passshowhidAction(_ sender: UIButton) {
+        if(passClick == true) {
+            txtpassword.isSecureTextEntry = false
+            btnpass.setBackgroundImage(UIImage.init(named: "showpass"), for: .normal)
+        } else {
+            txtpassword.isSecureTextEntry = true
+            btnpass.setBackgroundImage(UIImage.init(named: "hidePass"), for: .normal)
+        }
+
+        passClick = !passClick
+    }
+    
+    
+    @IBAction func confirmPAssshowhideAction(_ sender: UIButton) {
+        
+        if(ConfirmpassClick == true) {
+            txtconfirmpassword.isSecureTextEntry = false
+            btnconformpass.setBackgroundImage(UIImage.init(named: "showpass"), for: .normal)
+        } else {
+            txtconfirmpassword.isSecureTextEntry = true
+            btnconformpass.setBackgroundImage(UIImage.init(named: "hidePass"), for: .normal)
+        }
+
+        ConfirmpassClick = !ConfirmpassClick
+    }
+    
+    
+    
+    
     @IBAction func signUpAction(_ sender: UIButton) {
         
         if checkData() {

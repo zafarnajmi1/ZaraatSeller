@@ -12,6 +12,7 @@ import  IQKeyboardManagerSwift
 import  GooglePlaces
 import GooglePlacePicker
 import GoogleMaps
+import  Firebase
 //import  Crisp
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
      IQKeyboardManager.shared.enable = true
         GMSServices.provideAPIKey("AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI") //("AIzaSyBjEjCpCv1VfMc-BTh191xCd_omhTjJZDE")
         GMSPlacesClient.provideAPIKey("AIzaSyBUwsMy_xBj8tOy3seHnEcSt7NlJP2aOvs")//("AIzaSyADR5IFPSYE88eMxWTbrj7dZ-pyTHRc4NI")
