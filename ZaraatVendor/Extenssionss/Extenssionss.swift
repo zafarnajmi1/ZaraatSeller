@@ -461,6 +461,7 @@ extension UIImageView {
     
 }
 extension UIViewController {
+    @available(iOS 13.0, *)
     func darkDisabled() {
           overrideUserInterfaceStyle = .light
     }

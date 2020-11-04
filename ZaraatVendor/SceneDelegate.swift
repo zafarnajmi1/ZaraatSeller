@@ -8,6 +8,13 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -14,6 +14,12 @@ import GooglePlacePicker
 import GoogleMaps
 import  Firebase
 //import  Crisp
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
