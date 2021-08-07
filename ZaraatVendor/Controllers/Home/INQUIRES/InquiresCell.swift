@@ -11,8 +11,11 @@ protocol InquiriesReply {
     func replyinquireis(cell: InquiresCell)
 }
 class InquiresCell: UITableViewCell {
-
-   @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var lblname: UILabel!
+    @IBOutlet weak var lblmsg: UILabel!
+    
+    @IBOutlet weak var lbldate: UILabel!
+    @IBOutlet weak var mainView: UIView!
        @IBOutlet weak var btnordermanage: UIButton!
     var delegate:InquiriesReply?
        override func awakeFromNib() {

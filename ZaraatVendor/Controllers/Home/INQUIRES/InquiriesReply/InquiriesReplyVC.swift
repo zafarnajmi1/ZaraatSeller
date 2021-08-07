@@ -9,7 +9,7 @@
 import UIKit
 
 class InquiriesReplyVC: UIViewController {
-
+    var enquiresDetail : Enquiries?
     @IBOutlet weak var btnreply: UIButton!
     @IBOutlet weak var txtmessage: UITextView!
     @IBOutlet weak var mainView: UIView!
@@ -28,10 +28,40 @@ class InquiriesReplyVC: UIViewController {
          txtmessage.text = "Reply"
         txtmessage.textColor = #colorLiteral(red: 0.5566827655, green: 0.5607631207, blue: 0.5648422837, alpha: 1)
         btnreply.roundButton()
+        
+        //self.txtmessage.text =  enquiresDetail?.message
     }
     
 
+    func replyenquires() {
+        ShareData.showProgress()
+        let dic : [String:Any] = ["reply": txtmessage.text!]
+        userhandler.enquiriesReply(id: (enquiresDetail?.enquiry_id)!, params: dic, Success: {response in
+            ShareData.hideProgress()
+
+            if response.success == 1 {
+                self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                self.alertMessage(message: response.message ?? "", completionHandler: {})
+                ShareData.hideProgress()
+            }
+        }, Failure: {error in
+            self.alertMessage(message: error.message, completionHandler: {})
+                           ShareData.hideProgress()
+        })
+    }
+    
+    
+    
+    
+    
     @IBAction func replyAction(_ sender: UIButton) {
+        if txtmessage.text == "" {
+            
+        } else {
+            replyenquires()
+        }
     }
     
     @IBAction func dismissAction(_ sender: UIButton) {

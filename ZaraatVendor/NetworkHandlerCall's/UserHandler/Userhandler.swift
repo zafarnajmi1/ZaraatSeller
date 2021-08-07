@@ -1448,4 +1448,53 @@ class userhandler {
     
     
     
+    
+    class  func getMyallEnquires(Success: @escaping (Myinquires) -> Void, Failure: @escaping(NetworkError) -> Void){
+           let url = Constant.MainUrl + Constant.URLs.Enquires
+           print("pages Url", url)
+           Networkhandler.GetRequiest(url: url, parameters: nil,success: {(successResponse) in
+
+               do {
+                   print("products",successResponse)
+                   let responseModel = try JSONDecoder().decode(Myinquires.self, from: successResponse.data!)
+                   Success(responseModel)
+               }
+               catch {
+                   print("Response Error")
+               }
+
+
+           } , Falioure: {(Error) in
+               Failure(Error)
+           })
+       }
+       
+    
+    class  func enquiriesReply(id:Int,params:[String:Any],Success: @escaping (LogoutModel) -> Void, Failure: @escaping(NetworkError) -> Void){
+        let url = Constant.MainUrl + Constant.URLs.Enquires + "/" + "\(id)" + "/reply"
+        print("pages Url", url)
+        
+        
+        print("Parameter Data ", params)
+        Networkhandler.PostRequest(url: url, parameters: params, success: {(successResponse) in
+                   
+           do {
+             print(successResponse)
+               let responseModel = try JSONDecoder().decode(LogoutModel.self, from: successResponse.data!)
+               Success(responseModel)
+           }
+           catch {
+               print("Response Error")
+           }
+           
+           
+       } , Falioure: {(Error) in
+           Failure(Error)
+       })
+    }
+    
+    
+    
+    
+    
 }

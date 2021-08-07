@@ -72,6 +72,7 @@
 		CE46F00724AB452900248D94 /* ViewDealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46F00624AB452900248D94 /* ViewDealsVC.swift */; };
 		CE46F00924AB47A100248D94 /* CreateDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46F00824AB47A100248D94 /* CreateDealModel.swift */; };
 		CE46F00B24AB4AB200248D94 /* UploadDealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46F00A24AB4AB100248D94 /* UploadDealImage.swift */; };
+		CE4AC83425C2D1B6009C37C7 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AC83325C2D1B6009C37C7 /* Orders.swift */; };
 		CE4D339A24AC7A020098BCCB /* DealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D339824AC7A020098BCCB /* DealViewCell.swift */; };
 		CE4D339B24AC7A020098BCCB /* DealViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4D339924AC7A020098BCCB /* DealViewCell.xib */; };
 		CE4D339D24AC86D10098BCCB /* DealDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D339C24AC86D10098BCCB /* DealDetailVC.swift */; };
@@ -101,12 +102,10 @@
 		CE528B72248F73FC001AB5B9 /* AddproductGetChildCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE528B71248F73FC001AB5B9 /* AddproductGetChildCategories.swift */; };
 		CE52DB1C24AE0B29008DE4E3 /* CouponsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52DB1B24AE0B29008DE4E3 /* CouponsListModel.swift */; };
 		CE5555EE248E49B20004526C /* AddProductGetSubcatgories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5555ED248E49B20004526C /* AddProductGetSubcatgories.swift */; };
-		CE563AB7252C79F700287511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE563AB6252C79F700287511 /* GoogleService-Info.plist */; };
-		CE563AB8252C79F700287511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE563AB6252C79F700287511 /* GoogleService-Info.plist */; };
-		CE563AB9252C79F700287511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE563AB6252C79F700287511 /* GoogleService-Info.plist */; };
 		CE57023C24B5884200F73E8A /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE57023B24B5884100F73E8A /* CategoryHeader.swift */; };
 		CE57024424B5E3A100F73E8A /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE57024224B5E3A100F73E8A /* ColorCell.swift */; };
 		CE57024524B5E3A100F73E8A /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE57024324B5E3A100F73E8A /* ColorCell.xib */; };
+		CE589BB925C0020500C24430 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE589BB825C0020400C24430 /* GoogleService-Info.plist */; };
 		CE6A75C824751558003DE2C1 /* VCChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A75C724751558003DE2C1 /* VCChangeLanguage.swift */; };
 		CE6D9DF02473A27E004DA883 /* VendortypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D9DEE2473A27E004DA883 /* VendortypeCell.swift */; };
 		CE6D9DF12473A27E004DA883 /* VendortypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6D9DEF2473A27E004DA883 /* VendortypeCell.xib */; };
@@ -251,6 +250,7 @@
 		CEBFC25D2420E5AD00D6ADA1 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBFC25B2420E5AD00D6ADA1 /* OrderCell.xib */; };
 		CEBFC25F2420E5C300D6ADA1 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFC25E2420E5C200D6ADA1 /* OrderVC.swift */; };
 		CEBFC2612420E5D200D6ADA1 /* InquiresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFC2602420E5D200D6ADA1 /* InquiresVC.swift */; };
+		CEC75E1225C15EAC001F62A1 /* InquiresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC75E1125C15EAC001F62A1 /* InquiresModel.swift */; };
 		CECABE5E249239AE00AAA233 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECABE47249239AE00AAA233 /* BarChartViewController.swift */; };
 		CECABE62249239CF00AAA233 /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECABE61249239CF00AAA233 /* DemoBaseViewController.swift */; };
 		CECABE6424923F0D00AAA233 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECABE6324923F0C00AAA233 /* DayAxisValueFormatter.swift */; };
@@ -376,6 +376,7 @@
 		CE46F00624AB452900248D94 /* ViewDealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDealsVC.swift; sourceTree = "<group>"; };
 		CE46F00824AB47A100248D94 /* CreateDealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDealModel.swift; sourceTree = "<group>"; };
 		CE46F00A24AB4AB100248D94 /* UploadDealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDealImage.swift; sourceTree = "<group>"; };
+		CE4AC83325C2D1B6009C37C7 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		CE4D339824AC7A020098BCCB /* DealViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewCell.swift; sourceTree = "<group>"; };
 		CE4D339924AC7A020098BCCB /* DealViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealViewCell.xib; sourceTree = "<group>"; };
 		CE4D339C24AC86D10098BCCB /* DealDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailVC.swift; sourceTree = "<group>"; };
@@ -405,10 +406,11 @@
 		CE528B71248F73FC001AB5B9 /* AddproductGetChildCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddproductGetChildCategories.swift; sourceTree = "<group>"; };
 		CE52DB1B24AE0B29008DE4E3 /* CouponsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsListModel.swift; sourceTree = "<group>"; };
 		CE5555ED248E49B20004526C /* AddProductGetSubcatgories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductGetSubcatgories.swift; sourceTree = "<group>"; };
-		CE563AB6252C79F700287511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE57023B24B5884100F73E8A /* CategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryHeader.swift; path = ../../../../../../../Desktop/CategoryHeader.swift; sourceTree = "<group>"; };
 		CE57024224B5E3A100F73E8A /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		CE57024324B5E3A100F73E8A /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
+		CE589BB725C0007000C24430 /* Zaraat Seller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Zaraat Seller.entitlements"; sourceTree = "<group>"; };
+		CE589BB825C0020400C24430 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE6A75C724751558003DE2C1 /* VCChangeLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCChangeLanguage.swift; sourceTree = "<group>"; };
 		CE6D9DEE2473A27E004DA883 /* VendortypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendortypeCell.swift; sourceTree = "<group>"; };
 		CE6D9DEF2473A27E004DA883 /* VendortypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VendortypeCell.xib; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 		CEBFC25B2420E5AD00D6ADA1 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		CEBFC25E2420E5C200D6ADA1 /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		CEBFC2602420E5D200D6ADA1 /* InquiresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiresVC.swift; sourceTree = "<group>"; };
+		CEC75E1125C15EAC001F62A1 /* InquiresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiresModel.swift; sourceTree = "<group>"; };
 		CECABE47249239AE00AAA233 /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		CECABE61249239CF00AAA233 /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoBaseViewController.swift; path = "../../../../../../Downloads/Charts-master/ChartsDemo-iOS/Swift/DemoBaseViewController.swift"; sourceTree = "<group>"; };
 		CECABE6324923F0C00AAA233 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayAxisValueFormatter.swift; path = "../../../../../../Downloads/Charts-master/ChartsDemo-iOS/Swift/Formatters/DayAxisValueFormatter.swift"; sourceTree = "<group>"; };
@@ -589,6 +592,8 @@
 				CE9D2EBD24A093B00014FDAD /* DeleteGalleryModel.swift */,
 				CE518A5A24C5D20400ADEE79 /* ForgotPasswordModel.swift */,
 				CE518A5C24C5D5F900ADEE79 /* VerifyCodeModel.swift */,
+				CEC75E1125C15EAC001F62A1 /* InquiresModel.swift */,
+				CE4AC83325C2D1B6009C37C7 /* Orders.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 		CEBFC16E2420986A00D6ADA1 /* ZaraatVendor */ = {
 			isa = PBXGroup;
 			children = (
+				CE589BB725C0007000C24430 /* Zaraat Seller.entitlements */,
 				CE2746942514CF630052C12A /* Zaraat Seller Guide.pdf */,
 				CEAE717F24CEB1C40057DB9C /* ZaraatSellerShareData */,
 				CEAE712224CEB1580057DB9C /* ZaraatSelleFonts */,
@@ -1076,7 +1082,7 @@
 				CEBFC1712420986A00D6ADA1 /* SceneDelegate.swift */,
 				CEBFC17B2420986D00D6ADA1 /* Assets.xcassets */,
 				CEBFC17D2420986D00D6ADA1 /* LaunchScreen.storyboard */,
-				CE563AB6252C79F700287511 /* GoogleService-Info.plist */,
+				CE589BB825C0020400C24430 /* GoogleService-Info.plist */,
 				CEBFC1802420986D00D6ADA1 /* Info.plist */,
 				CEBFC1782420986A00D6ADA1 /* ZaraatVendor.xcdatamodeld */,
 			);
@@ -1416,8 +1422,8 @@
 				CEAE715824CEB18F0057DB9C /* Poppins-Bold.otf in Resources */,
 				CEAE716124CEB18F0057DB9C /* Poppins-Thin.otf in Resources */,
 				CEAE717924CEB18F0057DB9C /* Poppins-SemiBoldItalic.otf in Resources */,
+				CE589BB925C0020500C24430 /* GoogleService-Info.plist in Resources */,
 				CEAE717C24CEB18F0057DB9C /* Poppins-SemiBold.ttf in Resources */,
-				CE563AB7252C79F700287511 /* GoogleService-Info.plist in Resources */,
 				4302D29424592B2A00233F92 /* SupportCell.xib in Resources */,
 				CEAE717324CEB18F0057DB9C /* Poppins-BoldItalic.otf in Resources */,
 				CEAE714F24CEB18F0057DB9C /* Poppins-Medium.ttf in Resources */,
@@ -1460,7 +1466,6 @@
 				CEAE715024CEB18F0057DB9C /* Poppins-Medium.ttf in Resources */,
 				CEAE717A24CEB18F0057DB9C /* Poppins-SemiBoldItalic.otf in Resources */,
 				CEAE715624CEB18F0057DB9C /* Poppins-BlackItalic.otf in Resources */,
-				CE563AB8252C79F700287511 /* GoogleService-Info.plist in Resources */,
 				CEAE717424CEB18F0057DB9C /* Poppins-BoldItalic.otf in Resources */,
 				CEAE714424CEB18F0057DB9C /* Poppins-ExtraLightItalic.otf in Resources */,
 				CEAE714724CEB18F0057DB9C /* Poppins-ExtraBoldItalic.otf in Resources */,
@@ -1491,7 +1496,6 @@
 				CEAE715124CEB18F0057DB9C /* Poppins-Medium.ttf in Resources */,
 				CEAE717B24CEB18F0057DB9C /* Poppins-SemiBoldItalic.otf in Resources */,
 				CEAE715724CEB18F0057DB9C /* Poppins-BlackItalic.otf in Resources */,
-				CE563AB9252C79F700287511 /* GoogleService-Info.plist in Resources */,
 				CEAE717524CEB18F0057DB9C /* Poppins-BoldItalic.otf in Resources */,
 				CEAE714524CEB18F0057DB9C /* Poppins-ExtraLightItalic.otf in Resources */,
 				CEAE714824CEB18F0057DB9C /* Poppins-ExtraBoldItalic.otf in Resources */,
@@ -1652,6 +1656,7 @@
 				CE0F06C924C1E84F006ABD0A /* PkgDetailVC.swift in Sources */,
 				43C625D324627E4F00E08370 /* ChildCategory.swift in Sources */,
 				CE46F00724AB452900248D94 /* ViewDealsVC.swift in Sources */,
+				CE4AC83425C2D1B6009C37C7 /* Orders.swift in Sources */,
 				CEB010FA24B721D200AD6BF2 /* VariationListCell.swift in Sources */,
 				CEAE718624CEB2D10057DB9C /* SplashVC.swift in Sources */,
 				43CE62A9246272350086DA40 /* CategoreisModel.swift in Sources */,
@@ -1667,6 +1672,7 @@
 				CECABE6624923F7D00AAA233 /* XYMarkerView.swift in Sources */,
 				433F964C2437371D0018CC32 /* AddimageVC.swift in Sources */,
 				CE8E0271246D2633003CCA92 /* GetProductsChildCategories.swift in Sources */,
+				CEC75E1225C15EAC001F62A1 /* InquiresModel.swift in Sources */,
 				CE4D339A24AC7A020098BCCB /* DealViewCell.swift in Sources */,
 				CED3FF3C24AF3F1300AE60BF /* DealDeatilModel.swift in Sources */,
 				4302D29624592B4300233F92 /* SupportVC.swift in Sources */,
@@ -1908,6 +1914,7 @@
 			baseConfigurationReference = 3FD7B3AAA956CB0A978E776B /* Pods-ZaraatVendor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ZaraatVendor/Zaraat Seller.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
@@ -1917,11 +1924,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1931,6 +1938,7 @@
 			baseConfigurationReference = 99679711226C3816B895D9C1 /* Pods-ZaraatVendor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ZaraatVendor/Zaraat Seller.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
@@ -1940,11 +1948,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaraatSeller.ZTPL;
 				PRODUCT_NAME = "Zaraat Seller";
 				PROVISIONING_PROFILE_SPECIFIER = ZaraatSellerDistributtionProfile;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

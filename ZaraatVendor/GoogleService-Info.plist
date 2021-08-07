@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>9597150201-40jibbrqtmchbmlkf7rp7o60b2tab0ar.apps.googleusercontent.com</string>
+	<string>12019947913-h63fvjqlhbt1s42nlp4lj5ljmapa9hjh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.9597150201-40jibbrqtmchbmlkf7rp7o60b2tab0ar</string>
+	<string>com.googleusercontent.apps.12019947913-h63fvjqlhbt1s42nlp4lj5ljmapa9hjh</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAboJIu_-t78HINpRboavqAPoOoyncYH5M</string>
+	<string>AIzaSyDAjWv9fnzR1IYaGqEK6FRuINrVQ6ELJz4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>9597150201</string>
+	<string>12019947913</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.ZaraatSeller.ZTPL</string>
 	<key>PROJECT_ID</key>
-	<string>zaraat-seller-9b864</string>
+	<string>zaraat-notifications-4cd12</string>
 	<key>STORAGE_BUCKET</key>
-	<string>zaraat-seller-9b864.appspot.com</string>
+	<string>zaraat-notifications-4cd12.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:9597150201:ios:80a797c0ecf2cddec6d328</string>
-	<key>DATABASE_URL</key>
-	<string>https://zaraat-seller-9b864.firebaseio.com</string>
+	<string>1:12019947913:ios:308deb936abc724ac9a958</string>
 </dict>
 </plist>

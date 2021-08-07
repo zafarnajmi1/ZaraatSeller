@@ -110,6 +110,8 @@ class Constant {
         static let resetPassword = "resetpassword"
         
         static let ChangePassword = "edit/main/profile/changepassword"
+        static let Enquires = "enquiries"
+        static let Orders = "orders"
     }
     
     struct NetworkErrorType {

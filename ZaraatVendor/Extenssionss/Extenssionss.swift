@@ -435,13 +435,38 @@ func formatedDatetype(string: String)-> String {
     let dateFormatter = DateFormatter()
     let tempLocale = dateFormatter.locale // save locale temporarily
     dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"//"yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
     let date = dateFormatter.date(from: string)!
     dateFormatter.dateFormat = "yyyy-MM-dd"//"dd-MM-yyyy"//"MMM d, yyyy" ; //"dd-MM-yyyy HH:mm:ss"
     dateFormatter.locale = tempLocale // reset the locale --> but no need here
     let dateString = dateFormatter.string(from: date)
+    
+    
+//    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+//    Date date = dateFormat.parse("2017-04-26T20:55:00.000Z");//You will get date object relative to server/client timezone wherever it is parsed
+//    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd"); //If you need time just put specific format for time like 'HH:mm:ss'
+//    String dateStr = formatter.format(date);
         return dateString
     }
+
+
+
+func formatedDateted(string: String)-> String {
+
+let dateFormatter = DateFormatter()
+let tempLocale = dateFormatter.locale // save locale temporarily
+dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+let date = dateFormatter.date(from: string)!
+dateFormatter.dateFormat = "yyyy-MM-dd"//"dd-MM-yyyy"//"MMM d, yyyy" ; //"dd-MM-yyyy HH:mm:ss"
+dateFormatter.locale = tempLocale // reset the locale --> but no need here
+let dateString = dateFormatter.string(from: date)
+    return dateString
+}
+
+
+
+
 
 extension UIImageView {
     func roundImage(){

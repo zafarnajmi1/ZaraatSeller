@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
         </array>
-        <array key="Poppins-Regular.ttf">
+        <array key="Poppins-Regular.otf">
             <string>Poppins-Regular</string>
         </array>
     </customFonts>
@@ -34,19 +35,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i just want to know  the size ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JD-NY-i9I">
-                                <rect key="frame" x="108" y="34" width="187" height="18.5"/>
+                                <rect key="frame" x="96" y="34" width="318" height="18.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="nOW-Jm-LpO"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18.5" id="sKX-45-eyH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0075112422929999997" blue="0.02834324911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inquiries :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15r-PT-bft">
-                                <rect key="frame" x="19" y="34.5" width="74" height="17.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inquiry :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15r-PT-bft">
+                                <rect key="frame" x="19" y="34.5" width="62" height="17.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17.5" id="dtx-O6-0e0"/>
+                                    <constraint firstAttribute="width" constant="62" id="oIE-Ta-HFh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -62,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9/12/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aia-Sc-eWp">
-                                <rect key="frame" x="72" y="59.5" width="63.5" height="18.5"/>
+                                <rect key="frame" x="72" y="59.5" width="66" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,6 +89,7 @@
                             <constraint firstItem="0JD-NY-i9I" firstAttribute="leading" secondItem="15r-PT-bft" secondAttribute="trailing" constant="15" id="hsm-KV-0oM"/>
                             <constraint firstAttribute="trailing" secondItem="lOU-nc-BXk" secondAttribute="trailing" constant="10" id="jwZ-xh-Zrc"/>
                             <constraint firstItem="xu1-RA-hO1" firstAttribute="leading" secondItem="Ee6-Or-GdT" secondAttribute="leading" constant="19" id="mYE-Nx-nAE"/>
+                            <constraint firstItem="lOU-nc-BXk" firstAttribute="leading" secondItem="0JD-NY-i9I" secondAttribute="trailing" constant="20" id="oMn-kW-Gen"/>
                             <constraint firstItem="aia-Sc-eWp" firstAttribute="top" secondItem="0JD-NY-i9I" secondAttribute="bottom" constant="7" id="ppi-1G-FPb"/>
                             <constraint firstItem="QNg-dg-nQp" firstAttribute="leading" secondItem="Ee6-Or-GdT" secondAttribute="leading" constant="19" id="pzJ-xl-8kl"/>
                             <constraint firstItem="QNg-dg-nQp" firstAttribute="top" secondItem="15r-PT-bft" secondAttribute="bottom" constant="8" id="sKn-Ek-Uc3"/>
@@ -104,6 +106,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="Jh4-Rr-g0D"/>
             <connections>
+                <outlet property="lbldate" destination="aia-Sc-eWp" id="VvM-Qr-TTh"/>
+                <outlet property="lblmsg" destination="0JD-NY-i9I" id="ZDB-LE-GOe"/>
+                <outlet property="lblname" destination="xu1-RA-hO1" id="GRb-GJ-Nls"/>
                 <outlet property="mainView" destination="Ee6-Or-GdT" id="LaZ-W4-Nzl"/>
             </connections>
             <point key="canvasLocation" x="74.637681159420296" y="55.915178571428569"/>

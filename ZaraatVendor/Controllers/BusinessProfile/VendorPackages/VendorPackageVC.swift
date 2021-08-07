@@ -203,7 +203,7 @@ class VendorPackageVC: BaseVC,deleteFeature {
 
                      
                 
-                MarketdropDown.dataSource = ["b2b","ecommerce","both"]
+                MarketdropDown.dataSource = ["b2b","ecommerce"]
 
                         MarketdropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                             print(index)
